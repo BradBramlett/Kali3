@@ -54,7 +54,7 @@ cp -a ./tmux.conf $HOME/.tmux.conf
 # Fonts:
 if [[ ! -d "$HOME/.local/share/fonts" ]]
 then
-	mkdir "$HOME/.local/share/fonts"
+	mkdir -p "$HOME/.local/share/fonts"
 fi
 echo -e "\tcp -a $PWD/MesloLGSNerdFont-Regular.ttf $HOME/.local/share/fonts/MesloLGSNerdFont-Regular.ttf"
 cp -a ./MesloLGSNerdFont-Regular.ttf $HOME/.local/share/fonts/
