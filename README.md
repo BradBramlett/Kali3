@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Minimal Kali i3 setup:
 This setup features a minimal i3 setup. This desktop is meant to be ran in a virtual machine.
 Currently, this i3 setup lacks many basic utilities such as (these features may be added at a later point): 
@@ -90,3 +91,7 @@ sudo apt install i3 polybar python3-gi python3-gi-cairo libgtk-4-dev copyq rofi 
 ```
 Then log out and select i3 as your session. 
 
+=======
+# Kali3
+Custom Kali i3 and Polybar setup
+>>>>>>> 8f827c087b2599879ec158e4851b9e760f10ab14
