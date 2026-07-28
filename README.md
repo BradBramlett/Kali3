@@ -79,6 +79,8 @@ chmod +x setup.sh
 
 ## Manual install:
 ```
+sudo apt install i3 polybar python3-gi python3-gi-cairo libgtk-4-dev copyq rofi picom kitty obsidian feh
+
 git clone https://github.com/BradBramlett/Kali3.git
 
 cd Kali3
@@ -91,7 +93,6 @@ for i in i3 polybar kitty; do cp -a "./${i}" "~/.config/";done
 
 cp -a ./MesloLGSNerdFont-Regular.ttf ~/.local/share/fonts/
 
-sudo apt install i3 polybar python3-gi python3-gi-cairo libgtk-4-dev copyq rofi picom kitty obsidian feh
 ```
 Then log out and select i3 as your session. 
 
