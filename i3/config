@@ -147,7 +147,7 @@ bindsym $mod+space exec "rofi -no-config -no-lazy-grab -show drun -modi drun -th
 bindsym $mod+f exec firefox
 bindsym $mod+o exec obsidian
 bindsym $mod+b exec burpsuite
-bindsym $mod+t exec kitty $HOME/.tmux/tmux.sh
+bindsym $mod+t exec kitty $HOME/.tmux/scripts/tmux.sh
 bindsym $mod+v exec copyq menu
 
 # Float ip stuff:
