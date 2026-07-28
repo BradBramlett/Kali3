@@ -41,6 +41,7 @@ My general thought process is SUPER key controls i3 while ALT controls tmux.
 | Super + b | Launch Burpsuite |
 | Super + v | Open a clipboard manager|
 | Super + z | Toggle full screen |
+| Super + q | Quit current window |
 | Super + **ARROW KEYS** | Change focused window |
 
 ## Tmux Keybindings:
@@ -52,6 +53,8 @@ My general thought process is SUPER key controls i3 while ALT controls tmux.
 | ALT + **ARROW KEYS** | Change focused pane |
 | ALT + z | Toggle full screen mode |
 | ALT + v or Scroll through terminal | Enter Copy mode |
+| ALT + q | Quit current pane |
+| ALT + x | Kill tmux session|
 
 ### Tmux Copy Mode bindings:
 I have included the Vi copy mode. It adds a ton of versatility to your productivity.
