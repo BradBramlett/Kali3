@@ -1,0 +1,68 @@
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m nc -lvp 8001
+Listening on pi.hole 8001
+^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m curl 127.0.0.1:8000
+curl: (56) Recv failure: Connection reset by peer
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m nc -lvp 8001
+Listening on pi.hole 8001
+^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m nc 192.168.198.150 5000
+Available Processors: 1
+Free Memory: 26508584
+Total Memory: 32440320
+^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m nc -vvvv 192.168.198.150 8000
+nc: connect to 192.168.198.150 port 8000 (tcp) failed: Connection refused
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m nc -vvvv 192.168.198.150 5000
+Connection to 192.168.198.150 5000 port [tcp/*] succeeded!
+Available Processors: 1
+Free Memory: 25450360
+Total Memory: 32440320
+^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m nc -vvvv 192.168.198.150 5000
+Connection to 192.168.198.150 5000 port [tcp/*] succeeded!
+Available Processors: 1
+Free Memory: 25169744
+Total Memory: 32440320
+^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m nc -vvvv 192.168.198.150 5000
+Connection to 192.168.198.150 5000 port [tcp/*] succeeded!
+Available Processors: 1
+Free Memory: 25080592
+Total Memory: 32440320
+^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m nc -vvvv 192.168.198.150 5000
+Connection to 192.168.198.150 5000 port [tcp/*] succeeded!
+Available Processors: 1
+Free Memory: 24899376
+Total Memory: 32440320
+^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m nc -vvvv 192.168.198.150 5000
+Connection to 192.168.198.150 5000 port [tcp/*] succeeded!
+Available Processors: 1
+Free Memory: 24810224
+Total Memory: 32440320
+^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m nc -vvvv 192.168.198.150 5000
+Connection to 192.168.198.150 5000 port [tcp/*] succeeded!
+Available Processors: 1
+Free Memory: 24631928
+Total Memory: 32440320
+^C
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~[0m]
+└─[1m[34m$[0m

