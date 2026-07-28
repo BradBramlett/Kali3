@@ -79,7 +79,9 @@ chmod +x setup.sh
 
 ## Manual install:
 ```
-cd kali3
+git clone https://github.com/BradBramlett/Kali3.git
+
+cd Kali3
 
 cp -a ./tmux/ ~/.tmux
 
