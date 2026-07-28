@@ -9,17 +9,17 @@ echo '\_|\_\\_/ \|\____/\_//____/'
 
 # Install dependencies:
 echo -e "\033[96m[+] Install system dependencies:\033[93m"
-for i in i3 polybar python3-gi python3-gi-cairo libgtk-4-dev copyq rofi picom kitty obsidian feh
+for i in i3 polybar python3-gi python3-gi-cairo libgtk-4-dev copyq rofi picom kitty obsidian feh xdotool
 	do echo -e "\t${i}"
 done
 
-sudo apt install i3 polybar python3-gi python3-gi-cairo libgtk-4-dev copyq rofi picom kitty obsidian feh
+sudo apt install i3 polybar python3-gi python3-gi-cairo libgtk-4-dev copyq rofi picom kitty obsidian feh xdotool -y
 
 
 # Taking backups in the event a roll back is wanted/need
 echo -e "\033[96m[+] Taking backups of any found directories and configuration files...\033[0m" 
 
-CONFIG_BU=$(find $HOME/.config/ -name i3 -o -name polybar -o -name kitty -o -name picom)
+CONFIG_BU=$(find $HOME/.config/ -name i3 -o -name polybar -o -name kitty -o -name picom -o -name copyq)
 for i in $CONFIG_BU
 do echo -e "\t\033[93mmv ${i} ${i}_PRE_KALI3_BAK"; 
 	sleep .5
@@ -38,7 +38,7 @@ fi
 # Moving items into place:
 # .config directories:
 echo -e "\033[96m[+] Moving configs into place\033[0m" 
-for i in i3 picom kitty polybar
+for i in i3 picom kitty polybar copyq
 do sleep .5
 	echo -e "\t\033[93mcp -a $PWD/$i $HOME/.config/$i"
 	 cp -a "./${i}" "$HOME/.config/${i}"
@@ -57,7 +57,8 @@ then
 	mkdir "$HOME/.local/share/fonts"
 fi
 echo -e "\tcp -a $PWD/MesloLGSNerdFont-Regular.ttf $HOME/.local/share/fonts/MesloLGSNerdFont-Regular.ttf"
-cp -a ./MesloLGSNerdFont-Regular.ttf $HOME/.local/share/fonts/MesloLGSNerdFont-Regular.ttf
+cp -a ./MesloLGSNerdFont-Regular.ttf $HOME/.local/share/fonts/
 echo -e "\033[92m[+] Files moved successfully\033[0m"
+echo 'export GTK_THEME=Adwaita:dark' >> $HOME/.profile
 # Ready to roll
 echo -e "\033[92m[+] Install has been completed. Please log out and select i3 as your session from the login screen\033[0m"
