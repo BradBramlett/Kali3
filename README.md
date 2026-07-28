@@ -32,6 +32,7 @@ My general thought process is SUPER key controls i3 while ALT controls tmux.
 
 ## i3 Keybindings:
 | Key Combo | Description |
+| --- | --- |
 | Super + Enter | Start Kitty|
 | Super + t | Start a tmux session|
 | Super + Space | Launch Rofi |
@@ -44,6 +45,7 @@ My general thought process is SUPER key controls i3 while ALT controls tmux.
 
 ## Tmux Keybindings:
 | Key Combo | Description |
+| --- | --- |
 | ALT + O | Open a Vertical Pane |
 | ALT + e | Open a Horizontal Pane |
 | ALT + b | Toggle broadcast mode on/off (Sends keystrokes to all visible panes|
@@ -54,6 +56,7 @@ My general thought process is SUPER key controls i3 while ALT controls tmux.
 ### Tmux Copy Mode bindings:
 I have included the Vi copy mode. It adds a ton of versatility to your productivity.
 | Key Combo | Description |
+| --- | --- |
 | / | Search below cursor for a specified string or pattern|
 | ? | Search above cursor for a specified string or pattern|
 | space | Set markers for the beginning and end of text to be copied within your terminal buffer |
