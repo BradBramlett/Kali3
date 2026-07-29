@@ -9,11 +9,11 @@ echo '\_|\_\\_/ \|\____/\_//____/'
 
 # Install dependencies:
 echo -e "\033[96m[+] Install system dependencies:\033[93m"
-for i in i3 polybar python3-gi python3-gi-cairo libgtk-4-dev copyq rofi picom kitty obsidian feh xdotool
+for i in i3 polybar python3-gi python3-gi-cairo python3-i3ipc libgtk-4-dev copyq rofi picom kitty obsidian feh xdotool
 	do echo -e "\t${i}"
 done
 
-sudo apt install i3 polybar python3-gi python3-gi-cairo libgtk-4-dev copyq rofi picom kitty obsidian feh xdotool -y
+sudo apt install i3 polybar python3-gi python3-gi-cairo libgtk-4-dev copyq rofi picom kitty obsidian feh xdotool python3-i3ipc -y
 
 
 # Taking backups in the event a roll back is wanted/need
