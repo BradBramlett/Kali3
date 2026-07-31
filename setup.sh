@@ -57,7 +57,7 @@ then
 	mkdir -p "$HOME/.local/share/fonts"
 fi
 echo -e "\tcp -a $PWD/*.ttf $HOME/.local/share/fonts/"
-cp -a ./MesloLGSNerdFont-Regular.ttf $HOME/.local/share/fonts/
+cp -a ./*.ttf $HOME/.local/share/fonts/
 echo -e "\033[92m[+] Files moved successfully\033[0m"
 echo 'export GTK_THEME=Adwaita:dark' >> $HOME/.profile
 # Ready to roll
