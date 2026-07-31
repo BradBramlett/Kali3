@@ -14,7 +14,7 @@ rofi_command="rofi -no-config -theme $dir/powermenu.rasi"
 shutdown="\uf011 Shutdown"
 reboot="\uead2 Restart"
 suspend="\uf186 Sleep"
-logout="\udb80\udf43 Logout"
+logout="󰍃 Logout"
 
 # Confirmation
 confirm_exit() {
