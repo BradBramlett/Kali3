@@ -13,7 +13,7 @@ rofi_command="rofi -no-config -theme $dir/powermenu.rasi"
 # Options
 shutdown="\uf011 Shutdown"
 reboot="\uead2 Restart"
-lock="\uea75 Lock"
+lock="\udb81\uddfd Lock"
 suspend="\uf186 Sleep"
 logout="\udb80\udf43 Logout"
 
